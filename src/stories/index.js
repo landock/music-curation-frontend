@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+import { specs, describe, it } from 'storybook-addon-specifications';
+
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
