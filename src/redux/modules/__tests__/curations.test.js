@@ -1,14 +1,37 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
+import Immutable from 'seamless-immutable';
 
 import reducer, { types, actions } from '../curations';
 const middleware = [thunk];
 const mockStore = configureMockStore(middleware);
 
 describe('curations reducer', () => {
-  it('should return initial state', () => {
+  it('should return initial empty state', () => {
     expect(reducer(undefined, {})).toEqual({});
+  });
+
+  it('should return an Immutable state object', () => {
+    const initialState = { test: 'Waddup' };
+
+    const reducedState = reducer(initialState, {});
+
+    expect(reducedState).toEqual({ test: 'Waddup' });
+    expect(Immutable.isImmutable(reducedState)).toBe(true);
+    expect(Immutable.isImmutable(initialState)).toBe(false);
+  });
+
+  it('should handle CURATIONS_FETCHED', () => {
+    const initialState = { curationsById: [1, 2, 3] };
+    const modifiedState = { curationsById: [4, 5, 6] };
+    const expectedAction = {
+      type: types.CURATIONS_FETCHED,
+      payload: modifiedState,
+    };
+    const reducedState = reducer(initialState, expectedAction);
+
+    expect(reducedState).toEqual(modifiedState);
   });
 });
 
@@ -33,7 +56,6 @@ describe('action creators', () => {
     fetchMock.get('*', curations);
 
     return store.dispatch(actions.fetchCurations()).then(() => {
-      console.log(store.getActions());
       expect(store.getActions()).toEqual(expectedActions);
     });
   });
