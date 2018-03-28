@@ -2,28 +2,42 @@ import Immutable from 'seamless-immutable';
 
 // Actions
 const CURATIONS_FETCHED = 'music-curation-frontend/curations/CURATIONS_FETCHED';
-const actions = {
+const types = {
   CURATIONS_FETCHED,
 };
 
 const initialState = Immutable({});
 // Reducer
-export default function reducer(state = initialState, action = {}) {
+function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case CURATIONS_FETCHED:
       return state.merge({
         curationsById: action.payload.curationsById,
       });
-    //do reducer stuff
     default:
       return state;
   }
 }
+
 // Action Creators
-export function fetchCurations() {
-  return (dispatch, getState) => {
-    dispatch({ type: CURATIONS_FETCHED, payload: {} });
+function curationsFetched(payload) {
+  return { type: CURATIONS_FETCHED, payload: payload };
+}
+
+function fetchCurations() {
+  const url =
+    'https://private-4cf18-musiccurationmanager.apiary-mock.com/yarn/curations';
+  return dispatch => {
+    return fetch(url)
+      .then(response => response.json())
+      .then(body => dispatch(curationsFetched({ curationsById: body })));
   };
 }
 
-export { actions };
+const actions = {
+  fetchCurations,
+  curationsFetched,
+};
+
+export { types, actions };
+export default reducer;
