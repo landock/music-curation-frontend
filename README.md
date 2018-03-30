@@ -28,3 +28,8 @@ Storybook runs on http://localhost:9009/
 ```
 $ nvm use 8.9.4 && yarn run storybook
 ```
+
+### Testing
+```
+$ yarn test
+```
