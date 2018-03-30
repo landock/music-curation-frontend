@@ -1,4 +1,3 @@
-import Immutable from 'seamless-immutable';
 import 'cross-fetch/polyfill';
 
 export function getCurations() {

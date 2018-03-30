@@ -1,32 +1,29 @@
-// @flow
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { actions, types } from '../../redux/modules/curations';
+import { actions } from '../../redux/modules/curations';
 
 import './AppContainer.css';
 import App from '../../components/App';
 
-type State = {};
-type Props = {};
-export class AppContainer extends Component<State, Props> {
-  constructor(props: Props) {
+export class AppContainer extends Component {
+  constructor(props) {
     super(props);
     autoBind(this);
-    this.state = {
-      curationsById: [],
-    };
+  }
+  componentDidMount() {
+    this.props.actions.fetchCurations();
   }
 
   render() {
-    return <App />;
+    return <App curations={this.props.curations.curationsById} />;
   }
 }
 
 function mapStateToProps(state) {
   return {
-    curations: state.curationsById,
+    curations: state.curations,
   };
 }
 
