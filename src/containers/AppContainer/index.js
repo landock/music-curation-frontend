@@ -1,16 +1,22 @@
 // @flow
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import './AppContainer.scss';
+import { actions, types } from '../../redux/modules/curations';
+
+import './AppContainer.css';
 import App from '../../components/App';
 
 type State = {};
 type Props = {};
 export class AppContainer extends Component<State, Props> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     autoBind(this);
+    this.state = {
+      curationsById: [],
+    };
   }
 
   render() {
@@ -19,11 +25,13 @@ export class AppContainer extends Component<State, Props> {
 }
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    curations: state.curationsById,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return { actions: bindActionCreators(actions, dispatch) };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

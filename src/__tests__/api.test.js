@@ -3,11 +3,13 @@ import fetchMock from 'fetch-mock';
 
 describe('getCurations function', () => {
   it('should return object with curationsById key and array of values', () => {
-    const curations = ['1', '2'];
-    fetchMock.get(/curations/, curations);
+    const mockCurations = ['1', '2'];
+    const expectedResult = { curationsById: mockCurations };
+
+    fetchMock.get(/curations/, mockCurations);
+
     return getCurations().then(curations => {
-      console.log(curations);
-      expect(curations).toHaveProperty('curationsById');
+      expect(curations).toMatchObject(expectedResult);
     });
   });
 });

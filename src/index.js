@@ -13,7 +13,6 @@ import history from './history';
 import './index.css';
 
 const store = configureStore();
-console.log(store.getState(), configureStore);
 
 ReactDOM.render(
   <Provider store={store}>

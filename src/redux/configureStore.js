@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
@@ -14,13 +14,16 @@ const reducer = combineReducers({
 });
 
 const createStoreWithMiddleware = (reducer, initialState = {}) => {
+  const composeEnhancers =
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
   return createStore(
     reducer,
     initialState,
-    applyMiddleware(thunk, middleware, loggerMiddleware)
+    composeEnhancers(applyMiddleware(thunk, middleware, loggerMiddleware))
   );
 };
 
 export default function configureStore(initialState) {
-  return createStoreWithMiddleware(reducer, initialState);
+  const store = createStoreWithMiddleware(reducer, initialState);
+  return store;
 }
