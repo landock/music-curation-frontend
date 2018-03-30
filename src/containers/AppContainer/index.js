@@ -12,12 +12,14 @@ export class AppContainer extends Component {
     super(props);
     autoBind(this);
   }
+
   componentDidMount() {
-    this.props.actions.fetchCurations();
+    this.props.actions && this.props.actions.fetchCurations();
   }
 
   render() {
-    return <App curations={this.props.curations.curationsById} />;
+    const { curations } = this.props;
+    return <App curations={curations ? curations.curationsById : null} />;
   }
 }
 

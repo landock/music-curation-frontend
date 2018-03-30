@@ -8,5 +8,6 @@ export function getCurations() {
     .then(response => response.json())
     .then(body => {
       return { curationsById: body };
-    });
+    })
+    .catch(error => console.log(error));
 }
