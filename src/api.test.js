@@ -1,4 +1,4 @@
-import { getCurations } from '../api';
+import { getCurations } from './api';
 import fetchMock from 'fetch-mock';
 
 describe('getCurations function', () => {

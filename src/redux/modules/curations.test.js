@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
 import Immutable from 'seamless-immutable';
 
-import reducer, { types, actions } from '../curations';
+import reducer, { types, actions } from './curations';
 const middleware = [thunk];
 const mockStore = configureMockStore(middleware);
 

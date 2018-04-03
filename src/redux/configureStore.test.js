@@ -1,4 +1,4 @@
-import configureStore from '../configureStore';
+import configureStore from './configureStore';
 
 describe('configureStore', () => {
   it('should create a store object', () => {

@@ -1,15 +1,12 @@
 ---
-to: src/containers/<%= h.inflection.classify(name) %>/index.js
+to: src/containers/<%= name %>/index.js
 ---
-// @flow
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import { connect } from 'react-redux';
 import './<%= h.inflection.classify(name) %>.scss'
 
-type State = {};
-type Props = {};
-class <%= h.inflection.classify(name) %> extends Component<State, Props> {
+class <%= h.inflection.classify(name) %> extends Component {
 
 constructor(props) {
     super(props);

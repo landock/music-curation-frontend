@@ -1,3 +1,5 @@
+import '../components/TestTat/TestTat.story'
+import '../components/TestThis/TestThis.story'
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';

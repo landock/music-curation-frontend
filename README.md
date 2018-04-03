@@ -15,21 +15,39 @@ $ npm i -g @storybook/cli
 
 ### [TAB 1]
 ```
-$ nvm use 8.9.4
+$ nvm use 
 ```
 ### [TAB 2]
 React App runs on http://localhost:3000/
 ```
-$ nvm use 8.9.4 && yarn start
+$ nvm use && yarn start
 ```
 
 ### [TAB 3]
 Storybook runs on http://localhost:9009/
 ```
-$ nvm use 8.9.4 && yarn run storybook
+$ nvm use && yarn run storybook
 ```
 
 ### Testing
+We're using Jest + Enzyme: [Quck intro to testing React apps in Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html)
 ```
 $ yarn test
+```
+
+
+### Development  
+I added some tooling to generate Containers, Components, and Redux Modules. 
+
+From the commandline inside the project run the following commands to create the js, scss, and test files you initially need: 
+```
+container - hygen container new --name NewContainer
+```
+
+```
+module - hygen module new --name newModule --action NEW_MODULE_ACTION
+```
+
+```
+component - hygen component new --name newComponent
 ```
