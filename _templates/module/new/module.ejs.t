@@ -23,7 +23,7 @@ switch(action.type) {
 
 <% if (locals.actionName) { -%>
 // Action Creators
-export function get<%= h.pascalCase(name) %>() {
+function get<%= h.pascalCase(name) %>() {
     return { type: <%= uppercaseAction %> };
 }
 

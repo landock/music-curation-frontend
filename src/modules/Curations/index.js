@@ -12,6 +12,7 @@ const initialState = Immutable({});
 // Reducer
 function reducer(state = initialState, action = {}) {
   const immutableState = Immutable(state);
+  if (!action.payload) return immutableState;
   switch (action.type) {
     case CURATIONS_FETCHED:
       return immutableState.merge({

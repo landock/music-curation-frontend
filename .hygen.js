@@ -1,12 +1,11 @@
 var _ = require('lodash');
 module.exports = {
   helpers: {
-    pascalCase: function(s) {
-      let newString = s.slice(0);
-      newString = _.camelCase(newString);
-      newString = _.upperFirst(newString);
-      return newString;
-    },
+    pascalCase: s =>
+      _.chain(s)
+        .camelCase()
+        .upperFirst()
+        .value(),
     screamingSnakeCase: s =>
       _.chain(s)
         .snakeCase()

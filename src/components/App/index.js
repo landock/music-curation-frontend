@@ -11,11 +11,10 @@ export default class App extends Component {
       tracks = curations[0].tracks;
       curationName = curations[0].name;
     }
-    console.log(this.props);
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to Music Curation Apppppp</h1>
+          <h1 className="App-title">Music Curation</h1>
         </header>
         <h1>
           {`${curationName} - ${id}`}

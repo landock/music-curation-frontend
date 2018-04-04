@@ -10,7 +10,7 @@ exports[`AppContainer renders without crashing 1`] = `
     <h1
       className="App-title"
     >
-      Welcome to Music Curation Apppppp
+      Music Curation
     </h1>
   </header>
   <h1>
