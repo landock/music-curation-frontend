@@ -1,7 +1,7 @@
 ---
-to: src/components/<%= name %>/<%= name %>.story.js
+to: src/components/<%= h.pascalCase(name) %>/<%= h.pascalCase(name) %>.story.js
 ---
-<% const comp = h.inflection.classify(name) -%>
+<% const comp = h.pascalCase(name) -%>
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'

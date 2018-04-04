@@ -1,12 +1,13 @@
 ---
-to: src/containers/<%= name %>/index.js
+to: src/containers/<%= h.pascalCase(name) %>/index.js
 ---
+<% const container = h.pascalCase(name) -%>
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import { connect } from 'react-redux';
-import './<%= h.inflection.classify(name) %>.scss'
+import './<%= container %>.scss'
 
-class <%= h.inflection.classify(name) %> extends Component {
+class <%= container %> extends Component {
 
 constructor(props) {
     super(props);
@@ -27,4 +28,4 @@ function mapDispatchToProps(dispatch) {
   return {}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(<%= h.inflection.classify(name) %>)
+export default connect(mapStateToProps, mapDispatchToProps)(<%= container %>)

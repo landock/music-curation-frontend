@@ -1,12 +1,13 @@
 ---
-to: src/redux/modules/<%= name %>.test.js
+to: src/modules/<%= h.pascalCase(name) %>/<%= h.pascalCase(name) %>.test.js
 ---
-<% const comp = h.inflection.classify(name) %>import React from 'react'
+<% const module = h.pascalCase(name) %>
+import React from 'react'
 import renderer from 'react-test-renderer'
-import <%= comp %> from '.'
+import <%= module %> from '.'
 
-it('<%= comp %>: default', () => {
-  const component = renderer.create(<<%= comp %> />)
+it('<%= module %>: default', () => {
+  const component = renderer.create(<<%= module %> />)
   const tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })

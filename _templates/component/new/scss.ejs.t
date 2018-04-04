@@ -1,4 +1,4 @@
 ---
-to: src/components/<%= name %>/<%= name %>.scss
+to: src/components/<%= h.pascalCase(name) %>/<%= h.pascalCase(name) %>.scss
 ---
-//<%= h.inflection.classify(name) %>
+//<%= h.pascalCase(name) %>

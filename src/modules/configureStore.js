@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import curations from './modules/curations';
+import curations from '../modules/Curations';
 import history from '../history';
 
 const loggerMiddleware = createLogger(); // initialize log

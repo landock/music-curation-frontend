@@ -1,23 +1,22 @@
 ---
-to: src/components/<%= name %>/index.js
+to: src/components/<%= h.pascalCase(name) %>/index.js
 ---
-
-<% const comp = h.inflection.classify(name) -%>
+<% const comp = h.pascalCase(name) -%>
 <% if(locals.stateful) { -%>
 import React, { Component } from 'react'
 class <%= comp %> extends Component {
   render() {
-    return <div>edit me: at components/<%= name %>/index.js</div>
+    return <div>edit me: at components/<%= comp %>/index.js</div>
   }
 }
 <% } else if(locals.functional) { -%>
 import React from 'react'
-const <%= comp %> = props => <div>edit me: at components/<%= name %>/index.js</div>
+const <%= comp %> = props => <div>edit me: at components/<%= comp %>/index.js</div>
 <% } else { -%>
 import React, { PureComponent } from 'react'
 class <%= comp %> extends PureComponent {
   render() {
-    return <div>edit me: at components/<%= name %>/index.js</div>
+    return <div>edit me: at components/<%= comp %>/index.js</div>
   }
 }
 <% } -%>

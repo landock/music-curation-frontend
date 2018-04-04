@@ -1,12 +1,13 @@
 ---
-to: src/container/<%= name %>/<%= name %>.test.js
+to: src/containers/<%= h.pascalCase(name) %>/<%= h.pascalCase(name) %>.test.js
 ---
-<% const comp = h.inflection.classify(name) %>import React from 'react'
+<% const container = h.pascalCase(name) %>
+import React from 'react'
 import renderer from 'react-test-renderer'
-import <%= comp %> from '.'
+import <%= container %> from '.'
 
-it('<%= comp %>: default', () => {
-  const component = renderer.create(<<%= comp %> />)
+it('<%= container %>: default', () => {
+  const component = renderer.create(<<%= container %> />)
   const tree = component.toJSON()
   expect(tree).toMatchSnapshot()
 })

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { actions } from '../../redux/modules/curations';
+import { actions } from '../../modules/Curations';
 
 import './AppContainer.css';
-import App from '../../components/App';
+import App from '../../components/App/index';
 
 export class AppContainer extends Component {
   constructor(props) {

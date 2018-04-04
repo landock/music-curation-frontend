@@ -1,7 +1,8 @@
 ---
-to: src/components/<%= name %>/<%= name %>.test.js
+to: src/components/<%= h.pascalCase(name) %>/<%= h.pascalCase(name) %>.test.js
 ---
-<% const comp = h.inflection.classify(name) %>import React from 'react'
+<% const comp = h.pascalCase(name) %>
+import React from 'react'
 import renderer from 'react-test-renderer'
 import <%= comp %> from '.'
 
