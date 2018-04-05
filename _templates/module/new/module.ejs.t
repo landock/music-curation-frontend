@@ -12,15 +12,15 @@ const types = {
 <% } %>
 const initialState = Immutable({});
 // Reducer
-function reducer(state = initialState, action = {})
-switch(action.type) {
+function reducer(state = initialState, action = {}){
+  switch(action.type) {
     <% if (locals.actionName) { -%>
     case '<%= uppercaseAction %>':
       //do reducer stuff
     <% } -%>
     default: return state;
+  }
 }
-
 <% if (locals.actionName) { -%>
 // Action Creators
 function get<%= h.pascalCase(name) %>() {

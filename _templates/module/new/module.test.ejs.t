@@ -2,12 +2,16 @@
 to: src/modules/<%= h.pascalCase(name) %>/<%= h.pascalCase(name) %>.test.js
 ---
 <% const module = h.pascalCase(name) %>
-import React from 'react'
-import renderer from 'react-test-renderer'
-import <%= module %> from '.'
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import fetchMock from 'fetch-mock';
 
-it('<%= module %>: default', () => {
-  const component = renderer.create(<<%= module %> />)
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-})
+import reducer, { types, actions } from '.';
+const middleware = [thunk];
+const mockStore = configureMockStore(middleware);
+
+describe('<%= module %> Reducer', () => {
+  it('should return empty state object if undefined state passed in', () => {
+    expect(reducer(undefined, {})).toEqual({});
+  });
+});

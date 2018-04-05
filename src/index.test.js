@@ -1,11 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import stringify from 'json-stringify-safe';
 
-import Index from './index';
+beforeEach(() => {
+  document.body.innerHTML = '<div id="root"></div>';
+});
 
 it('renders without crashing', () => {
-  let stringifiedIndex = stringify(Index);
-  expect(stringifiedIndex).toMatchSnapshot();
+  let root = document.getElementById('root');
+
+  expect(root.innerHTML).toBeFalsy();
+
+  const index = require('./index');
+
+  console.log(root);
+  expect(root).toHaveProperty('_reactRootContainer');
 });

@@ -18,7 +18,7 @@ describe('configureStore', () => {
     const store = configureStore();
     expect(store.getState()).toEqual(
       expect.objectContaining({
-        curations: expect.any(Object),
+        Curations: expect.any(Object),
         router: expect.any(Object),
       })
     );

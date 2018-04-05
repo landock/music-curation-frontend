@@ -40,14 +40,32 @@ $ yarn test
 I added some tooling to generate Containers, Components, and Redux Modules. 
 
 From the commandline inside the project run the following commands to create the js, scss, and test files you initially need: 
+
 ```
-container - hygen container new --name NewContainer
+hygen component new --name NAME [--stateful] [--functional]
+
+Generates a React component, a storybook, a SCSS file, and a test.
+
+  NAME           The component name in kebab-case (required).
+  --stateful     Generate a stateful component (optional).
+  --functional   Generate a functional component (optional).
+
+If no flags given, will generate a PureComponent.
 ```
 
 ```
-module - hygen module new --name newModule --action NEW_MODULE_ACTION
+hygen container new --name [NAME]
+
+Generates a React container and a test.
+
+  NAME        The container name in kebab-case (required).
 ```
 
 ```
-component - hygen component new --name newComponent
+hygen module new --name [NAME] --action [ACTION]
+
+Generates a Redux module (using ducks pattern) and a test.
+
+  NAME        The module name in kebab-case (required).
+  ACTION      An action name in kebab-case (optional).
 ```

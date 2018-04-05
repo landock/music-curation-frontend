@@ -20,5 +20,5 @@ export default ReactDOM.render(
       <Route path="/" component={AppContainer} />
     </ConnectedRouter>
   </Provider>,
-  document.getElementById('root') || document.createElement('div')
+  document.getElementById('root')
 );

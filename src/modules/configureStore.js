@@ -2,15 +2,15 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import curations from '../modules/Curations';
 import history from '../history';
+import Curations from '../modules/Curations';
 
 const loggerMiddleware = createLogger(); // initialize log
 const middleware = routerMiddleware(history);
 
 const reducer = combineReducers({
   router: routerReducer,
-  curations,
+  Curations,
 });
 
 const createStoreWithMiddleware = (reducer, initialState = {}) => {
