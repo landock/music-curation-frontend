@@ -6,5 +6,3 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import '../components/App/App.story';
-
-import '../components/JamesMilani/JamesMilani.story'

@@ -54,18 +54,20 @@ If no flags given, will generate a PureComponent.
 ```
 
 ```
-hygen container new --name [NAME]
+hygen container new --name NAME
 
 Generates a React container and a test.
 
-  NAME        The container name in kebab-case (required).
+  NAME          The container name in kebab-case (required).
 ```
 
 ```
-hygen module new --name [NAME] --action [ACTION]
+hygen module new --name NAME --action ACTION
 
-Generates a Redux module (using ducks pattern) and a test.
+Generates a Redux module that bundles reducers, action types, and actions, as well as a test file.
 
-  NAME        The module name in kebab-case (required).
-  ACTION      An action name in kebab-case (optional).
+  NAME          The module name in kebab-case (required).
+  ACTION        An action name in kebab-case (optional).
+
+We're using the Ducks proposal as a reference - https://github.com/erikras/ducks-modular-redux
 ```

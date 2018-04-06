@@ -1,6 +1,6 @@
 ---
 message: |
-  hygen {bold module new} --name [NAME] --action [ACTION]
+  hygen {bold module new} --name {bold NAME} --action {bold ACTION}
 
   Generates a Redux module (using ducks pattern) and a test.
 

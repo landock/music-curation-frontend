@@ -1,6 +1,6 @@
 ---
 message: |
-  hygen {bold container new} --name [NAME] 
+  hygen {bold container new} --name {bold NAME} 
 
   Generates a React container and a test.
 

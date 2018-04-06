@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders without crashing 1`] = `
+exports[`App Component renders without crashing 1`] = `
 <div
   className="App"
 >
@@ -13,16 +13,8 @@ exports[`renders without crashing 1`] = `
       Music Curation
     </h1>
   </header>
-  <h1>
-    undefined - undefined
-    <img
-      src={undefined}
-      style={
-        Object {
-          "height": "120px",
-        }
-      }
-    />
-  </h1>
+  <p>
+    No Curations Found
+  </p>
 </div>
 `;

@@ -14,7 +14,7 @@ export class AppContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.actions && this.props.actions.fetchCurations();
+    return this.props.actions && this.props.actions.fetchCurations();
   }
 
   render() {
@@ -25,7 +25,7 @@ export class AppContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    curations: state.curations,
+    curations: state.Curations,
   };
 }
 
