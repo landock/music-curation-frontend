@@ -1,16 +1,28 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import { Provider } from 'react-redux';
+
+import configureMockStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
+import thunk from 'redux-thunk';
 
 import App from './index';
 
 describe('App Component', () => {
-  let component;
+  let component, mockStore, store;
   beforeEach(() => {
     component = shallow(<App />);
+    mockStore = configureMockStore([thunk]);
   });
   it('renders without crashing', () => {
-    let tree = renderer.create(<App />).toJSON();
+    let store = mockStore({});
+    let tree = renderer
+      .create(
+        <Provider store={store}>
+          <App />
+        </Provider>
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
@@ -55,10 +67,5 @@ describe('App Component', () => {
 
     expect(component.contains(curationMarkup));
     expect(component.contains(trackMarkup));
-  });
-
-  it('should render placeholder message if no curations are passed as props', () => {
-    const placeholderMarkup = <p>No Curations Found</p>;
-    expect(component.contains(placeholderMarkup)).toBe(true);
   });
 });

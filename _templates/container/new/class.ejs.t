@@ -4,10 +4,10 @@ to: src/containers/<%= h.pascalCase(name) %>/index.js
 <% const container = h.pascalCase(name) -%>
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import './<%= container %>.scss'
 
-class <%= container %> extends Component {
+export class <%= container %> extends Component {
 
 constructor(props) {
     super(props);

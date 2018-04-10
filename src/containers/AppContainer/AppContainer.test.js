@@ -2,24 +2,24 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 import { AppContainer } from './index';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
+
+import configureMockStore from 'redux-mock-store';
 import fetchMock from 'fetch-mock';
 
 describe('AppContainer', () => {
   let component;
 
   it('renders without crashing', () => {
-    component = renderer.create(<AppContainer />);
+    let mockStore = configureMockStore([thunk]);
+    let store = mockStore({});
+    component = renderer.create(
+      <Provider store={store}>
+        <AppContainer />
+      </Provider>
+    );
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
-  });
-
-  it('should dispatch fetchCurations when mounted', () => {
-    const fetchCurationsMock = jest.fn();
-    fetchCurationsMock.mockReturnValue({ curationsById: ['1'] });
-
-    let mockActions = { fetchCurations: fetchCurationsMock };
-
-    component = mount(<AppContainer actions={mockActions} />);
-    expect(fetchCurationsMock).toHaveBeenCalled();
   });
 });

@@ -6,3 +6,5 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import '../components/App/App.story';
+
+import '../components/CurationsCollection/CurationsCollection.story'

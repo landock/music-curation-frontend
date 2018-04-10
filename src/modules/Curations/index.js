@@ -7,16 +7,14 @@ const types = {
   CURATIONS_FETCHED,
 };
 
-const initialState = Immutable({});
-
 // Reducer
-function reducer(state = initialState, action = {}) {
+function reducer(state = {}, action = {}) {
   const immutableState = Immutable(state);
   if (!action.payload) return immutableState;
   switch (action.type) {
     case CURATIONS_FETCHED:
       return immutableState.merge({
-        curationsById: action.payload.curationsById,
+        curations: action.payload,
       });
     default:
       return immutableState;

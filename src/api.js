@@ -6,9 +6,6 @@ export function getCurations() {
 
   return fetch(url)
     .then(response => response.json())
-    .then(body => {
-      return { curationsById: body };
-    })
     .catch(error => {
       console.log(error);
       return { error: error };

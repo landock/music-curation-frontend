@@ -1,7 +1,7 @@
 import history from './history';
 
 it('should create a singleton object with this shape', () => {
-  expect(history).toMatchObject({
+  const expectedHistoryObject = {
     length: expect.any(Number),
     action: expect.any(String),
     location: expect.any(Object),
@@ -13,5 +13,7 @@ it('should create a singleton object with this shape', () => {
     goForward: expect.any(Function),
     block: expect.any(Function),
     listen: expect.any(Function),
-  });
+  };
+
+  expect(history).toMatchObject(expectedHistoryObject);
 });
