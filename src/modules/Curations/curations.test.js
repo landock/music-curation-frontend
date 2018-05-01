@@ -18,7 +18,7 @@ describe('Curations Reducer', () => {
 
     const reducedState = reducer(initialState, {});
 
-    expect(reducedState).toEqual({ test: 'Waddup' });
+    expect(reducedState).toEqual(initialState);
     expect(Immutable.isImmutable(reducedState)).toBe(true);
     expect(Immutable.isImmutable(initialState)).toBe(false);
   });

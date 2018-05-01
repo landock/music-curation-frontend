@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PublicationStatusEditor: default 1`] = `
+<div>
+  edit me: at components/PublicationStatusEditor/index.js
+</div>
+`;

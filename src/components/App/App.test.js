@@ -26,11 +26,6 @@ describe('App Component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('renders welcome message', () => {
-    const welcome = <h1 className="App-title">Music Curation</h1>;
-    expect(component.contains(welcome)).toBe(true);
-  });
-
   it('should render shit if curations prop exists', () => {
     let name = 'Test fuckin Name';
     let id = '11';

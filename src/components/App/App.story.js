@@ -1,4 +1,9 @@
 import React from 'react';
+
+import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
+
+import thunk from 'redux-thunk';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
@@ -19,5 +24,17 @@ const curations = [
     name: 'story testing',
   },
 ];
-storiesOf('App', module).add('default', () => <App curations={curations} />);
-storiesOf('App', module).add('no props', () => <App curations={null} />);
+
+const mockStore = configureMockStore([thunk]);
+const store = mockStore({ Curations: curations });
+
+storiesOf('App', module)
+  .addDecorator(story => {
+    return <Provider store={store}>{story()}</Provider>;
+  })
+  .add('default', () => <App curations={curations} />);
+storiesOf('App', module)
+  .addDecorator(story => {
+    return <Provider store={store}>{story()}</Provider>;
+  })
+  .add('no props', () => <App curations={null} />);

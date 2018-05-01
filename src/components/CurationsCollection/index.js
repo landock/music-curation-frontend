@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Curation from '../Curation';
 
 class CurationsCollection extends Component {
   render() {
@@ -7,27 +8,12 @@ class CurationsCollection extends Component {
       curations && curations.curations && curations.curations[0];
     const curationsMarkup = hasCurations ? (
       curations.curations.map(curation => (
-        <div key={curation.id}>
-          <h1>
-            {`${curation.name} - ${curation.id}`}
-            <img style={{ height: '120px' }} src={curation.imageUrl} />
-          </h1>
-          {curation.tracks &&
-            curation.tracks.map(track => {
-              return (
-                <div key={track.id}>
-                  <img style={{ height: '120px' }} src={track.imageUrl} />
-                  <p>{`${track.artistName} - ${track.trackName}`}</p>
-                </div>
-              );
-            })}
-        </div>
+        <Curation key={curation.id} curation={curation} />
       ))
     ) : (
       <p>No Curations Found</p>
     );
 
-    debugger;
     return curationsMarkup;
   }
 }

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultCard: default 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+    }
+  }
+>
+  <img
+    src={undefined}
+    style={
+      Object {
+        "height": "150px",
+      }
+    }
+  />
+  <div>
+    <h4>
+      <button>
+        add to curation
+      </button>
+    </h4>
+    <p />
+    <p>
+      <span>
+         no labels 
+      </span>
+    </p>
+    <p />
+    <div>
+      <button>
+        tags
+      </button>
+      <button>
+        Add to
+      </button>
+    </div>
+  </div>
+</div>
+`;

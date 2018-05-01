@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurationScheduler: default 1`] = `
+<section>
+  <div>
+    <span>
+      UPdated:
+    </span>
+    <button>
+      Save Curations
+    </button>
+    <select>
+      <option>
+        Draft
+      </option>
+      <option>
+        Published
+      </option>
+    </select>
+  </div>
+  <div>
+    <span>
+      Schedule:
+    </span>
+    <input
+      id="date-start"
+      type="date"
+      valueAsDate={true}
+    />
+    <input
+      id="date-end"
+      type="date"
+      valueAsDate={true}
+    />
+  </div>
+  <div>
+    <span>
+      Recommended Time Slot
+    </span>
+    <input
+      id="date-start"
+      max="24"
+      min="0"
+      step="1"
+      type="range"
+    />
+  </div>
+  <div>
+    <span>
+      Environment
+    </span>
+    <select>
+      <option>
+        Production
+      </option>
+      <option>
+        Development
+      </option>
+    </select>
+  </div>
+</section>
+`;

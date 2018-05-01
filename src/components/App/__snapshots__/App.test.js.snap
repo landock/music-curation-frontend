@@ -7,11 +7,97 @@ exports[`App Component renders without crashing 1`] = `
   <header
     className="App-header"
   >
-    <h1
-      className="App-title"
+    <div
+      style={
+        Object {
+          "background": "#fff",
+          "height": "50px",
+          "width": "100%",
+        }
+      }
     >
-      Music Curation
-    </h1>
+      <img
+        src="logo.svg"
+        width="100"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#354244",
+          "display": "flex",
+          "height": "100px",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <input
+        placeholder="Search Curations"
+        style={
+          Object {
+            "fontSize": "50%",
+            "height": "25px",
+            "padding": "5px",
+            "width": "50%",
+          }
+        }
+        type="text"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "background": "black",
+          "height": "150px",
+          "width": "100%",
+        }
+      }
+    >
+      <div>
+        <label>
+          Environment
+        </label>
+        <select />
+      </div>
+      <div>
+        <label>
+          Status
+        </label>
+        <select />
+      </div>
+      <div>
+        <span>
+          Tags 
+        </span>
+        <span
+          style={
+            Object {
+              "background": "red",
+              "color": "white",
+              "display": "inline-block",
+              "margin": "5px",
+              "padding": "5px",
+            }
+          }
+        >
+          what
+        </span>
+        <span
+          style={
+            Object {
+              "background": "red",
+              "color": "white",
+              "display": "inline-block",
+              "margin": "5px",
+              "padding": "5px",
+            }
+          }
+        >
+          when
+        </span>
+      </div>
+    </div>
   </header>
   <p>
     No Curations Found
