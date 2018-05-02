@@ -3,7 +3,7 @@ class Curation extends Component {
   render() {
     const { curation } = this.props;
     return (
-      <div key={curation.id}>
+      <div style={{ flex: '2', textAlign: 'left' }} key={curation.id}>
         <img
           style={{ height: '120px', display: 'inline-block' }}
           src={curation.imageUrl}

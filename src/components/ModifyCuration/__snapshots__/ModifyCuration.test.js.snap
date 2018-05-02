@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModifyCuration: default 1`] = `
+<ul
+  style={
+    Object {
+      "listStyle": "none",
+    }
+  }
+>
+  <li>
+    <button>
+      Edit
+    </button>
+  </li>
+  <li>
+    <button>
+      Delete
+    </button>
+  </li>
+  <li>
+    <button>
+      Duplicate
+    </button>
+  </li>
+</ul>
+`;

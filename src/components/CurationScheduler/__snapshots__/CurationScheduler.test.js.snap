@@ -25,12 +25,10 @@ exports[`CurationScheduler: default 1`] = `
     <input
       id="date-start"
       type="date"
-      valueAsDate={true}
     />
     <input
       id="date-end"
       type="date"
-      valueAsDate={true}
     />
   </div>
   <div>

@@ -14,3 +14,11 @@ import '../components/PublicationStatusEditor/PublicationStatusEditor.story'
 import '../components/CurationScheduler/CurationScheduler.story'
 
 import '../components/SearchResultCard/SearchResultCard.story'
+
+import '../components/ModifyCuration/ModifyCuration.story'
+
+import '../components/AddTags/AddTags.story'
+
+import '../components/AddToCuration/AddToCuration.story'
+
+import '../components/FilterMenu/FilterMenu.story'

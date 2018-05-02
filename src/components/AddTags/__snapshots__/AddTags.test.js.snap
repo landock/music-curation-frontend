@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTags: default 1`] = `
+<div>
+  <p>
+    Add tags
+  </p>
+  <span>
+    No tags
+  </span>
+</div>
+`;

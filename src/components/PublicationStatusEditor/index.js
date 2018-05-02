@@ -9,11 +9,20 @@ function PublicationStatusEditor({
   published,
 }) {
   return (
-    <div>
-      <p>Status: {published ? 'Scheduled' : 'Draft'}</p>
-      <p>Updated: {updated_at}</p>
-      <p>Scheduled: {created_at}</p>
-      <p>Expires: {scheduled_at}</p>
+    <div style={{ textAlign: 'left', flex: '1' }}>
+      <button>Modify curation</button>
+      <p>
+        <strong>Status:</strong> {published ? 'Published' : 'Draft'}
+      </p>
+      <p>
+        <strong>Updated:</strong> {updated_at}
+      </p>
+      <p>
+        <strong>Scheduled:</strong> {created_at}
+      </p>
+      <p>
+        <strong>Expires:</strong> {scheduled_at}
+      </p>
       <div>
         <p>Exists in: </p>
         <p>

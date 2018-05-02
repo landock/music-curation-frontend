@@ -65,7 +65,10 @@ describe('CurationsCollection', () => {
     let expectedText = `Tracks: ${trackName}`;
     component = mount(<CurationsCollection curations={testCurations} />);
 
-    const componentText = component.find('p').text();
+    const componentText = component
+      .find('p')
+      .text()
+      .trim();
 
     expect(componentText).toEqual(expectedText);
   });

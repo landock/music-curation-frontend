@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddToCuration: default 1`] = `
+<div>
+  <span>
+    Add to:
+  </span>
+  <div>
+    <input
+      placeholder="Search"
+      type="search"
+    />
+  </div>
+  <p>
+    No curations available
+  </p>
+</div>
+`;
