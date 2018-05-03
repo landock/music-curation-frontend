@@ -11,6 +11,7 @@ import AppContainer from './containers/AppContainer';
 import history from './history';
 
 import './index.css';
+import 'semantic-ui-css/semantic.min.css';
 
 const store = configureStore();
 

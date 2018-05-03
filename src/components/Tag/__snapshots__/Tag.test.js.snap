@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag: default 1`] = `
+<span
+  style={
+    Object {
+      "background": "red",
+      "color": "white",
+      "display": "inline-block",
+      "margin": "5px",
+      "padding": "5px",
+    }
+  }
+>
+  test
+</span>
+`;

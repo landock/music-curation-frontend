@@ -1,32 +1,38 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+
+import { Input, Button, Select } from 'semantic-ui-react';
+
 class CurationScheduler extends PureComponent {
   render() {
+    const selectOptions = [
+      { value: 'draft', text: 'Draft' },
+      { value: 'published', text: 'Published' },
+    ];
+    const otherSelectOptions = [
+      { value: 'production', text: 'Production' },
+      { value: 'development', text: 'Development' },
+    ];
+
     return (
       <section>
         <div>
           <span>UPdated:</span>
-          <button>Save Curations</button>
-          <select>
-            <option>Draft</option>
-            <option>Published</option>
-          </select>
+          <Button color="red">Save Curations</Button>
+          <Select options={selectOptions} />
         </div>
         <div>
           <span>Schedule:</span>
-          <input id="date-start" type="date" />
-          <input id="date-end" type="date" />
+          <Input id="date-start" type="date" />
+          <Input id="date-end" type="date" />
         </div>
         <div>
           <span>Recommended Time Slot</span>
-          <input id="date-start" type="range" min="0" max="24" step="1" />
+          <Input id="date-start" type="range" min="0" max="24" step="1" />
         </div>
         <div>
           <span>Environment</span>
-          <select>
-            <option>Production</option>
-            <option>Development</option>
-          </select>
+          <Select options={otherSelectOptions} />
         </div>
       </section>
     );

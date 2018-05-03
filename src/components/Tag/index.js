@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Label } from 'semantic-ui-react';
 
-function Tag({data}){
-
-    return <span style={{background: 'red', color: 'white', display: 'inline-block', margin: '5px', padding: '5px'}}>{data.title}</span>
+function Tag({ data }) {
+  return (
+    <Label style={{ marginBottom: '1%' }} color="red">
+      {data.title}
+    </Label>
+  );
 }
 
-export default Tag
-
+export default Tag;

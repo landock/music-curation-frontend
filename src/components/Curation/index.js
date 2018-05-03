@@ -1,37 +1,24 @@
 import React, { Component } from 'react';
+import { Item } from 'semantic-ui-react';
 class Curation extends Component {
   render() {
     const { curation } = this.props;
     return (
-      <div style={{ flex: '2', textAlign: 'left' }} key={curation.id}>
-        <img
-          style={{ height: '120px', display: 'inline-block' }}
-          src={curation.imageUrl}
-        />
-        <div style={{ display: 'inline-block' }}>
-          <span className="curation-name">{curation.name} </span>
-
-          <p>
-            Tracks:
+      <Item>
+        <Item.Image size="small" src={curation.imageUrl} />
+        <Item.Content>
+          <Item.Header>{curation.name}</Item.Header>
+          <Item.Description>
+            Tracks:{' '}
             {curation.tracks &&
-              curation.tracks.map(track => {
-                return (
-                  <span
-                    style={{
-                      background: '#ccc',
-                      margin: '2px',
-                      padding: '3px',
-                    }}
-                    key={track.id}
-                  >
-                    {' '}
-                    {track.trackName}{' '}
-                  </span>
-                );
-              })}
-          </p>
-        </div>
-      </div>
+              curation.tracks
+                .map(track => {
+                  return track.trackName;
+                })
+                .join(', ')}
+          </Item.Description>
+        </Item.Content>
+      </Item>
     );
   }
 }

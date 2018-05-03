@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Curation from '../Curation';
 import PublicationStatusEditor from '../PublicationStatusEditor';
+import { Item, Grid } from 'semantic-ui-react';
 
 class CurationsCollection extends Component {
   render() {
@@ -9,23 +10,37 @@ class CurationsCollection extends Component {
       curations && curations.curations && curations.curations[0];
     const curationsMarkup = hasCurations ? (
       curations.curations.map(curation => (
-        <div key={curation.id} style={{ display: 'flex' }}>
-          <Curation curation={curation} />
-          <PublicationStatusEditor
-            {...{
-              created_at: '2018-04-30T22:09:50.997Z',
-              updated_at: '2018-04-30T22:09:50.997Z1',
-              scheduled_at: '2018-04-30T22:09:50.997Z',
-              environment: ['development'],
-            }}
-          />
-        </div>
+        <Grid.Row>
+          <Grid.Column>
+            <Item.Group>
+              <Curation curation={curation} />
+            </Item.Group>
+          </Grid.Column>
+          <Grid.Column>
+            <PublicationStatusEditor
+              {...{
+                created_at: '2018-04-30T22:09:50.997Z',
+                updated_at: '2018-04-30T22:09:50.997Z1',
+                scheduled_at: '2018-04-30T22:09:50.997Z',
+                environment: ['development'],
+              }}
+            />
+          </Grid.Column>
+        </Grid.Row>
       ))
     ) : (
-      <p>No Curations Found</p>
+      <Grid.Row>
+        <Grid.Column>
+          <p>No Curations Found</p>
+        </Grid.Column>{' '}
+      </Grid.Row>
     );
 
-    return curationsMarkup;
+    return (
+      <Grid columns={2} divided>
+        {curationsMarkup}
+      </Grid>
+    );
   }
 }
 

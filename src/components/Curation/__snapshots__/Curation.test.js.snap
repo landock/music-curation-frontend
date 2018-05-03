@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Curation: default 1`] = `
+<div
+  style={
+    Object {
+      "flex": "2",
+      "textAlign": "left",
+    }
+  }
+>
+  <img
+    src="http://lorempixel.com/640/480/abstract"
+    style={
+      Object {
+        "display": "inline-block",
+        "height": "120px",
+      }
+    }
+  />
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <span
+      className="curation-name"
+    >
+      Tasty Soft Pizza
+       
+    </span>
+    <p>
+      Tracks:
+      <span
+        style={
+          Object {
+            "background": "#ccc",
+            "margin": "2px",
+            "padding": "3px",
+          }
+        }
+      >
+         
+        parallelism tan
+         
+      </span>
+      <span
+        style={
+          Object {
+            "background": "#ccc",
+            "margin": "2px",
+            "padding": "3px",
+          }
+        }
+      >
+         
+        Fantastic South Dakota
+         
+      </span>
+    </p>
+  </div>
+</div>
+`;
