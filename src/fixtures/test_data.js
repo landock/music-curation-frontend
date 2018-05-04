@@ -6,6 +6,6 @@ const curations = {
   curations: testUtils.n(testUtils.createCuration, faker.random.number(10)),
 };
 const tag = testUtils.createTag();
-const tags = testUtils.n(testUtils.createTag, faker.random.number(10));
+const tags = testUtils.n(testUtils.createTag, faker.random.number(50));
 
 export { curation, curations, tag, tags };

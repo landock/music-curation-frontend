@@ -9,13 +9,16 @@ class Curation extends Component {
         <Item.Content>
           <Item.Header>{curation.name}</Item.Header>
           <Item.Description>
-            Tracks:{' '}
-            {curation.tracks &&
-              curation.tracks
-                .map(track => {
-                  return track.trackName;
-                })
-                .join(', ')}
+            <p>{curation.description}</p>
+            <strong>Tracks:</strong>{' '}
+            <em>
+              {curation.tracks &&
+                curation.tracks
+                  .map(track => {
+                    return track.trackName;
+                  })
+                  .join(', ')}
+            </em>
           </Item.Description>
         </Item.Content>
       </Item>

@@ -6,12 +6,12 @@ class AddToCuration extends PureComponent {
   render() {
     const menuItems = this.props.curations ? (
       this.props.curations.map((curation, index) => (
-        <Menu.Item name={curation} key={index}>
+        <Menu.Item key={index} name={curation}>
           <Checkbox label={curation} value={curation} />
         </Menu.Item>
       ))
     ) : (
-      <p>No curations available</p>
+      <Menu.Item content="No curations available" />
     );
     return (
       <Menu text vertical>
@@ -20,7 +20,7 @@ class AddToCuration extends PureComponent {
           Add to
         </Menu.Header>
         <Menu.Item>
-          <Input icon="search" type="search" placeholder="Search" />
+          <Input icon="search" placeholder="Search" />
         </Menu.Item>
         {menuItems}
       </Menu>

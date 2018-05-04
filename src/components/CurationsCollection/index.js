@@ -10,7 +10,7 @@ class CurationsCollection extends Component {
       curations && curations.curations && curations.curations[0];
     const curationsMarkup = hasCurations ? (
       curations.curations.map(curation => (
-        <Grid.Row>
+        <Grid.Row key={curation.id}>
           <Grid.Column>
             <Item.Group>
               <Curation curation={curation} />

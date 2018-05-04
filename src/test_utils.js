@@ -27,21 +27,18 @@ function createCuration() {
   return {
     id: faker.random.number(1000),
     imageUrl: faker.image.image(),
-    tracks: [
-      {
-        id: faker.random.number(),
-        imageUrl: faker.image.image(),
-        artistName: faker.name.findName(),
-        trackName: faker.random.words(),
-      },
-      {
-        id: faker.random.number(),
-        imageUrl: faker.image.image(),
-        artistName: faker.name.findName(),
-        trackName: faker.random.words(),
-      },
-    ],
+    description: faker.hacker.phrase(),
+    tracks: n(createTrack, 12),
     name: faker.fake('{{commerce.productAdjective}} {{address.streetName}}'),
+  };
+}
+
+function createTrack() {
+  return {
+    id: faker.random.number(),
+    imageUrl: faker.image.image(),
+    artistName: faker.name.findName(),
+    trackName: faker.random.words(),
   };
 }
 

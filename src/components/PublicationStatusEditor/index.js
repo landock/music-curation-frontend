@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ModifyCuration from '../ModifyCuration';
+import { Popup, Icon, Button, Grid } from 'semantic-ui-react';
 
 function PublicationStatusEditor({
+  id,
   created_at,
   updated_at,
   scheduled_at,
@@ -9,27 +12,39 @@ function PublicationStatusEditor({
   published,
 }) {
   return (
-    <div style={{ textAlign: 'left', flex: '1' }}>
-      <button>Modify curation</button>
-      <p>
-        <strong>Status:</strong> {published ? 'Published' : 'Draft'}
-      </p>
-      <p>
-        <strong>Updated:</strong> {updated_at}
-      </p>
-      <p>
-        <strong>Scheduled:</strong> {created_at}
-      </p>
-      <p>
-        <strong>Expires:</strong> {scheduled_at}
-      </p>
-      <div>
-        <p>Exists in: </p>
+    <Grid>
+      <Grid.Column floated="left" width={14}>
         <p>
-          {environment.map((env, index) => <span key={index}> {env} </span>)}
+          <strong>Status:</strong> {published ? 'Published' : 'Draft'}
         </p>
-      </div>
-    </div>
+        <p>
+          <strong>Updated:</strong> {updated_at}
+        </p>
+        <p>
+          <strong>Scheduled:</strong> {created_at}
+        </p>
+        <p>
+          <strong>Expires:</strong> {scheduled_at}
+        </p>
+        <div>
+          <p>Exists in: </p>
+          <p>
+            {environment.map((env, index) => <span key={index}> {env} </span>)}
+          </p>
+        </div>
+      </Grid.Column>
+      <Grid.Column floated="right" width={2}>
+        <Popup
+          trigger={
+            <Icon style={{ cursor: 'pointer' }} name="ellipsis vertical" />
+          }
+          content={<ModifyCuration id={id} />}
+          on="click"
+          position="bottom right"
+          verticalOffset={10}
+        />
+      </Grid.Column>
+    </Grid>
   );
 }
 

@@ -5,11 +5,11 @@ import { Input, Button, Select } from 'semantic-ui-react';
 
 class CurationScheduler extends PureComponent {
   render() {
-    const selectOptions = [
+    const statusOptions = [
       { value: 'draft', text: 'Draft' },
       { value: 'published', text: 'Published' },
     ];
-    const otherSelectOptions = [
+    const environmentOptions = [
       { value: 'production', text: 'Production' },
       { value: 'development', text: 'Development' },
     ];
@@ -17,9 +17,9 @@ class CurationScheduler extends PureComponent {
     return (
       <section>
         <div>
-          <span>UPdated:</span>
+          <span>Updated:</span>
           <Button color="red">Save Curations</Button>
-          <Select options={selectOptions} />
+          <Select options={statusOptions} />
         </div>
         <div>
           <span>Schedule:</span>
@@ -32,7 +32,7 @@ class CurationScheduler extends PureComponent {
         </div>
         <div>
           <span>Environment</span>
-          <Select options={otherSelectOptions} />
+          <Select options={environmentOptions} />
         </div>
       </section>
     );
