@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import TagCollection from '../TagCollection';
-import { Header } from 'semantic-ui-react';
+import { Header, Icon } from 'semantic-ui-react';
 class AddTags extends PureComponent {
   render() {
     return (
       <div>
-        <Header as="h5" icon="tags" content="Tags" />
+        <Header as="h5" content="Tags" />
         <div>
           <p>Add Tags</p>
           <TagCollection tags={this.props.tags} />

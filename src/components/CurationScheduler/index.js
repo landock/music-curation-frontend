@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import { Input, Button, Select } from 'semantic-ui-react';
+import './CurationScheduler.css';
 
 class CurationScheduler extends PureComponent {
   render() {
@@ -17,21 +18,31 @@ class CurationScheduler extends PureComponent {
     return (
       <section>
         <div>
-          <span>Updated:</span>
+          <label>Updated:</label>
           <Button color="red">Save Curations</Button>
           <Select options={statusOptions} />
         </div>
         <div>
-          <span>Schedule:</span>
-          <Input id="date-start" type="date" />
-          <Input id="date-end" type="date" />
+          <label>Schedule:</label>
+          <Input
+            icon="calendar outline"
+            iconPosition="left"
+            id="date-start"
+            type="date"
+          />
+          <Input
+            icon="calendar outline"
+            iconPosition="left"
+            id="date-end"
+            type="date"
+          />
         </div>
         <div>
-          <span>Recommended Time Slot</span>
+          <label>Recommended Time Slot</label>
           <Input id="date-start" type="range" min="0" max="24" step="1" />
         </div>
         <div>
-          <span>Environment</span>
+          <label>Environment</label>
           <Select options={environmentOptions} />
         </div>
       </section>

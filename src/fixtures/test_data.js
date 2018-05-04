@@ -8,4 +8,6 @@ const curations = {
 const tag = testUtils.createTag();
 const tags = testUtils.n(testUtils.createTag, faker.random.number(50));
 
-export { curation, curations, tag, tags };
+const tracks = testUtils.n(testUtils.createTrack, 10);
+
+export { curation, curations, tag, tags, tracks };

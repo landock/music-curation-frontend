@@ -26,7 +26,7 @@ function createPublicationStatus() {
 function createCuration() {
   return {
     id: faker.random.number(1000),
-    imageUrl: faker.image.image(),
+    imageUrl: 'http://fpoimg.com/200x200',
     description: faker.hacker.phrase(),
     tracks: n(createTrack, 12),
     name: faker.fake('{{commerce.productAdjective}} {{address.streetName}}'),
@@ -36,10 +36,12 @@ function createCuration() {
 function createTrack() {
   return {
     id: faker.random.number(),
-    imageUrl: faker.image.image(),
+    imageUrl: 'http://fpoimg.com/100x100',
     artistName: faker.name.findName(),
     trackName: faker.random.words(),
+    durationInSeconds: faker.random.number(20000),
+    recordLabels: n(faker.company.companyName, 4),
   };
 }
 
-export { n, createTag, createCuration };
+export { n, createTag, createCuration, createTrack };

@@ -13,7 +13,7 @@ function PublicationStatusEditor({
 }) {
   return (
     <Grid>
-      <Grid.Column floated="left" width={14}>
+      <Grid.Column width={13}>
         <p>
           <strong>Status:</strong> {published ? 'Published' : 'Draft'}
         </p>
@@ -33,7 +33,7 @@ function PublicationStatusEditor({
           </p>
         </div>
       </Grid.Column>
-      <Grid.Column floated="right" width={2}>
+      <Grid.Column floated="right" width={3}>
         <Popup
           trigger={
             <Icon style={{ cursor: 'pointer' }} name="ellipsis vertical" />

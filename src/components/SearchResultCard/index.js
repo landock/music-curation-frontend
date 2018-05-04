@@ -1,37 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Item, Menu, Icon, Button, Popup } from 'semantic-ui-react';
+
+import AddTags from '../AddTags';
+import AddToCuration from '../AddToCuration';
+
 function SearchResultCard({
   trackName,
   artistName,
+  iconName,
   durationInSeconds,
   imageUrl,
   streamUrl,
   recordLabels,
+  curations,
 }) {
   return (
-    <div style={{ display: 'flex' }}>
-      <img style={{ height: '150px' }} src={imageUrl} />
-      <div>
-        <h4>
+    <Item>
+      <Item.Image size="tiny" src={imageUrl} />
+      <Item.Content>
+        <Item.Header as="a">
           {trackName}
-          <button>add to curation</button>
-        </h4>
-        <p>{artistName}</p>
-        <p>
+          <Icon name={iconName || 'plus'} />
+        </Item.Header>
+        <Item.Description>{artistName}</Item.Description>
+        <Item.Extra>
           {recordLabels ? (
-            recordLabels.map((label, index) => <span key={index}>{label}</span>)
+            <span>{recordLabels.join(', ')}</span>
           ) : (
             <span> no labels </span>
           )}
-        </p>
-        <p>{durationInSeconds}</p>
-        <div>
-          <button>tags</button>
-          <button>Add to</button>
-        </div>
-      </div>
-    </div>
+          <p>{durationInSeconds}</p>
+        </Item.Extra>
+        <Popup
+          trigger={
+            <Icon style={{ cursor: 'pointer' }} size="small" name="tags" />
+          }
+          content={<AddTags />}
+          on="click"
+          position="top right"
+          verticalOffset={-100}
+          horizontalOffset={90}
+          basic
+        />
+        <Popup
+          trigger={<Icon name="share" style={{ cursor: 'pointer' }} />}
+          content={<AddToCuration curations={curations} />}
+          on="click"
+          position="bottom right"
+          verticalOffset={-133}
+          horizontalOffset={-20}
+          basic
+        />
+      </Item.Content>
+    </Item>
   );
 }
 

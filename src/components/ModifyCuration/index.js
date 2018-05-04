@@ -10,7 +10,6 @@ class ModifyCuration extends PureComponent {
           <Icon name="write" />
           Edit
         </Menu.Item>
-
         <Menu.Item name="Delete">
           <Icon name="trash" />
           Delete

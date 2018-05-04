@@ -31,3 +31,7 @@ import '../components/CurationFilterSubHeader/CurationFilterSubHeader.story'
 import '../components/SearchResultFilterSubHeader/SearchResultFilterSubHeader.story'
 
 import '../components/BulkCurationEditor/BulkCurationEditor.story'
+
+import '../components/SearchResultCollection/SearchResultCollection.story'
+
+import '../components/EditCuration/EditCuration.story'

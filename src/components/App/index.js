@@ -4,26 +4,19 @@ import logo from '../../img/logo.svg';
 import CurationsContainer from '../../containers/CurationsContainer';
 import CurationSearchBar from '../CurationSearchBar';
 import CurationFilterSubHeader from '../CurationFilterSubHeader';
+import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
 import BulkCurationEditor from '../BulkCurationEditor';
-import { Icon } from 'semantic-ui-react';
+import { Icon, Image, Search } from 'semantic-ui-react';
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <div
-            style={{
-              width: '100%',
-              height: '75px',
-              background: '#fff',
-              textAlign: 'center',
-            }}
-          >
-            <img height={50} src={logo} />
-          </div>
+          <Icon name="sidebar" color="black" size="large" />
+          <Image src={logo} size="small" centered />
           <CurationSearchBar />
-          <CurationFilterSubHeader />
+          <SearchResultFilterSubHeader />
         </header>
         <BulkCurationEditor />
         <CurationsContainer />

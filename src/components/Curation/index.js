@@ -3,7 +3,9 @@ import { Item } from 'semantic-ui-react';
 class Curation extends Component {
   render() {
     const { curation } = this.props;
-    return (
+    return !curation ? (
+      <p>No Curfations</p>
+    ) : (
       <Item>
         <Item.Image size="small" src={curation.imageUrl} />
         <Item.Content>

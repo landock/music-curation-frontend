@@ -15,10 +15,7 @@ class AddToCuration extends PureComponent {
     );
     return (
       <Menu text vertical>
-        <Menu.Header>
-          <Icon name="share" />
-          Add to
-        </Menu.Header>
+        <Menu.Header>Add to</Menu.Header>
         <Menu.Item>
           <Input icon="search" placeholder="Search" />
         </Menu.Item>
