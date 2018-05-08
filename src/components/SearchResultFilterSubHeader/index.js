@@ -36,8 +36,18 @@ class SearchResultFilterSubHeader extends PureComponent {
             <Form inverted widths="equal">
               <Form.Input label="Dates" type="range" />
               <Form.Group>
-                <Form.Select label="Country" fluid />
-                <Form.Select label="City" fluid />
+                <Form.Select
+                  label="Country"
+                  options={[{ key: 'af', value: 'af', text: 'Afghanistan' }]}
+                  fluid
+                />
+                <Form.Select
+                  label="City"
+                  options={[
+                    { key: 'kandahar', value: 'kandahar', text: 'Kandahar' },
+                  ]}
+                  fluid
+                />
               </Form.Group>
             </Form>
           </Grid.Column>

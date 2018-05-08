@@ -2,11 +2,18 @@
 
 exports[`AddTags: default 1`] = `
 <div>
-  <p>
-    Add tags
-  </p>
-  <span>
-    No tags
-  </span>
+  <h5
+    className="ui header"
+  >
+    Tags
+  </h5>
+  <div>
+    <p>
+      Add Tags
+    </p>
+    <span>
+      No tags
+    </span>
+  </div>
 </div>
 `;

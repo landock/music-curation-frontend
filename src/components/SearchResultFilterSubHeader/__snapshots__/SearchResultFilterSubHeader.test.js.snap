@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResultFilterSubHeader: default 1`] = `
+<div
+  className="ui left aligned four column grid"
+>
+  <div
+    className="black row"
+  >
+    <div
+      className="two wide column"
+    >
+      <div
+        className="ui black inverted text vertical menu"
+      >
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          All
+        </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Tracks
+        </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Artist
+        </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Albums
+        </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Label
+        </a>
+      </div>
+    </div>
+    <div
+      className="seven wide column"
+    >
+      <form
+        action={undefined}
+        className="ui inverted equal width form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="field"
+        >
+          <label
+            htmlFor={undefined}
+          >
+            Dates
+          </label>
+          <div
+            className="ui input"
+            content={undefined}
+          >
+            <input
+              disabled={undefined}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="range"
+            />
+          </div>
+        </div>
+        <div
+          className="fields"
+        >
+          <div
+            className="field"
+          >
+            <label
+              htmlFor={undefined}
+            >
+              Country
+            </label>
+            <div
+              aria-busy={undefined}
+              aria-disabled={undefined}
+              aria-expanded={false}
+              aria-multiselectable={undefined}
+              className="ui fluid selection dropdown"
+              content={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              required={undefined}
+              role="listbox"
+              tabIndex={0}
+              type={undefined}
+            >
+              <div
+                aria-live="polite"
+                className="text"
+                role="alert"
+              />
+              <i
+                aria-hidden="true"
+                className="dropdown icon"
+                onClick={[Function]}
+              />
+              <div
+                className="menu transition"
+              >
+                <div
+                  aria-checked={false}
+                  aria-disabled={undefined}
+                  aria-selected={true}
+                  className="selected item"
+                  onClick={[Function]}
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
+                    }
+                  }
+                >
+                  <span
+                    className="text"
+                  >
+                    Afghanistan
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="field"
+          >
+            <label
+              htmlFor={undefined}
+            >
+              City
+            </label>
+            <div
+              aria-busy={undefined}
+              aria-disabled={undefined}
+              aria-expanded={false}
+              aria-multiselectable={undefined}
+              className="ui fluid selection dropdown"
+              content={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              required={undefined}
+              role="listbox"
+              tabIndex={0}
+              type={undefined}
+            >
+              <div
+                aria-live="polite"
+                className="text"
+                role="alert"
+              />
+              <i
+                aria-hidden="true"
+                className="dropdown icon"
+                onClick={[Function]}
+              />
+              <div
+                className="menu transition"
+              >
+                <div
+                  aria-checked={false}
+                  aria-disabled={undefined}
+                  aria-selected={true}
+                  className="selected item"
+                  onClick={[Function]}
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
+                    }
+                  }
+                >
+                  <span
+                    className="text"
+                  >
+                    Kandahar
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div
+      className="five wide column"
+    >
+      <div
+        className="ui small inverted header"
+      >
+        Release type
+      </div>
+      <div
+        className="ui equal width grid"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="column"
+          >
+            <div
+              className="ui inverted text vertical menu"
+            >
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Karaoke
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Soundtrack
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Compilation
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Single
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                B Side
+              </a>
+            </div>
+          </div>
+          <div
+            className="column"
+          >
+            <div
+              className="ui inverted text vertical menu"
+            >
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Collaboration
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Related
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Remix
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Live
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Acoustic
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="two wide column"
+    >
+      <span>
+        No tags
+      </span>
+    </div>
+  </div>
+</div>
+`;

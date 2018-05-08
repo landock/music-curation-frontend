@@ -18,6 +18,7 @@ describe('CurationsCollection', () => {
         type: 1,
         name: curationName,
         imageUrl,
+        description: 'test description',
         tracks: [
           {
             id: 0,
@@ -55,21 +56,20 @@ describe('CurationsCollection', () => {
     const expectedComponentText = curationName;
     console.log(component.debug());
     const componentText = component
-      .find('.curation-name')
+      .find('.header')
       .text()
       .trim();
     expect(componentText).toEqual(expectedComponentText);
   });
 
   it("should render 'artist - track name'", () => {
-    let expectedText = `Tracks: ${trackName}`;
     component = mount(<CurationsCollection curations={testCurations} />);
 
     const componentText = component
-      .find('p')
+      .find('em')
       .text()
       .trim();
 
-    expect(componentText).toEqual(expectedText);
+    expect(componentText).toEqual(trackName);
   });
 });

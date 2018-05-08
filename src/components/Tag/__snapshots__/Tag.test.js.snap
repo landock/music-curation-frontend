@@ -1,17 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tag: default 1`] = `
-<span
+<a
+  className="ui red label"
+  onClick={[Function]}
   style={
     Object {
-      "background": "red",
-      "color": "white",
-      "display": "inline-block",
-      "margin": "5px",
-      "padding": "5px",
+      "marginBottom": "1%",
     }
   }
 >
   test
-</span>
+</a>
 `;

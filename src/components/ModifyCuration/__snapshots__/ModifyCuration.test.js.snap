@@ -1,27 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ModifyCuration: default 1`] = `
-<ul
-  style={
-    Object {
-      "listStyle": "none",
-    }
-  }
+<div
+  className="ui text vertical menu"
 >
-  <li>
-    <button>
-      Edit
-    </button>
-  </li>
-  <li>
-    <button>
-      Delete
-    </button>
-  </li>
-  <li>
-    <button>
-      Duplicate
-    </button>
-  </li>
-</ul>
+  <div
+    className="link item"
+    onClick={[Function]}
+  >
+    <i
+      aria-hidden="true"
+      className="write icon"
+    />
+    Edit
+  </div>
+  <div
+    className="link item"
+    onClick={[Function]}
+  >
+    <i
+      aria-hidden="true"
+      className="trash icon"
+    />
+    Delete
+  </div>
+  <div
+    className="link item"
+    onClick={[Function]}
+  >
+    <i
+      aria-hidden="true"
+      className="plus icon"
+    />
+    Duplicate
+  </div>
+</div>
 `;

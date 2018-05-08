@@ -1,25 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddToCuration: default 1`] = `
-<div
-  className="ui text vertical menu"
+exports[`CurationSearchBar: default 1`] = `
+<form
+  action={undefined}
+  className="ui inverted form"
+  onSubmit={[Function]}
 >
   <div
-    className="header"
-  >
-    Add to
-  </div>
-  <div
-    className="item"
-    onClick={[Function]}
+    className="field"
   >
     <div
       className="ui icon input"
+      content={undefined}
     >
       <input
         disabled={undefined}
         onChange={[Function]}
-        placeholder="Search"
+        placeholder="Search Curations"
+        required={undefined}
         tabIndex={undefined}
         type="text"
       />
@@ -29,11 +27,5 @@ exports[`AddToCuration: default 1`] = `
       />
     </div>
   </div>
-  <div
-    className="item"
-    onClick={[Function]}
-  >
-    No curations available
-  </div>
-</div>
+</form>
 `;

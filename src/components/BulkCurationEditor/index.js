@@ -12,9 +12,17 @@ class BulkCurationEditor extends PureComponent {
               <Form.Field inline>
                 <Form.Checkbox label="Select All" />
               </Form.Field>
-              <Form.Select fluid />
+              <Form.Select
+                placeholder="Actions"
+                options={[{ key: 'af', value: 'af', text: 'Afghanistan' }]}
+                fluid
+              />
 
-              <Form.Select fluid />
+              <Form.Select
+                placeholder="Add to"
+                options={[{ key: 'af', value: 'af', text: 'Afghanistan' }]}
+                fluid
+              />
               <Form.Button floated="right" color="red">
                 New Curation
               </Form.Button>

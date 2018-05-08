@@ -2,105 +2,587 @@
 
 exports[`AppContainer renders without crashing 1`] = `
 <div
-  className="App"
+  className="ui container grid App"
 >
-  <header
-    className="App-header"
+  <div
+    className="row App-header"
   >
     <div
-      style={
-        Object {
-          "background": "#fff",
-          "height": "50px",
-          "width": "100%",
-        }
-      }
+      className="column"
     >
-      <img
-        src="logo.svg"
-        width="100"
-      />
-    </div>
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#354244",
-          "display": "flex",
-          "height": "100px",
-          "justifyContent": "center",
-        }
-      }
-    >
-      <input
-        placeholder="Search Curations"
-        style={
-          Object {
-            "fontSize": "50%",
-            "height": "25px",
-            "padding": "5px",
-            "width": "50%",
-          }
-        }
-        type="text"
-      />
-    </div>
-    <div
-      style={
-        Object {
-          "background": "black",
-          "height": "150px",
-          "width": "100%",
-        }
-      }
-    >
-      <div>
-        <label>
-          Environment
-        </label>
-        <select />
-      </div>
-      <div>
-        <label>
-          Status
-        </label>
-        <select />
-      </div>
-      <div>
-        <span>
-          Tags 
-        </span>
-        <span
-          style={
-            Object {
-              "background": "red",
-              "color": "white",
-              "display": "inline-block",
-              "margin": "5px",
-              "padding": "5px",
-            }
-          }
+      <div
+        className="ui container two column grid"
+      >
+        <div
+          className="row"
         >
-          what
-        </span>
-        <span
-          style={
-            Object {
-              "background": "red",
-              "color": "white",
-              "display": "inline-block",
-              "margin": "5px",
-              "padding": "5px",
-            }
-          }
-        >
-          when
-        </span>
+          <div
+            className="left floated two wide column"
+          >
+            <i
+              aria-hidden="true"
+              className="black sidebar large icon"
+            />
+          </div>
+          <div
+            className="fourteen wide column"
+          >
+            <img
+              className="ui small centered image"
+              src="logo.svg"
+            />
+          </div>
+        </div>
       </div>
     </div>
-  </header>
-  <p>
-    No Curations Found
-  </p>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="grey column"
+    >
+      <form
+        action={undefined}
+        className="ui inverted form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="field"
+        >
+          <div
+            className="ui icon input"
+            content={undefined}
+          >
+            <input
+              disabled={undefined}
+              onChange={[Function]}
+              placeholder="Search Curations"
+              required={undefined}
+              tabIndex={undefined}
+              type="text"
+            />
+            <i
+              aria-hidden="true"
+              className="search icon"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="column"
+    >
+      <div
+        className="ui left aligned four column grid"
+      >
+        <div
+          className="black row"
+        >
+          <div
+            className="two wide column"
+          >
+            <div
+              className="ui black inverted text vertical menu"
+            >
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                All
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Tracks
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Artist
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Albums
+              </a>
+              <a
+                className="item"
+                onClick={[Function]}
+              >
+                Label
+              </a>
+            </div>
+          </div>
+          <div
+            className="seven wide column"
+          >
+            <form
+              action={undefined}
+              className="ui inverted equal width form"
+              onSubmit={[Function]}
+            >
+              <div
+                className="field"
+              >
+                <label
+                  htmlFor={undefined}
+                >
+                  Dates
+                </label>
+                <div
+                  className="ui input"
+                  content={undefined}
+                >
+                  <input
+                    disabled={undefined}
+                    onChange={[Function]}
+                    required={undefined}
+                    tabIndex={undefined}
+                    type="range"
+                  />
+                </div>
+              </div>
+              <div
+                className="fields"
+              >
+                <div
+                  className="field"
+                >
+                  <label
+                    htmlFor={undefined}
+                  >
+                    Country
+                  </label>
+                  <div
+                    aria-busy={undefined}
+                    aria-disabled={undefined}
+                    aria-expanded={false}
+                    aria-multiselectable={undefined}
+                    className="ui fluid selection dropdown"
+                    content={undefined}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    required={undefined}
+                    role="listbox"
+                    tabIndex={0}
+                    type={undefined}
+                  >
+                    <div
+                      aria-live="polite"
+                      className="text"
+                      role="alert"
+                    />
+                    <i
+                      aria-hidden="true"
+                      className="dropdown icon"
+                      onClick={[Function]}
+                    />
+                    <div
+                      className="menu transition"
+                    >
+                      <div
+                        aria-checked={false}
+                        aria-disabled={undefined}
+                        aria-selected={true}
+                        className="selected item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Afghanistan
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="field"
+                >
+                  <label
+                    htmlFor={undefined}
+                  >
+                    City
+                  </label>
+                  <div
+                    aria-busy={undefined}
+                    aria-disabled={undefined}
+                    aria-expanded={false}
+                    aria-multiselectable={undefined}
+                    className="ui fluid selection dropdown"
+                    content={undefined}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onMouseDown={[Function]}
+                    required={undefined}
+                    role="listbox"
+                    tabIndex={0}
+                    type={undefined}
+                  >
+                    <div
+                      aria-live="polite"
+                      className="text"
+                      role="alert"
+                    />
+                    <i
+                      aria-hidden="true"
+                      className="dropdown icon"
+                      onClick={[Function]}
+                    />
+                    <div
+                      className="menu transition"
+                    >
+                      <div
+                        aria-checked={false}
+                        aria-disabled={undefined}
+                        aria-selected={true}
+                        className="selected item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Kandahar
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div
+            className="five wide column"
+          >
+            <div
+              className="ui small inverted header"
+            >
+              Release type
+            </div>
+            <div
+              className="ui equal width grid"
+            >
+              <div
+                className="row"
+              >
+                <div
+                  className="column"
+                >
+                  <div
+                    className="ui inverted text vertical menu"
+                  >
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Karaoke
+                    </a>
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Soundtrack
+                    </a>
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Compilation
+                    </a>
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Single
+                    </a>
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      B Side
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className="column"
+                >
+                  <div
+                    className="ui inverted text vertical menu"
+                  >
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Collaboration
+                    </a>
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Related
+                    </a>
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Remix
+                    </a>
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Live
+                    </a>
+                    <a
+                      className="item"
+                      onClick={[Function]}
+                    >
+                      Acoustic
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="two wide column"
+          >
+            <span>
+              No tags
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="left aligned column"
+    >
+      <form
+        action={undefined}
+        className="ui equal width form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="inline fields"
+        >
+          <div
+            className="inline field"
+          >
+            <div
+              className="field"
+            >
+              <div
+                className="ui checkbox"
+                content={undefined}
+                onChange={[Function]}
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <input
+                  checked={false}
+                  className="hidden"
+                  id={undefined}
+                  name={undefined}
+                  onClick={[Function]}
+                  readOnly={true}
+                  required={undefined}
+                  tabIndex={0}
+                  type="checkbox"
+                  value={undefined}
+                />
+                <label
+                  htmlFor={undefined}
+                >
+                  Select All
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            className="field"
+          >
+            <div
+              aria-busy={undefined}
+              aria-disabled={undefined}
+              aria-expanded={false}
+              aria-multiselectable={undefined}
+              className="ui fluid selection dropdown"
+              content={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              required={undefined}
+              role="listbox"
+              tabIndex={0}
+              type={undefined}
+            >
+              <div
+                aria-live="polite"
+                className="default text"
+                role="alert"
+              >
+                Actions
+              </div>
+              <i
+                aria-hidden="true"
+                className="dropdown icon"
+                onClick={[Function]}
+              />
+              <div
+                className="menu transition"
+              >
+                <div
+                  aria-checked={false}
+                  aria-disabled={undefined}
+                  aria-selected={true}
+                  className="selected item"
+                  onClick={[Function]}
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
+                    }
+                  }
+                >
+                  <span
+                    className="text"
+                  >
+                    Afghanistan
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="field"
+          >
+            <div
+              aria-busy={undefined}
+              aria-disabled={undefined}
+              aria-expanded={false}
+              aria-multiselectable={undefined}
+              className="ui fluid selection dropdown"
+              content={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              required={undefined}
+              role="listbox"
+              tabIndex={0}
+              type={undefined}
+            >
+              <div
+                aria-live="polite"
+                className="default text"
+                role="alert"
+              >
+                Add to
+              </div>
+              <i
+                aria-hidden="true"
+                className="dropdown icon"
+                onClick={[Function]}
+              />
+              <div
+                className="menu transition"
+              >
+                <div
+                  aria-checked={false}
+                  aria-disabled={undefined}
+                  aria-selected={true}
+                  className="selected item"
+                  onClick={[Function]}
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
+                    }
+                  }
+                >
+                  <span
+                    className="text"
+                  >
+                    Afghanistan
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="field"
+          >
+            <button
+              className="ui red right floated button"
+              disabled={undefined}
+              onClick={[Function]}
+              required={undefined}
+              role="button"
+              tabIndex={undefined}
+              type={undefined}
+            >
+              New Curation
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="column"
+    >
+      <div
+        className="ui divided two column grid"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="column"
+          >
+            <p>
+              No Curations Found
+            </p>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;

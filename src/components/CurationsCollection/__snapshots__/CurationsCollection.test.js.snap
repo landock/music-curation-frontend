@@ -1,7 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CurationsCollection Render without crashing 1`] = `
-<p>
-  No Curations Found
-</p>
+<div
+  className="row"
+>
+  <div
+    className="column"
+  >
+    <div
+      className="ui divided two column grid"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="column"
+        >
+          <p>
+            No Curations Found
+          </p>
+        </div>
+         
+      </div>
+    </div>
+  </div>
+</div>
 `;

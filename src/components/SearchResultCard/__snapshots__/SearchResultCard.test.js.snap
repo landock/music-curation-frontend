@@ -2,41 +2,66 @@
 
 exports[`SearchResultCard: default 1`] = `
 <div
-  style={
-    Object {
-      "display": "flex",
-    }
-  }
+  className="item"
 >
-  <img
-    src={undefined}
-    style={
-      Object {
-        "height": "150px",
-      }
-    }
-  />
-  <div>
-    <h4>
-      <button>
-        add to curation
-      </button>
-    </h4>
-    <p />
-    <p>
+  <div
+    className="ui tiny image"
+    href={undefined}
+  >
+    <img
+      src={undefined}
+    />
+  </div>
+  <div
+    className="content"
+  >
+    <a
+      className="header"
+    >
+      <i
+        aria-hidden="true"
+        className="plus icon"
+      />
+    </a>
+    <div
+      className="description"
+    />
+    <div
+      className="extra"
+    >
       <span>
          no labels 
       </span>
-    </p>
-    <p />
-    <div>
-      <button>
-        tags
-      </button>
-      <button>
-        Add to
-      </button>
+      <p />
     </div>
+    <i
+      aria-hidden="true"
+      className="tags small icon"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    />
+    <i
+      aria-hidden="true"
+      className="share icon"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    />
   </div>
 </div>
 `;
