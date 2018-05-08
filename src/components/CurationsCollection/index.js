@@ -16,7 +16,7 @@ class CurationsCollection extends Component {
               <Curation curation={curation} />
             </Item.Group>
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column textAlign="left">
             <PublicationStatusEditor
               {...{
                 created_at: '2018-04-30T22:09:50.997Z',
@@ -37,9 +37,13 @@ class CurationsCollection extends Component {
     );
 
     return (
-      <Grid columns={2} divided>
-        {curationsMarkup}
-      </Grid>
+      <Grid.Row>
+        <Grid.Column>
+          <Grid columns={2} divided>
+            {curationsMarkup}
+          </Grid>
+        </Grid.Column>
+      </Grid.Row>
     );
   }
 }

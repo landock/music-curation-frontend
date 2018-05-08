@@ -6,15 +6,15 @@ class ModifyCuration extends PureComponent {
   render() {
     return (
       <Menu text vertical>
-        <Menu.Item name="Edit">
+        <Menu.Item link name="Edit">
           <Icon name="write" />
           Edit
         </Menu.Item>
-        <Menu.Item name="Delete">
+        <Menu.Item link name="Delete">
           <Icon name="trash" />
           Delete
         </Menu.Item>
-        <Menu.Item name="Duplicate">
+        <Menu.Item link name="Duplicate">
           <Icon name="plus" />
           Duplicate
         </Menu.Item>

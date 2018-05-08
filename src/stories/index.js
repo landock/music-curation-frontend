@@ -22,16 +22,14 @@ import '../components/AddTags/AddTags.story';
 
 import '../components/AddToCuration/AddToCuration.story';
 
-import '../components/FilterMenu/FilterMenu.story';
+import '../components/CurationSearchBar/CurationSearchBar.story';
 
-import '../components/CurationSearchBar/CurationSearchBar.story'
+import '../components/CurationFilterSubHeader/CurationFilterSubHeader.story';
 
-import '../components/CurationFilterSubHeader/CurationFilterSubHeader.story'
+import '../components/SearchResultFilterSubHeader/SearchResultFilterSubHeader.story';
 
-import '../components/SearchResultFilterSubHeader/SearchResultFilterSubHeader.story'
+import '../components/BulkCurationEditor/BulkCurationEditor.story';
 
-import '../components/BulkCurationEditor/BulkCurationEditor.story'
+import '../components/SearchResultCollection/SearchResultCollection.story';
 
-import '../components/SearchResultCollection/SearchResultCollection.story'
-
-import '../components/EditCuration/EditCuration.story'
+import '../components/EditCuration/EditCuration.story';

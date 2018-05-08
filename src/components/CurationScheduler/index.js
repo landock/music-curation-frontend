@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { Input, Button, Select } from 'semantic-ui-react';
+import { Form, Input, Button, Select } from 'semantic-ui-react';
 import './CurationScheduler.css';
 
 class CurationScheduler extends PureComponent {
@@ -16,36 +16,42 @@ class CurationScheduler extends PureComponent {
     ];
 
     return (
-      <section>
-        <div>
-          <label>Updated:</label>
-          <Button color="red">Save Curations</Button>
-          <Select options={statusOptions} />
-        </div>
-        <div>
-          <label>Schedule:</label>
-          <Input
+      <Form>
+        <Form.Group>
+          <Form.Button color="red">Save Curations</Form.Button>
+          <Form.Select placeholder="DRAFT" options={statusOptions} />
+        </Form.Group>
+        <p>
+          <strong>Schedule</strong>
+        </p>
+        <Form.Group>
+          <Form.Input
             icon="calendar outline"
             iconPosition="left"
             id="date-start"
             type="date"
           />
-          <Input
+          <Form.Input
             icon="calendar outline"
             iconPosition="left"
             id="date-end"
             type="date"
           />
-        </div>
-        <div>
-          <label>Recommended Time Slot</label>
-          <Input id="date-start" type="range" min="0" max="24" step="1" />
-        </div>
-        <div>
-          <label>Environment</label>
-          <Select options={environmentOptions} />
-        </div>
-      </section>
+        </Form.Group>
+        <Form.Input
+          label="Recommended Time Slot"
+          id="date-start"
+          type="range"
+          min="0"
+          max="24"
+          step="1"
+        />
+        <Form.Select
+          placeholder="Copy to"
+          label="Environment"
+          options={environmentOptions}
+        />
+      </Form>
     );
   }
 }

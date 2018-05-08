@@ -1,19 +1,24 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Popup, Icon, Button, Grid, Input } from 'semantic-ui-react';
+import {
+  Form,
+  Popup,
+  Icon,
+  Button,
+  Grid,
+  Input,
+  Container,
+} from 'semantic-ui-react';
 
 class CurationSearchBar extends PureComponent {
   render() {
+    const containerStyle = {
+      minHeight: '150px',
+    };
     return (
-      <div
-        style={{
-          backgroundColor: '#354244',
-          height: '150px',
-          padding: '50px 15% 0',
-        }}
-      >
-        <Input icon="search" placeholder="Search Curations" fluid />
-      </div>
+      <Form inverted>
+        <Form.Input icon="search" placeholder="Search Curations" />
+      </Form>
     );
   }
 }
