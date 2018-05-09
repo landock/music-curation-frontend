@@ -5,31 +5,27 @@ import { Form, Grid } from 'semantic-ui-react';
 class BulkCurationEditor extends PureComponent {
   render() {
     return (
-      <Grid.Row>
-        <Grid.Column textAlign="left">
-          <Form widths="equal">
-            <Form.Group inline>
-              <Form.Field inline>
-                <Form.Checkbox label="Select All" />
-              </Form.Field>
-              <Form.Select
-                placeholder="Actions"
-                options={[{ key: 'af', value: 'af', text: 'Afghanistan' }]}
-                fluid
-              />
+      <Form widths="equal">
+        <Form.Group inline>
+          <Form.Field inline>
+            <Form.Checkbox label="Select All" />
+          </Form.Field>
+          <Form.Select
+            placeholder="Actions"
+            options={[{ key: 'af', value: 'af', text: 'Afghanistan' }]}
+            fluid
+          />
 
-              <Form.Select
-                placeholder="Add to"
-                options={[{ key: 'af', value: 'af', text: 'Afghanistan' }]}
-                fluid
-              />
-              <Form.Button floated="right" color="red">
-                New Curation
-              </Form.Button>
-            </Form.Group>
-          </Form>
-        </Grid.Column>
-      </Grid.Row>
+          <Form.Select
+            placeholder="Add to"
+            options={[{ key: 'af', value: 'af', text: 'Afghanistan' }]}
+            fluid
+          />
+          <Form.Button floated="right" color="red">
+            New Curation
+          </Form.Button>
+        </Form.Group>
+      </Form>
     );
   }
 }

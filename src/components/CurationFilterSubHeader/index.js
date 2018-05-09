@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import TagCollection from '../TagCollection';
 import { Form, Select, Icon, Checkbox, Input, Grid } from 'semantic-ui-react';
+import { tags } from '../../fixtures/test_data';
 
 class CurationFilterSubHeader extends PureComponent {
   render() {
@@ -17,25 +18,27 @@ class CurationFilterSubHeader extends PureComponent {
     return (
       <Form>
         <Grid columns={3} style={{ background: 'black', marginBottom: '20px' }}>
-          <Grid.Row>
-            <Grid.Column textAlign="right">Filters:</Grid.Column>
+          <Grid.Row textAlign="left">
+            <Grid.Column textAlign="right">
+              <span style={{ color: 'white' }}>Filters:</span>
+            </Grid.Column>
             <Grid.Column>
-              <Form.Field>
-                <label style={{ color: 'white' }}>Environment</label>
-                <Select options={environmentOptions} />
-              </Form.Field>
-              <Form.Field>
-                <label style={{ color: 'white' }}>Status</label>
-                <Select options={statusOptions} />
-              </Form.Field>
+              <Form>
+                <Form.Field>
+                  <label style={{ color: 'white' }}>Environment</label>
+                  <Form.Select options={environmentOptions} />
+                </Form.Field>
+                <Form.Field>
+                  <label style={{ color: 'white' }}>Status</label>
+                  <Form.Select options={statusOptions} />
+                </Form.Field>
+              </Form>
             </Grid.Column>
             <Grid.Column>
               <p>
-                <strong>Tags</strong>
+                <strong style={{ color: 'white' }}>Tags</strong>
               </p>
-              <TagCollection
-                tags={[{ id: 1, title: 'what' }, { id: 2, title: 'when' }]}
-              />
+              <TagCollection tags={tags} />
             </Grid.Column>
           </Grid.Row>
         </Grid>

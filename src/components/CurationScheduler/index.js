@@ -30,12 +30,14 @@ class CurationScheduler extends PureComponent {
             iconPosition="left"
             id="date-start"
             type="date"
+            width="8"
           />
           <Form.Input
             icon="calendar outline"
             iconPosition="left"
             id="date-end"
             type="date"
+            width="8"
           />
         </Form.Group>
         <Form.Input

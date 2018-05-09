@@ -2,13 +2,13 @@
 
 exports[`EditCuration: default 1`] = `
 <div
-  className="ui equal width grid"
+  className="ui two column grid"
 >
   <div
     className="row"
   >
     <div
-      className="column"
+      className="ten wide column"
     >
       <div
         className="ui items"
@@ -19,7 +19,7 @@ exports[`EditCuration: default 1`] = `
       </div>
     </div>
     <div
-      className="column"
+      className="six wide column"
     >
       <form
         action={undefined}

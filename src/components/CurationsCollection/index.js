@@ -14,6 +14,7 @@ class CurationsCollection extends Component {
           <Grid.Column>
             <Item.Group>
               <Curation curation={curation} />
+              <p>hello</p>
             </Item.Group>
           </Grid.Column>
           <Grid.Column textAlign="left">

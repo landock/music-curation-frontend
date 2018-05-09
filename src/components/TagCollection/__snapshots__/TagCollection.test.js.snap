@@ -11,7 +11,7 @@ Array [
           }
     }
 >
-    Vermont
+    Bahamian Dollar
 </a>,
   <a
     className="ui red label"
@@ -22,7 +22,7 @@ Array [
           }
     }
 >
-    Marketing
+    Branding
 </a>,
   <a
     className="ui red label"
@@ -33,7 +33,7 @@ Array [
           }
     }
 >
-    Customer
+    Small
 </a>,
   <a
     className="ui red label"
@@ -44,7 +44,7 @@ Array [
           }
     }
 >
-    Synergized
+    Digitized
 </a>,
   <a
     className="ui red label"
@@ -55,7 +55,7 @@ Array [
           }
     }
 >
-    Research
+    technologies
 </a>,
   <a
     className="ui red label"
@@ -66,7 +66,7 @@ Array [
           }
     }
 >
-    Cheese
+    iterate
 </a>,
   <a
     className="ui red label"
@@ -77,7 +77,7 @@ Array [
           }
     }
 >
-    Chief
+    Concrete
 </a>,
   <a
     className="ui red label"
@@ -88,282 +88,7 @@ Array [
           }
     }
 >
-    Lead
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Music
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Coordinator
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    bleeding-edge
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Ergonomic Fresh Pants
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    payment
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    architectures
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    reciprocal
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Metal
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Unbranded
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    object-oriented
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Frozen
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    neural
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    microchip
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Clothing
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    withdrawal
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    world-class
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    calculating
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    invoice
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    cross-platform
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Turnpike
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    monitor
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Handcrafted Cotton Car
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Arizona
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Cambridgeshire
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Alabama
+    approach
 </a>,
   <a
     className="ui red label"
@@ -385,7 +110,7 @@ Array [
           }
     }
 >
-    deposit
+    methodologies
 </a>,
   <a
     className="ui red label"
@@ -396,7 +121,7 @@ Array [
           }
     }
 >
-    HTTP
+    microchip
 </a>,
   <a
     className="ui red label"
@@ -407,7 +132,7 @@ Array [
           }
     }
 >
-    blue
+    content-based
 </a>,
   <a
     className="ui red label"
@@ -418,7 +143,7 @@ Array [
           }
     }
 >
-    Designer
+    Checking Account
 </a>,
   <a
     className="ui red label"
@@ -429,7 +154,7 @@ Array [
           }
     }
 >
-    synthesizing
+    Centralized
 </a>,
   <a
     className="ui red label"
@@ -440,7 +165,7 @@ Array [
           }
     }
 >
-    Avon
+    turquoise
 </a>,
   <a
     className="ui red label"
@@ -451,7 +176,7 @@ Array [
           }
     }
 >
-    Refined Concrete Mouse
+    Implementation
 </a>,
   <a
     className="ui red label"
@@ -462,7 +187,7 @@ Array [
           }
     }
 >
-    USB
+    Brand
 </a>,
   <a
     className="ui red label"
@@ -473,7 +198,7 @@ Array [
           }
     }
 >
-    Baby
+    Glen
 </a>,
   <a
     className="ui red label"
@@ -484,7 +209,7 @@ Array [
           }
     }
 >
-    SSL
+    reboot
 </a>,
   <a
     className="ui red label"
@@ -495,7 +220,7 @@ Array [
           }
     }
 >
-    override
+    Configurable
 </a>,
 ]
 `;

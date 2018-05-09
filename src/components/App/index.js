@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+
 import './App.css';
 import logo from '../../img/logo.svg';
 import CurationsContainer from '../../containers/CurationsContainer';
@@ -6,6 +8,7 @@ import CurationSearchBar from '../CurationSearchBar';
 import CurationFilterSubHeader from '../CurationFilterSubHeader';
 import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
 import BulkCurationEditor from '../BulkCurationEditor';
+import EditCuration from '../EditCuration';
 import {
   Container,
   Grid,
@@ -23,16 +26,26 @@ export default class App extends Component {
           <Grid.Column>
             <Grid container columns="2">
               <Grid.Row>
-                <Grid.Column floated="left" width={2}>
+                <Grid.Column floated="left" verticalAlign="middle" width={2}>
                   <Icon name="sidebar" color="black" size="large" />
                 </Grid.Column>
-                <Grid.Column width={14}>
+                <Grid.Column verticalAlign="middle" width={14}>
                   <Image src={logo} size="small" centered />
                 </Grid.Column>
               </Grid.Row>
             </Grid>
           </Grid.Column>
         </Grid.Row>
+        <Route
+          path="/editCuration"
+          render={props => (
+            <Grid.Row textAlign="left">
+              <Grid.Column>
+                <EditCuration />
+              </Grid.Column>{' '}
+            </Grid.Row>
+          )}
+        />
         <Grid.Row>
           <Grid.Column color="grey">
             <CurationSearchBar />
@@ -40,11 +53,25 @@ export default class App extends Component {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <SearchResultFilterSubHeader />
+            <Route exact path="/" component={CurationFilterSubHeader} />
+            <Route
+              path="/editCuration"
+              component={SearchResultFilterSubHeader}
+            />
           </Grid.Column>
         </Grid.Row>
-        <BulkCurationEditor />
-        <CurationsContainer />
+
+        <Grid.Row>
+          <Grid.Column textAlign="left">
+            <Route exact path="/" component={BulkCurationEditor} />
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Column textAlign="left">
+            <Route exact path="/" component={CurationsContainer} />
+          </Grid.Column>
+        </Grid.Row>
       </Grid>
     );
   }

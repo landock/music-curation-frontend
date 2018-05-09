@@ -10,6 +10,8 @@ import {
   Container,
 } from 'semantic-ui-react';
 import TagCollection from '../TagCollection';
+
+import { tags } from '../../fixtures/test_data';
 import './SearchResultFilterSubHeader.css';
 
 class SearchResultFilterSubHeader extends PureComponent {
@@ -97,6 +99,9 @@ class SearchResultFilterSubHeader extends PureComponent {
   }
 }
 
-SearchResultFilterSubHeader.propTypes = {};
+SearchResultFilterSubHeader.propTypes = { tags: PropTypes.array };
 
+SearchResultFilterSubHeader.defaultProps = {
+  tags,
+};
 export default SearchResultFilterSubHeader;
