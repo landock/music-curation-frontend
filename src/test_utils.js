@@ -10,7 +10,7 @@ function n(callback, lengthToGenerate) {
 
 function createTag() {
   return {
-    id: faker.random.number(1000),
+    id: faker.random.number(9999),
     title: faker.random.word(),
   };
 }
@@ -39,7 +39,7 @@ function createTrack() {
     imageUrl: 'http://fpoimg.com/100x100',
     artistName: faker.name.findName(),
     trackName: faker.company.bs(),
-    durationInSeconds: faker.random.number(999999),
+    durationInSeconds: faker.random.number(99999),
     recordLabels: n(faker.company.companyName, faker.random.number(3)),
   };
 }
