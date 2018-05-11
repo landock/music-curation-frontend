@@ -1,4 +1,4 @@
-import faker from 'faker';
+var faker = require('faker');
 
 function n(callback, lengthToGenerate) {
   let items = [];
@@ -25,23 +25,23 @@ function createPublicationStatus() {
 
 function createCuration() {
   return {
-    id: faker.random.number(1000),
+    id: faker.random.number(9999),
     imageUrl: 'http://fpoimg.com/200x200',
     description: faker.hacker.phrase(),
-    tracks: n(createTrack, 12),
+    tracks: n(createTrack, faker.random.number(20)),
     name: faker.fake('{{commerce.productAdjective}} {{address.streetName}}'),
   };
 }
 
 function createTrack() {
   return {
-    id: faker.random.number(),
+    id: faker.random.number(9999),
     imageUrl: 'http://fpoimg.com/100x100',
     artistName: faker.name.findName(),
-    trackName: faker.random.words(),
-    durationInSeconds: faker.random.number(20000),
-    recordLabels: n(faker.company.companyName, 4),
+    trackName: faker.company.bs(),
+    durationInSeconds: faker.random.number(999999),
+    recordLabels: n(faker.company.companyName, faker.random.number(3)),
   };
 }
 
-export { n, createTag, createCuration, createTrack };
+module.exports = { n, createTag, createCuration, createTrack };
