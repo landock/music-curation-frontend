@@ -37,11 +37,11 @@ export default class App extends Component {
           </Grid.Column>
         </Grid.Row>
         <Route
-          path="/editCuration"
+          path="/editCuration/:id"
           render={props => (
             <Grid.Row textAlign="left">
               <Grid.Column>
-                <EditCuration />
+                <EditCuration {...props} />
               </Grid.Column>{' '}
             </Grid.Row>
           )}

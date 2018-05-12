@@ -110,7 +110,7 @@ exports[`CurationScheduler: default 1`] = `
     className="fields"
   >
     <div
-      className="field"
+      className="eight wide field"
     >
       <div
         className="ui left icon input"
@@ -131,7 +131,7 @@ exports[`CurationScheduler: default 1`] = `
       </div>
     </div>
     <div
-      className="field"
+      className="eight wide field"
     >
       <div
         className="ui left icon input"

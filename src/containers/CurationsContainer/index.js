@@ -1,41 +1,41 @@
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
-import { connect } from 'react-redux';
-
-import { bindActionCreators } from 'redux';
+import { gql } from 'apollo-boost';
+import { Query } from 'react-apollo';
 
 import { getCurations } from '../../api';
-import { actions as curationsActions } from '../../modules/Curations';
+
 import CurationsCollection from '../../components/CurationsCollection';
 
-export class CurationsContainer extends Component {
+export default class CurationsContainer extends Component {
   constructor(props) {
     super(props);
     autoBind(this);
   }
 
-  componentDidMount() {
-    return this.props.doFetchCurations();
-  }
-
   render() {
-    return <CurationsCollection curations={this.props.curations} />;
+    const CurationsQuery = gql`
+      {
+        allCurations {
+          id
+          imageUrl
+          description
+          tracks
+          name
+        }
+      }
+    `;
+
+    return (
+      <Query query={CurationsQuery}>
+        {({ loading, error, data }) => {
+          console.log(data.allCurations);
+          if (loading) return <div>Loading...</div>;
+          if (error) return <div>Error :(</div>;
+
+          return <CurationsCollection curations={data.allCurations} />;
+        }}
+      </Query>
+    );
   }
 }
-
-function mapDispatchToProps(dispatch) {
-  return {
-    doFetchCurations: bindActionCreators(
-      curationsActions.fetchCurations,
-      dispatch
-    ),
-  };
-}
-
-function mapStateToProps(state) {
-  return {
-    curations: state.Curations,
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CurationsContainer);
