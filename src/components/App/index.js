@@ -9,14 +9,7 @@ import CurationFilterSubHeader from '../CurationFilterSubHeader';
 import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
 import BulkCurationEditor from '../BulkCurationEditor';
 import EditCuration from '../EditCuration';
-import {
-  Container,
-  Grid,
-  Icon,
-  Image,
-  Search,
-  Segment,
-} from 'semantic-ui-react';
+import { Grid, Icon, Image } from 'semantic-ui-react';
 
 export default class App extends Component {
   render() {

@@ -29,7 +29,6 @@ export default class CurationsContainer extends Component {
     return (
       <Query query={CurationsQuery}>
         {({ loading, error, data }) => {
-          console.log(data.allCurations);
           if (loading) return <div>Loading...</div>;
           if (error) return <div>Error :(</div>;
 

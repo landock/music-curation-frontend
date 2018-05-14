@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
@@ -45,12 +45,5 @@ function EditCuration({ match: { params: { id } } }) {
     </Query>
   );
 }
-
-EditCuration.propTypes = {
-  curation: PropTypes.object,
-};
-EditCuration.defaultProps = {
-  curation,
-};
 
 export default EditCuration;

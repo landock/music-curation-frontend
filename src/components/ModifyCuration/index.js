@@ -28,9 +28,11 @@ class ModifyCuration extends PureComponent {
             {(removeCuration, data) => (
               <Button
                 onClick={() => {
-                  let whatever = removeCuration({
-                    variables: { id: parseInt(id, 10) },
-                  });
+                  console.log(
+                    removeCuration({
+                      variables: { id: parseInt(id, 10) },
+                    })
+                  );
                 }}
               >
                 Delete
