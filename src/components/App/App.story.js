@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
+import { MemoryRouter as Router } from 'react-router';
 
 import thunk from 'redux-thunk';
 import { storiesOf } from '@storybook/react';
@@ -30,11 +31,19 @@ const store = mockStore({ Curations: curations });
 
 storiesOf('App', module)
   .addDecorator(story => {
-    return <Provider store={store}>{story()}</Provider>;
+    return (
+      <Provider store={store}>
+        <Router>{story()}</Router>
+      </Provider>
+    );
   })
-  .add('default', () => <App curations={curations} />);
+  .add('default', () => <App />);
 storiesOf('App', module)
   .addDecorator(story => {
-    return <Provider store={store}>{story()}</Provider>;
+    return (
+      <Provider store={store}>
+        <Router>{story()}</Router>
+      </Provider>
+    );
   })
-  .add('no props', () => <App curations={null} />);
+  .add('no props', () => <App />);
