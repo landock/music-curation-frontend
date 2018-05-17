@@ -7,6 +7,7 @@ import CurationsContainer from '../../containers/CurationsContainer';
 import CurationSearchBar from '../CurationSearchBar';
 import CurationFilterSubHeader from '../CurationFilterSubHeader';
 import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
+import SearchResultCollection from '../SearchResultCollection';
 import BulkCurationEditor from '../BulkCurationEditor';
 import EditCuration from '../EditCuration';
 import {
@@ -61,17 +62,41 @@ export default class App extends Component {
           </Grid.Column>
         </Grid.Row>
 
-        <Grid.Row>
-          <Grid.Column textAlign="left">
-            <Route exact path="/" component={BulkCurationEditor} />
-          </Grid.Column>
-        </Grid.Row>
-
-        <Grid.Row>
-          <Grid.Column textAlign="left">
-            <Route exact path="/" component={CurationsContainer} />
-          </Grid.Column>
-        </Grid.Row>
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <Grid.Row textAlign="left">
+              <Grid.Column>
+                <BulkCurationEditor />
+              </Grid.Column>
+            </Grid.Row>
+          )}
+        />
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <Grid.Row textAlign="left">
+              <Grid.Column>
+                <CurationsContainer />
+              </Grid.Column>
+            </Grid.Row>
+          )}
+        />
+        <Route
+          path="/editCuration"
+          render={props => (
+            <Grid.Row>
+              <Grid.Column textAlign="left" width={8}>
+                <SearchResultCollection />
+              </Grid.Column>
+              <Grid.Column width={8}>
+                <p>The other side</p>
+              </Grid.Column>
+            </Grid.Row>
+          )}
+        />
       </Grid>
     );
   }

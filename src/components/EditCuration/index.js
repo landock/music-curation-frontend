@@ -6,6 +6,12 @@ import { Grid, Item } from 'semantic-ui-react';
 import { curation } from '../../fixtures/test_data';
 
 class EditCuration extends PureComponent {
+  static propTypes = {
+    curation: PropTypes.object,
+  };
+  static defaultProps = {
+    curation,
+  };
   render() {
     return (
       <Grid columns={2}>
@@ -23,12 +29,5 @@ class EditCuration extends PureComponent {
     );
   }
 }
-
-EditCuration.propTypes = {
-  curation: PropTypes.object,
-};
-EditCuration.defaultProps = {
-  curation,
-};
 
 export default EditCuration;

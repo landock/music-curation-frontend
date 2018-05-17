@@ -23,16 +23,14 @@ class CurationFilterSubHeader extends PureComponent {
               <span style={{ color: 'white' }}>Filters:</span>
             </Grid.Column>
             <Grid.Column>
-              <Form>
-                <Form.Field>
-                  <label style={{ color: 'white' }}>Environment</label>
-                  <Form.Select options={environmentOptions} />
-                </Form.Field>
-                <Form.Field>
-                  <label style={{ color: 'white' }}>Status</label>
-                  <Form.Select options={statusOptions} />
-                </Form.Field>
-              </Form>
+              <Form.Field>
+                <label style={{ color: 'white' }}>Environment</label>
+                <Form.Select options={environmentOptions} />
+              </Form.Field>
+              <Form.Field>
+                <label style={{ color: 'white' }}>Status</label>
+                <Form.Select options={statusOptions} />
+              </Form.Field>
             </Grid.Column>
             <Grid.Column>
               <p>

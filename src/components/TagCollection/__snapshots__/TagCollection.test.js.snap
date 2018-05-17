@@ -11,7 +11,7 @@ Array [
           }
     }
 >
-    Bahamian Dollar
+    Gorgeous Fresh Pizza
 </a>,
   <a
     className="ui red label"
@@ -22,7 +22,7 @@ Array [
           }
     }
 >
-    Branding
+    Cambridgeshire
 </a>,
   <a
     className="ui red label"
@@ -33,7 +33,7 @@ Array [
           }
     }
 >
-    Small
+    yellow
 </a>,
   <a
     className="ui red label"
@@ -44,183 +44,7 @@ Array [
           }
     }
 >
-    Digitized
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    technologies
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    iterate
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Concrete
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    approach
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Buckinghamshire
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    methodologies
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    microchip
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    content-based
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Checking Account
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Centralized
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    turquoise
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Implementation
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Brand
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Glen
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    reboot
-</a>,
-  <a
-    className="ui red label"
-    onClick={[Function]}
-    style={
-        Object {
-            "marginBottom": "1%",
-          }
-    }
->
-    Configurable
+    sky blue
 </a>,
 ]
 `;

@@ -4,7 +4,7 @@ import ModifyCuration from '../ModifyCuration';
 import { Popup, Icon, Button, Grid } from 'semantic-ui-react';
 
 function PublicationStatusEditor({
-  id,
+  curationId,
   created_at,
   updated_at,
   scheduled_at,
@@ -38,7 +38,7 @@ function PublicationStatusEditor({
           trigger={
             <Icon style={{ cursor: 'pointer' }} name="ellipsis vertical" />
           }
-          content={<ModifyCuration id={id} />}
+          content={<ModifyCuration curationId={curationId} />}
           on="click"
           position="bottom right"
           verticalOffset={10}

@@ -13,9 +13,41 @@ exports[`EditCuration: default 1`] = `
       <div
         className="ui items"
       >
-        <p>
-          No Curfations
-        </p>
+        <div
+          className="item"
+        >
+          <div
+            className="ui small image"
+            href={undefined}
+          >
+            <img
+              src="http://fpoimg.com/200x200"
+            />
+          </div>
+          <div
+            className="content"
+          >
+            <div
+              className="header"
+            >
+              Handmade McLaughlin Station
+            </div>
+            <div
+              className="description"
+            >
+              <p>
+                The JSON monitor is down, parse the back-end microchip so we can parse the RAM application!
+              </p>
+              <strong>
+                Tracks:
+              </strong>
+               
+              <em>
+                user-centric repurpose portals, bleeding-edge unleash deliverables, global brand networks, sticky productize ROI, innovative envisioneer deliverables
+              </em>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -130,7 +162,7 @@ exports[`EditCuration: default 1`] = `
           className="fields"
         >
           <div
-            className="field"
+            className="eight wide field"
           >
             <div
               className="ui left icon input"
@@ -151,7 +183,7 @@ exports[`EditCuration: default 1`] = `
             </div>
           </div>
           <div
-            className="field"
+            className="eight wide field"
           >
             <div
               className="ui left icon input"

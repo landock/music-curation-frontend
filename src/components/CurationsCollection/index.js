@@ -14,12 +14,12 @@ class CurationsCollection extends Component {
           <Grid.Column>
             <Item.Group>
               <Curation curation={curation} />
-              <p>hello</p>
             </Item.Group>
           </Grid.Column>
           <Grid.Column textAlign="left">
             <PublicationStatusEditor
               {...{
+                curationId: curation.id,
                 created_at: '2018-04-30T22:09:50.997Z',
                 updated_at: '2018-04-30T22:09:50.997Z1',
                 scheduled_at: '2018-04-30T22:09:50.997Z',

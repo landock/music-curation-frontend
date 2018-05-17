@@ -1,41 +1,28 @@
 import React, { Component } from 'react';
-import autoBind from 'react-autobind';
-import { connect } from 'react-redux';
+import recycle from 'recycle';
 
-import { bindActionCreators } from 'redux';
-
-import { getCurations } from '../../api';
 import { actions as curationsActions } from '../../modules/Curations';
 import CurationsCollection from '../../components/CurationsCollection';
 
-export class CurationsContainer extends Component {
-  constructor(props) {
-    super(props);
-    autoBind(this);
-  }
+const CurationsContainer = recycle({
+  dispatch(sources) {
+    return [
+      sources.lifecycle
+        .filter(e => e === 'componentDidMount')
+        .map(curationsActions.fetchCurations),
+    ];
+  },
+  update(sources) {
+    return [
+      sources.store.reducer(function(state, store) {
+        state.curations = store.Curations;
+        return state;
+      }),
+    ];
+  },
+  view(props, state) {
+    return <CurationsCollection curations={state.curations} />;
+  },
+});
 
-  componentDidMount() {
-    return this.props.doFetchCurations();
-  }
-
-  render() {
-    return <CurationsCollection curations={this.props.curations} />;
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    doFetchCurations: bindActionCreators(
-      curationsActions.fetchCurations,
-      dispatch
-    ),
-  };
-}
-
-function mapStateToProps(state) {
-  return {
-    curations: state.Curations,
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(CurationsContainer);
+export default CurationsContainer;

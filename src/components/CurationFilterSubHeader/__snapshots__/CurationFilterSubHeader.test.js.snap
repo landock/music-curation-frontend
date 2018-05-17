@@ -16,182 +16,216 @@ exports[`CurationFilterSubHeader: default 1`] = `
     }
   >
     <div
-      className="row"
+      className="left aligned row"
     >
       <div
         className="right aligned column"
       >
-        Filters:
+        <span
+          style={
+            Object {
+              "color": "white",
+            }
+          }
+        >
+          Filters:
+        </span>
       </div>
       <div
         className="column"
       >
-        <div
-          className="field"
+        <form
+          action={undefined}
+          className="ui form"
+          onSubmit={[Function]}
         >
-          <label
-            style={
-              Object {
-                "color": "white",
-              }
-            }
-          >
-            Environment
-          </label>
           <div
-            aria-busy={undefined}
-            aria-disabled={undefined}
-            aria-expanded={false}
-            aria-multiselectable={undefined}
-            className="ui selection dropdown"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            role="listbox"
-            tabIndex={0}
+            className="field"
           >
+            <label
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            >
+              Environment
+            </label>
             <div
-              aria-live="polite"
-              className="text"
-              role="alert"
-            />
-            <i
-              aria-hidden="true"
-              className="dropdown icon"
-              onClick={[Function]}
-            />
-            <div
-              className="menu transition"
+              className="field"
             >
               <div
-                aria-checked={false}
+                aria-busy={undefined}
                 aria-disabled={undefined}
-                aria-selected={true}
-                className="selected item"
+                aria-expanded={false}
+                aria-multiselectable={undefined}
+                className="ui selection dropdown"
+                content={undefined}
+                onBlur={[Function]}
+                onChange={[Function]}
                 onClick={[Function]}
-                role="option"
-                style={
-                  Object {
-                    "pointerEvents": "all",
-                  }
-                }
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                required={undefined}
+                role="listbox"
+                tabIndex={0}
+                type={undefined}
               >
-                <span
+                <div
+                  aria-live="polite"
                   className="text"
+                  role="alert"
+                />
+                <i
+                  aria-hidden="true"
+                  className="dropdown icon"
+                  onClick={[Function]}
+                />
+                <div
+                  className="menu transition"
                 >
-                  Production
-                </span>
-              </div>
-              <div
-                aria-checked={false}
-                aria-disabled={undefined}
-                aria-selected={false}
-                className="item"
-                onClick={[Function]}
-                role="option"
-                style={
-                  Object {
-                    "pointerEvents": "all",
-                  }
-                }
-              >
-                <span
-                  className="text"
-                >
-                  Development
-                </span>
+                  <div
+                    aria-checked={false}
+                    aria-disabled={undefined}
+                    aria-selected={true}
+                    className="selected item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <span
+                      className="text"
+                    >
+                      Production
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-disabled={undefined}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <span
+                      className="text"
+                    >
+                      Development
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          className="field"
-        >
-          <label
-            style={
-              Object {
-                "color": "white",
-              }
-            }
-          >
-            Status
-          </label>
           <div
-            aria-busy={undefined}
-            aria-disabled={undefined}
-            aria-expanded={false}
-            aria-multiselectable={undefined}
-            className="ui selection dropdown"
-            onBlur={[Function]}
-            onChange={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseDown={[Function]}
-            role="listbox"
-            tabIndex={0}
+            className="field"
           >
+            <label
+              style={
+                Object {
+                  "color": "white",
+                }
+              }
+            >
+              Status
+            </label>
             <div
-              aria-live="polite"
-              className="text"
-              role="alert"
-            />
-            <i
-              aria-hidden="true"
-              className="dropdown icon"
-              onClick={[Function]}
-            />
-            <div
-              className="menu transition"
+              className="field"
             >
               <div
-                aria-checked={false}
+                aria-busy={undefined}
                 aria-disabled={undefined}
-                aria-selected={true}
-                className="selected item"
+                aria-expanded={false}
+                aria-multiselectable={undefined}
+                className="ui selection dropdown"
+                content={undefined}
+                onBlur={[Function]}
+                onChange={[Function]}
                 onClick={[Function]}
-                role="option"
-                style={
-                  Object {
-                    "pointerEvents": "all",
-                  }
-                }
+                onFocus={[Function]}
+                onMouseDown={[Function]}
+                required={undefined}
+                role="listbox"
+                tabIndex={0}
+                type={undefined}
               >
-                <span
+                <div
+                  aria-live="polite"
                   className="text"
+                  role="alert"
+                />
+                <i
+                  aria-hidden="true"
+                  className="dropdown icon"
+                  onClick={[Function]}
+                />
+                <div
+                  className="menu transition"
                 >
-                  Draft
-                </span>
-              </div>
-              <div
-                aria-checked={false}
-                aria-disabled={undefined}
-                aria-selected={false}
-                className="item"
-                onClick={[Function]}
-                role="option"
-                style={
-                  Object {
-                    "pointerEvents": "all",
-                  }
-                }
-              >
-                <span
-                  className="text"
-                >
-                  Published
-                </span>
+                  <div
+                    aria-checked={false}
+                    aria-disabled={undefined}
+                    aria-selected={true}
+                    className="selected item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <span
+                      className="text"
+                    >
+                      Draft
+                    </span>
+                  </div>
+                  <div
+                    aria-checked={false}
+                    aria-disabled={undefined}
+                    aria-selected={false}
+                    className="item"
+                    onClick={[Function]}
+                    role="option"
+                    style={
+                      Object {
+                        "pointerEvents": "all",
+                      }
+                    }
+                  >
+                    <span
+                      className="text"
+                    >
+                      Published
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </form>
       </div>
       <div
         className="column"
       >
         <p>
-          <strong>
+          <strong
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          >
             Tags
           </strong>
         </p>
@@ -204,7 +238,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          what
+          Product
         </a>
         <a
           className="ui red label"
@@ -215,7 +249,282 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          when
+          parsing
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          reboot
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Incredible
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Producer
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Developer
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          generating
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Bedfordshire
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          white
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          optical
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          B2B
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Sleek Soft Pants
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Berkshire
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Mandatory
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Chief
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Personal Loan Account
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          conglomeration
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          e-markets
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          optical
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Cotton
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Home Loan Account
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          redundant
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Rubber
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          lavender
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          Personal Loan Account
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          program
+        </a>
+        <a
+          className="ui red label"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "1%",
+            }
+          }
+        >
+          ivory
         </a>
       </div>
     </div>

@@ -46,7 +46,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
       </div>
     </div>
     <div
-      className="seven wide column"
+      className="four wide column"
     >
       <form
         action={undefined}
@@ -294,11 +294,382 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
       </div>
     </div>
     <div
-      className="two wide column"
+      className="five wide column"
     >
-      <span>
-        No tags
-      </span>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Rufiyaa
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Money Market Account
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Chips
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        viral
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        infrastructures
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        capability
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Engineer
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        parsing
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        compelling
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Savings Account
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Cape Verde Escudo
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        SMTP
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Manager
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Integration
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        olive
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Investment Account
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        well-modulated
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Throughway
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Central
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        North Dakota
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        users
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        optimizing
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Human
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        reintermediate
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        1080p
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Accounts
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        invoice
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Administrator
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Manor
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Fantastic
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Exclusive
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Borders
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Refined
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Garden
+      </a>
     </div>
   </div>
 </div>

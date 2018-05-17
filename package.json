@@ -26,6 +26,7 @@
     "react-scripts": "1.1.0",
     "react-test-renderer": "^16.2.0",
     "react-transition-group": "^2.3.1",
+    "recycle": "^3.0.0",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
@@ -76,5 +77,8 @@
       "!src/**/*.story.js",
       "!src/stories/index.js"
     ]
+  },
+  "peerDependencies": {
+    "rxjs": "5.x"
   }
 }
