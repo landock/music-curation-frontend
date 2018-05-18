@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import { Form, Input, Button, Select } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 import './CurationScheduler.css';
 
 class CurationScheduler extends PureComponent {

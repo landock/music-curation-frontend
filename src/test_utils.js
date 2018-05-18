@@ -14,14 +14,6 @@ function createTag() {
     title: faker.random.word(),
   };
 }
-function createPublicationStatus() {
-  return {
-    created_at: faker.date.recent(),
-    updated_at: faker.date.soon(),
-    scheduled_at: faker.date.future(1),
-    environment: ['development'],
-  };
-}
 
 function createCuration() {
   return {

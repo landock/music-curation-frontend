@@ -8,9 +8,11 @@ class SearchResultCollection extends PureComponent {
   render() {
     let markup =
       this.props.searchResults &&
-      this.props.searchResults.map(result => <SearchResultCard {...result} />);
+      this.props.searchResults.map(result => (
+        <SearchResultCard key={result.id} {...result} />
+      ));
     return markup ? (
-      <Item.Group textAlign="left">
+      <Item.Group>
         <Header>Search Results</Header> <p>{searchResults.length} Results</p>
         {markup}
       </Item.Group>

@@ -1,13 +1,36 @@
 import 'cross-fetch/polyfill';
 
-export function getCurations() {
-  const url =
-    'https://private-4cf18-musiccurationmanager.apiary-mock.com/yarn/curations';
+import { memoize } from 'lodash';
+const url = 'http://localhost:4545';
 
-  return fetch(url)
+function getCurations() {
+  const getCurationsUrl = `${url}/curations`;
+
+  return fetch(getCurationsUrl)
     .then(response => response.json())
     .catch(error => {
       console.log(error);
       return { error: error };
     });
 }
+
+function getCuration(id) {
+  const getCurationUrl = `${url}/curations/${id}`;
+
+  return fetch(getCurationUrl)
+    .then(response => {
+      return response.json();
+    })
+    .catch(error => {
+      console.log(error);
+      return { error: error };
+    });
+}
+
+const memoizedGetCuration = memoize(getCuration);
+const memoizedGetCurations = memoize(getCurations);
+
+export {
+  memoizedGetCuration as getCuration,
+  memoizedGetCurations as getCurations,
+};

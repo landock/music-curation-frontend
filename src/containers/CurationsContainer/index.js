@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import recycle from 'recycle';
 
 import { actions as curationsActions } from '../../modules/Curations';

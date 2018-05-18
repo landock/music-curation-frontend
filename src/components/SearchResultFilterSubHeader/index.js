@@ -1,14 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Grid,
-  Input,
-  Select,
-  Menu,
-  Form,
-  Header,
-  Container,
-} from 'semantic-ui-react';
+import { Grid, Menu, Form, Header } from 'semantic-ui-react';
 import TagCollection from '../TagCollection';
 
 import { tags } from '../../fixtures/test_data';
@@ -17,7 +9,7 @@ import './SearchResultFilterSubHeader.css';
 class SearchResultFilterSubHeader extends PureComponent {
   render() {
     return (
-      <Grid textAlign="left" columns="4">
+      <Grid columns="4">
         <Grid.Row color="black">
           <Grid.Column width={2}>
             <Menu

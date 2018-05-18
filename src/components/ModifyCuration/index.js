@@ -24,6 +24,8 @@ class ModifyCuration extends PureComponent {
   }
 }
 
-ModifyCuration.propTypes = {};
+ModifyCuration.propTypes = {
+  id: PropTypes.any,
+};
 
 export default ModifyCuration;

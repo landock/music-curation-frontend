@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import TagCollection from '../TagCollection';
-import { Form, Select, Icon, Checkbox, Input, Grid } from 'semantic-ui-react';
+import { Form, Grid } from 'semantic-ui-react';
 import { tags } from '../../fixtures/test_data';
 
 class CurationFilterSubHeader extends PureComponent {

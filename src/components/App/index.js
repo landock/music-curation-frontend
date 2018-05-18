@@ -10,14 +10,7 @@ import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
 import SearchResultCollection from '../SearchResultCollection';
 import BulkCurationEditor from '../BulkCurationEditor';
 import EditCuration from '../EditCuration';
-import {
-  Container,
-  Grid,
-  Icon,
-  Image,
-  Search,
-  Segment,
-} from 'semantic-ui-react';
+import { Grid, Icon, Image } from 'semantic-ui-react';
 
 export default class App extends Component {
   render() {
@@ -38,11 +31,11 @@ export default class App extends Component {
           </Grid.Column>
         </Grid.Row>
         <Route
-          path="/editCuration"
+          path="/editCuration/:id"
           render={props => (
             <Grid.Row textAlign="left">
               <Grid.Column>
-                <EditCuration />
+                <EditCuration {...props} />
               </Grid.Column>{' '}
             </Grid.Row>
           )}

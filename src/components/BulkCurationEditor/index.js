@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { Form, Grid } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 
 class BulkCurationEditor extends PureComponent {
   render() {
@@ -29,7 +28,5 @@ class BulkCurationEditor extends PureComponent {
     );
   }
 }
-
-BulkCurationEditor.propTypes = {};
 
 export default BulkCurationEditor;

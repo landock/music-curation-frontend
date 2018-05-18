@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Menu, Icon, Checkbox, Input } from 'semantic-ui-react';
+import { Menu, Checkbox, Input } from 'semantic-ui-react';
 
 class AddToCuration extends PureComponent {
   render() {

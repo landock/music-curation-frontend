@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ModifyCuration from '../ModifyCuration';
-import { Popup, Icon, Button, Grid } from 'semantic-ui-react';
+import { Popup, Icon, Grid } from 'semantic-ui-react';
 
 function PublicationStatusEditor({
   curationId,

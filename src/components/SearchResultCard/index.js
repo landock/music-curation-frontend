@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Item, Menu, Icon, Button, Popup } from 'semantic-ui-react';
+import { Item, Icon, Button, Popup } from 'semantic-ui-react';
 
 import AddTags from '../AddTags';
 import AddToCuration from '../AddToCuration';
 
 function SearchResultCard({
+  id,
   trackName,
   artistName,
   iconName,
@@ -22,7 +23,7 @@ function SearchResultCard({
       <Item.Content>
         <Item.Header as="a">
           {trackName}
-          <Icon name={iconName || 'plus'} />
+          <Button icon={iconName || 'plus'} value={id} />
         </Item.Header>
         <Item.Description>{artistName}</Item.Description>
         <Item.Extra>
