@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Item } from 'semantic-ui-react';
+
 class Curation extends Component {
   render() {
     const { curation } = this.props;

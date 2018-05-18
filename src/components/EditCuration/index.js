@@ -11,9 +11,13 @@ const EditCuration = recycle({
   dispatch(sources) {
     let { fetchCuration } = curationsActions;
     return [
+      sources
+        .select('button')
+        .addListener('onClick')
+        .mapTo({ type: 'UPDATE_CURATION_SCHEDULE', payload: {} }),
       sources.lifecycle
-        .skipWhile(e => {
-          return e !== 'componentDidMount';
+        .filter(e => {
+          return e === 'componentDidMount';
         })
         .merge(sources.props)
         .first()
