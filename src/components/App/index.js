@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 
 import './App.css';
 import logo from '../../img/logo.svg';
-import CurationsContainer from '../../containers/CurationsContainer';
+import Curations from '../../containers/Curations';
 import CurationSearchBar from '../CurationSearchBar';
 import CurationFilterSubHeader from '../CurationFilterSubHeader';
 import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
@@ -72,7 +72,7 @@ export default class App extends Component {
           render={props => (
             <Grid.Row textAlign="left">
               <Grid.Column>
-                <CurationsContainer />
+                <Curations />
               </Grid.Column>
             </Grid.Row>
           )}

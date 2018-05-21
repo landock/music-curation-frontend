@@ -7,10 +7,10 @@ import { Provider } from 'react-redux';
 import fetchMock from 'fetch-mock';
 
 import thunk from 'redux-thunk';
-import ConnectedCurationsContainer, { CurationsContainer } from '.';
+import ConnectedCurations, { Curations } from '.';
 import CurationsCollection from '../../components/CurationsCollection';
 
-describe('CurationsContainer', () => {
+describe('Curations Container', () => {
   let store, testData, mockStore;
 
   beforeEach(() => {
@@ -22,7 +22,7 @@ describe('CurationsContainer', () => {
   it('should have a store passed from a Provider as props', () => {
     let component = mount(
       <Provider store={store}>
-        <ConnectedCurationsContainer />
+        <ConnectedCurations />
       </Provider>
     );
 
@@ -34,7 +34,7 @@ describe('CurationsContainer', () => {
   it('should execute fetchCurations when mounted', () => {
     const fetchCurationsMock = jest.fn();
     let component = mount(
-      <CurationsContainer store={store} doFetchCurations={fetchCurationsMock} />
+      <Curations store={store} doFetchCurations={fetchCurationsMock} />
     );
 
     expect(fetchCurationsMock).toHaveBeenCalled();
@@ -44,7 +44,7 @@ describe('CurationsContainer', () => {
     fetchMock.get('*', { hello: 'world' });
     let component = mount(
       <Provider store={store}>
-        <ConnectedCurationsContainer />
+        <ConnectedCurations />
       </Provider>
     );
     expect(fetchMock.called()).toEqual(true);
@@ -53,7 +53,7 @@ describe('CurationsContainer', () => {
   it('should have a CurationsCollection as a child', () => {
     const fetchCurationsMock = jest.fn();
     let component = shallow(
-      <CurationsContainer doFetchCurations={fetchCurationsMock} />
+      <Curations doFetchCurations={fetchCurationsMock} />
     );
     expect(component.contains(<CurationsCollection />)).toEqual(true);
   });
