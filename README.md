@@ -72,9 +72,10 @@ If no flags given, will generate a PureComponent.
 ```
 hygen container new --name NAME
 
-Generates a React container and a test.
+Generates a React container using Recycle and a test.
 
-  NAME          The container name in kebab-case (required).
+  NAME        The container name in kebab-case (required).
+  --redux     Generate a Redux specific container (optional).
 ```
 
 ```

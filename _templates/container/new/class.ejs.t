@@ -2,6 +2,7 @@
 to: src/containers/<%= h.pascalCase(name) %>/index.js
 ---
 <% const container = h.pascalCase(name) -%>
+<% if(locals.redux) { -%>
 import React, { Component } from 'react';
 import autoBind from 'react-autobind';
 import { bindActionCreators } from 'redux';
@@ -29,3 +30,25 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(<%= container %>)
+
+<% } else { -%>
+import React from 'react';
+import recycle from 'recycle';
+
+
+const <%= container %> = recycle({
+  dispatch(sources) {
+    return [];
+  },
+  update(sources) {
+    return [];
+  },
+  view(props, state) {
+    return;
+  },
+});
+
+export default <%= container %>;
+
+
+<% } -%>
