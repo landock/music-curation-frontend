@@ -17,33 +17,38 @@ Helpful links and documentation on tech in this app.
   - [Hygen: The scalable code generator that saves you time](http://www.hygen.io/)
 
 
- 
+
 
 ## Prerequisites
 ```
-$ npm i -g @storybook/cli
+npm i -g @storybook/cli
 ```
 
 ## LOCAL DEV
 
 ### [TAB 1]
 ```
-$ nvm use 
+nvm use
 ```
 ### [TAB 2]
 React App runs on http://localhost:3000/
 ```
-$ nvm use && yarn start
+nvm use && yarn start
+```
+### [TAB 3]
+Local server runs on :3001, Ex: http://localhost:3001/curations
+```
+nvm use && yarn run server
 ```
 
-### [TAB 3]
+### [TAB 4]
 Storybook runs on http://localhost:9009/
 ```
-$ nvm use && yarn run storybook
+nvm use && yarn run storybook
 ```
 
 ### Testing
-We're using Jest + Enzyme: [Quck intro to testing React apps in Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html)
+We're using Jest + Enzyme: [Quick intro to testing React apps in Jest](https://facebook.github.io/jest/docs/en/tutorial-react.html)
   - [Enzyme Docs](https://github.com/airbnb/enzyme)
   - [Jest Docs](https://facebook.github.io/jest/docs/en/getting-started.html)
   - [redux-mock-store: a mock store for testing your redux async action creators and middleware](https://github.com/arnaudbenard/redux-mock-store)
@@ -53,9 +58,9 @@ $ yarn test
 
 
 ### Development  
-I added some tooling to generate Containers, Components, and Redux Modules. 
+I added some tooling to generate Containers, Components, and Redux Modules.
 
-From the commandline inside the project run the following commands to create the js, scss, and test files you initially need: 
+From the command line inside the project run the following commands to create the js, scss, and test files you initially need:
 
 ```
 hygen component new --name NAME [--stateful] [--functional]
