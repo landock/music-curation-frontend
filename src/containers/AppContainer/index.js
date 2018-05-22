@@ -3,7 +3,7 @@ import autoBind from 'react-autobind';
 import { connect } from 'react-redux';
 
 import './AppContainer.css';
-import App from '../../components/App/index';
+import App from '../../components/App';
 
 export class AppContainer extends Component {
   constructor(props) {
