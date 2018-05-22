@@ -15,9 +15,9 @@ function createTag() {
   };
 }
 
-function createCuration() {
+function createCuration(id) {
   return {
-    id: faker.random.number(9999),
+    id: id ? parseInt(id, 10) : faker.random.number(9999),
     imageUrl: 'http://fpoimg.com/200x200',
     description: faker.hacker.phrase(),
     tracks: n(createTrack, faker.random.number(20)),
