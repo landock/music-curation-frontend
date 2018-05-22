@@ -4,7 +4,7 @@ import recycle from 'recycle';
 import { actions as curationsActions } from '../../modules/Curations';
 import CurationsCollection from '../../components/CurationsCollection';
 
-const CurationsContainer = recycle({
+const Curations = recycle({
   dispatch(sources) {
     return [
       sources.lifecycle
@@ -25,4 +25,4 @@ const CurationsContainer = recycle({
   },
 });
 
-export default CurationsContainer;
+export default Curations;
