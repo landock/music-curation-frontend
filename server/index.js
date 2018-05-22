@@ -2,6 +2,7 @@ const express = require('express');
 const uid = require('uid');
 
 const app = express();
+const test_utils = require('../src/test_utils.js');
 
 const curations = [
   {
@@ -60,7 +61,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/curations', (req, res) => {
-  res.json(curations);
+  res.json(test_utils.n(test_utils.createCuration, 40));
 });
 
 

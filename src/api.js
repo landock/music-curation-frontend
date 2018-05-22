@@ -1,7 +1,7 @@
 import 'cross-fetch/polyfill';
 
 import { memoize } from 'lodash';
-const url = 'http://localhost:4545';
+const url = 'http://localhost:3001';
 
 function getCurations() {
   const getCurationsUrl = `${url}/curations`;
