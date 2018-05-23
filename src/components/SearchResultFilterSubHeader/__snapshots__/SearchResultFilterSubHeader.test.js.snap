@@ -2,7 +2,7 @@
 
 exports[`SearchResultFilterSubHeader: default 1`] = `
 <div
-  className="ui left aligned four column grid"
+  className="ui four column grid"
 >
   <div
     className="black row"
@@ -305,7 +305,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Rufiyaa
+        Liberia
       </a>
       <a
         className="ui red label"
@@ -316,7 +316,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Money Market Account
+        Sports
       </a>
       <a
         className="ui red label"
@@ -327,7 +327,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Chips
+        Program
       </a>
       <a
         className="ui red label"
@@ -338,7 +338,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        viral
+        toolset
       </a>
       <a
         className="ui red label"
@@ -349,7 +349,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        infrastructures
+        target
       </a>
       <a
         className="ui red label"
@@ -360,7 +360,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        capability
+        deposit
       </a>
       <a
         className="ui red label"
@@ -371,7 +371,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Engineer
+        Buckinghamshire
       </a>
       <a
         className="ui red label"
@@ -382,7 +382,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        parsing
+        Estate
       </a>
       <a
         className="ui red label"
@@ -393,7 +393,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        compelling
+        wireless
       </a>
       <a
         className="ui red label"
@@ -404,7 +404,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Savings Account
+        synthesize
       </a>
       <a
         className="ui red label"
@@ -415,7 +415,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Cape Verde Escudo
+        indexing
       </a>
       <a
         className="ui red label"
@@ -426,7 +426,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        SMTP
+        auxiliary
       </a>
       <a
         className="ui red label"
@@ -437,7 +437,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Manager
+        Intelligent Fresh Shoes
       </a>
       <a
         className="ui red label"
@@ -448,7 +448,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Integration
+        transmitting
       </a>
       <a
         className="ui red label"
@@ -459,7 +459,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        olive
+        Division
       </a>
       <a
         className="ui red label"
@@ -470,7 +470,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Investment Account
+        cyan
       </a>
       <a
         className="ui red label"
@@ -481,7 +481,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        well-modulated
+        azure
       </a>
       <a
         className="ui red label"
@@ -492,7 +492,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Throughway
+        intuitive
       </a>
       <a
         className="ui red label"
@@ -503,7 +503,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        Central
+        Gorgeous Metal Mouse
       </a>
       <a
         className="ui red label"
@@ -514,7 +514,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        North Dakota
+        New Hampshire
       </a>
       <a
         className="ui red label"
@@ -525,128 +525,7 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
-        users
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        optimizing
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        Human
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        reintermediate
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        1080p
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        Accounts
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        invoice
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        Administrator
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        Manor
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        Fantastic
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        Exclusive
-      </a>
-      <a
-        className="ui red label"
-        onClick={[Function]}
-        style={
-          Object {
-            "marginBottom": "1%",
-          }
-        }
-      >
-        Borders
+        Licensed Metal Pants
       </a>
       <a
         className="ui red label"
@@ -668,7 +547,293 @@ exports[`SearchResultFilterSubHeader: default 1`] = `
           }
         }
       >
+        Beauty
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        yellow
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        array
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        engineer
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Niger
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Handcrafted
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Som
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Cambridgeshire
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Credit Card Account
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        models
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Future-proofed
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        South Dakota
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        web-readiness
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Trace
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        SMS
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Cotton
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
         Garden
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        compressing
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        multi-byte
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        back-end
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        EXE
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Berkshire
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        invoice
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Granite
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Dynamic
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Alaska
+      </a>
+      <a
+        className="ui red label"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginBottom": "1%",
+          }
+        }
+      >
+        Avon
       </a>
     </div>
   </div>

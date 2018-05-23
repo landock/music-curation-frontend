@@ -3,7 +3,6 @@
 exports[`SearchResultCollection: default 1`] = `
 <div
   className="ui items"
-  textAlign="left"
 >
   <div
     className="ui header"
@@ -32,16 +31,25 @@ exports[`SearchResultCollection: default 1`] = `
       <a
         className="header"
       >
-        clicks-and-mortar visualize convergence
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
+        clicks-and-mortar envisioneer e-business
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={5863}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
       </a>
       <div
         className="description"
       >
-        Bridie Sipes
+        Chelsey Douglas
       </div>
       <div
         className="extra"
@@ -50,7 +58,7 @@ exports[`SearchResultCollection: default 1`] = `
           
         </span>
         <p>
-          27519
+          53982
         </p>
       </div>
       <i
@@ -100,16 +108,333 @@ exports[`SearchResultCollection: default 1`] = `
       <a
         className="header"
       >
-        front-end reinvent e-services
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
+        visionary target content
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={9972}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
       </a>
       <div
         className="description"
       >
-        Amelie Kub
+        Jesse Walsh
+      </div>
+      <div
+        className="extra"
+      >
+        <span>
+          Mante, Gerhold and Boyer, Armstrong Group
+        </span>
+        <p>
+          47138
+        </p>
+      </div>
+      <i
+        aria-hidden="true"
+        className="tags small icon"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+      <i
+        aria-hidden="true"
+        className="share icon"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="ui tiny image"
+      href={undefined}
+    >
+      <img
+        src="http://fpoimg.com/100x100"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <a
+        className="header"
+      >
+        virtual architect bandwidth
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={8573}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
+      </a>
+      <div
+        className="description"
+      >
+        Nick Pollich
+      </div>
+      <div
+        className="extra"
+      >
+        <span>
+          Orn - Satterfield, Maggio - Doyle
+        </span>
+        <p>
+          25472
+        </p>
+      </div>
+      <i
+        aria-hidden="true"
+        className="tags small icon"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+      <i
+        aria-hidden="true"
+        className="share icon"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="ui tiny image"
+      href={undefined}
+    >
+      <img
+        src="http://fpoimg.com/100x100"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <a
+        className="header"
+      >
+        user-centric streamline methodologies
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={7726}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
+      </a>
+      <div
+        className="description"
+      >
+        Rudolph Emard
+      </div>
+      <div
+        className="extra"
+      >
+        <span>
+          Keebler - Walsh, Crona Group, Torphy Group
+        </span>
+        <p>
+          48399
+        </p>
+      </div>
+      <i
+        aria-hidden="true"
+        className="tags small icon"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+      <i
+        aria-hidden="true"
+        className="share icon"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="ui tiny image"
+      href={undefined}
+    >
+      <img
+        src="http://fpoimg.com/100x100"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <a
+        className="header"
+      >
+        collaborative generate interfaces
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={3124}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
+      </a>
+      <div
+        className="description"
+      >
+        Marietta Kilback
+      </div>
+      <div
+        className="extra"
+      >
+        <span>
+          Dietrich - Bahringer, Nolan Inc, Pacocha - Kerluke
+        </span>
+        <p>
+          54103
+        </p>
+      </div>
+      <i
+        aria-hidden="true"
+        className="tags small icon"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+      <i
+        aria-hidden="true"
+        className="share icon"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="item"
+  >
+    <div
+      className="ui tiny image"
+      href={undefined}
+    >
+      <img
+        src="http://fpoimg.com/100x100"
+      />
+    </div>
+    <div
+      className="content"
+    >
+      <a
+        className="header"
+      >
+        leading-edge incubate relationships
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={7422}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
+      </a>
+      <div
+        className="description"
+      >
+        Nyasia Tremblay
       </div>
       <div
         className="extra"
@@ -118,7 +443,7 @@ exports[`SearchResultCollection: default 1`] = `
           
         </span>
         <p>
-          94697
+          89473
         </p>
       </div>
       <i
@@ -168,25 +493,34 @@ exports[`SearchResultCollection: default 1`] = `
       <a
         className="header"
       >
-        intuitive envisioneer e-commerce
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
+        proactive morph eyeballs
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={5409}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
       </a>
       <div
         className="description"
       >
-        Madison Russel DDS
+        Lew Stark
       </div>
       <div
         className="extra"
       >
         <span>
-          
+          Keebler Inc
         </span>
         <p>
-          79438
+          39034
         </p>
       </div>
       <i
@@ -236,25 +570,34 @@ exports[`SearchResultCollection: default 1`] = `
       <a
         className="header"
       >
-        distributed exploit niches
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
+        virtual expedite portals
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={8171}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
       </a>
       <div
         className="description"
       >
-        Janis Borer
+        Carmella Bauch
       </div>
       <div
         className="extra"
       >
         <span>
-          Borer Inc, Toy - Crona, Nader, Watsica and MacGyver
+          Kovacek - Ortiz
         </span>
         <p>
-          14002
+          42369
         </p>
       </div>
       <i
@@ -304,25 +647,34 @@ exports[`SearchResultCollection: default 1`] = `
       <a
         className="header"
       >
-        transparent cultivate ROI
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
+        viral morph synergies
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={6402}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
       </a>
       <div
         className="description"
       >
-        Jamey Raynor
+        Ms. Jessie Leffler
       </div>
       <div
         className="extra"
       >
         <span>
-          Paucek Group, Blanda, Dicki and Ortiz
+          Douglas - Hettinger
         </span>
         <p>
-          86207
+          43851
         </p>
       </div>
       <i
@@ -372,297 +724,34 @@ exports[`SearchResultCollection: default 1`] = `
       <a
         className="header"
       >
-        rich reinvent functionalities
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
+        compelling iterate paradigms
+        <button
+          className="ui icon button"
+          disabled={undefined}
+          onClick={[Function]}
+          role="button"
+          tabIndex={undefined}
+          value={7850}
+        >
+          <i
+            aria-hidden="true"
+            className="plus icon"
+          />
+        </button>
       </a>
       <div
         className="description"
       >
-        Pink Pfannerstill
+        Abigayle Schmidt
       </div>
       <div
         className="extra"
       >
         <span>
-          Douglas, Nolan and Mayer, Collier Group, Beatty, Bechtelar and Maggio
+          Ratke, Casper and Legros, Aufderhar, Hilll and Lubowitz, Schaden - Witting
         </span>
         <p>
-          1300
-        </p>
-      </div>
-      <i
-        aria-hidden="true"
-        className="tags small icon"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }
-      />
-      <i
-        aria-hidden="true"
-        className="share icon"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }
-      />
-    </div>
-  </div>
-  <div
-    className="item"
-  >
-    <div
-      className="ui tiny image"
-      href={undefined}
-    >
-      <img
-        src="http://fpoimg.com/100x100"
-      />
-    </div>
-    <div
-      className="content"
-    >
-      <a
-        className="header"
-      >
-        compelling innovate e-markets
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
-      </a>
-      <div
-        className="description"
-      >
-        Wilmer Hirthe
-      </div>
-      <div
-        className="extra"
-      >
-        <span>
-          
-        </span>
-        <p>
-          23227
-        </p>
-      </div>
-      <i
-        aria-hidden="true"
-        className="tags small icon"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }
-      />
-      <i
-        aria-hidden="true"
-        className="share icon"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }
-      />
-    </div>
-  </div>
-  <div
-    className="item"
-  >
-    <div
-      className="ui tiny image"
-      href={undefined}
-    >
-      <img
-        src="http://fpoimg.com/100x100"
-      />
-    </div>
-    <div
-      className="content"
-    >
-      <a
-        className="header"
-      >
-        viral revolutionize e-commerce
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
-      </a>
-      <div
-        className="description"
-      >
-        Anibal Hegmann
-      </div>
-      <div
-        className="extra"
-      >
-        <span>
-          O'Connell Group, Quigley Inc
-        </span>
-        <p>
-          53106
-        </p>
-      </div>
-      <i
-        aria-hidden="true"
-        className="tags small icon"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }
-      />
-      <i
-        aria-hidden="true"
-        className="share icon"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }
-      />
-    </div>
-  </div>
-  <div
-    className="item"
-  >
-    <div
-      className="ui tiny image"
-      href={undefined}
-    >
-      <img
-        src="http://fpoimg.com/100x100"
-      />
-    </div>
-    <div
-      className="content"
-    >
-      <a
-        className="header"
-      >
-        seamless engineer action-items
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
-      </a>
-      <div
-        className="description"
-      >
-        Brianne Greenfelder
-      </div>
-      <div
-        className="extra"
-      >
-        <span>
-          
-        </span>
-        <p>
-          41291
-        </p>
-      </div>
-      <i
-        aria-hidden="true"
-        className="tags small icon"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }
-      />
-      <i
-        aria-hidden="true"
-        className="share icon"
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "cursor": "pointer",
-          }
-        }
-      />
-    </div>
-  </div>
-  <div
-    className="item"
-  >
-    <div
-      className="ui tiny image"
-      href={undefined}
-    >
-      <img
-        src="http://fpoimg.com/100x100"
-      />
-    </div>
-    <div
-      className="content"
-    >
-      <a
-        className="header"
-      >
-        B2B implement ROI
-        <i
-          aria-hidden="true"
-          className="plus icon"
-        />
-      </a>
-      <div
-        className="description"
-      >
-        Newell Jacobi
-      </div>
-      <div
-        className="extra"
-      >
-        <span>
-          
-        </span>
-        <p>
-          37215
+          37172
         </p>
       </div>
       <i

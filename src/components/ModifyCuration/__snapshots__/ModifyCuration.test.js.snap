@@ -12,7 +12,12 @@ exports[`ModifyCuration: default 1`] = `
       aria-hidden="true"
       className="write icon"
     />
-    Edit
+    <a
+      href="editCuration/undefined"
+      onClick={[Function]}
+    >
+      Edit
+    </a>
   </div>
   <div
     className="link item"

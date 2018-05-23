@@ -34,186 +34,180 @@ exports[`CurationFilterSubHeader: default 1`] = `
       <div
         className="column"
       >
-        <form
-          action={undefined}
-          className="ui form"
-          onSubmit={[Function]}
+        <div
+          className="field"
         >
+          <label
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          >
+            Environment
+          </label>
           <div
             className="field"
           >
-            <label
-              style={
-                Object {
-                  "color": "white",
-                }
-              }
-            >
-              Environment
-            </label>
             <div
-              className="field"
+              aria-busy={undefined}
+              aria-disabled={undefined}
+              aria-expanded={false}
+              aria-multiselectable={undefined}
+              className="ui selection dropdown"
+              content={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              required={undefined}
+              role="listbox"
+              tabIndex={0}
+              type={undefined}
             >
               <div
-                aria-busy={undefined}
-                aria-disabled={undefined}
-                aria-expanded={false}
-                aria-multiselectable={undefined}
-                className="ui selection dropdown"
-                content={undefined}
-                onBlur={[Function]}
-                onChange={[Function]}
+                aria-live="polite"
+                className="text"
+                role="alert"
+              />
+              <i
+                aria-hidden="true"
+                className="dropdown icon"
                 onClick={[Function]}
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                required={undefined}
-                role="listbox"
-                tabIndex={0}
-                type={undefined}
+              />
+              <div
+                className="menu transition"
               >
                 <div
-                  aria-live="polite"
-                  className="text"
-                  role="alert"
-                />
-                <i
-                  aria-hidden="true"
-                  className="dropdown icon"
+                  aria-checked={false}
+                  aria-disabled={undefined}
+                  aria-selected={true}
+                  className="selected item"
                   onClick={[Function]}
-                />
-                <div
-                  className="menu transition"
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
+                    }
+                  }
                 >
-                  <div
-                    aria-checked={false}
-                    aria-disabled={undefined}
-                    aria-selected={true}
-                    className="selected item"
-                    onClick={[Function]}
-                    role="option"
-                    style={
-                      Object {
-                        "pointerEvents": "all",
-                      }
-                    }
+                  <span
+                    className="text"
                   >
-                    <span
-                      className="text"
-                    >
-                      Production
-                    </span>
-                  </div>
-                  <div
-                    aria-checked={false}
-                    aria-disabled={undefined}
-                    aria-selected={false}
-                    className="item"
-                    onClick={[Function]}
-                    role="option"
-                    style={
-                      Object {
-                        "pointerEvents": "all",
-                      }
+                    Production
+                  </span>
+                </div>
+                <div
+                  aria-checked={false}
+                  aria-disabled={undefined}
+                  aria-selected={false}
+                  className="item"
+                  onClick={[Function]}
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
                     }
+                  }
+                >
+                  <span
+                    className="text"
                   >
-                    <span
-                      className="text"
-                    >
-                      Development
-                    </span>
-                  </div>
+                    Development
+                  </span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          className="field"
+        >
+          <label
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          >
+            Status
+          </label>
           <div
             className="field"
           >
-            <label
-              style={
-                Object {
-                  "color": "white",
-                }
-              }
-            >
-              Status
-            </label>
             <div
-              className="field"
+              aria-busy={undefined}
+              aria-disabled={undefined}
+              aria-expanded={false}
+              aria-multiselectable={undefined}
+              className="ui selection dropdown"
+              content={undefined}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onMouseDown={[Function]}
+              required={undefined}
+              role="listbox"
+              tabIndex={0}
+              type={undefined}
             >
               <div
-                aria-busy={undefined}
-                aria-disabled={undefined}
-                aria-expanded={false}
-                aria-multiselectable={undefined}
-                className="ui selection dropdown"
-                content={undefined}
-                onBlur={[Function]}
-                onChange={[Function]}
+                aria-live="polite"
+                className="text"
+                role="alert"
+              />
+              <i
+                aria-hidden="true"
+                className="dropdown icon"
                 onClick={[Function]}
-                onFocus={[Function]}
-                onMouseDown={[Function]}
-                required={undefined}
-                role="listbox"
-                tabIndex={0}
-                type={undefined}
+              />
+              <div
+                className="menu transition"
               >
                 <div
-                  aria-live="polite"
-                  className="text"
-                  role="alert"
-                />
-                <i
-                  aria-hidden="true"
-                  className="dropdown icon"
+                  aria-checked={false}
+                  aria-disabled={undefined}
+                  aria-selected={true}
+                  className="selected item"
                   onClick={[Function]}
-                />
-                <div
-                  className="menu transition"
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
+                    }
+                  }
                 >
-                  <div
-                    aria-checked={false}
-                    aria-disabled={undefined}
-                    aria-selected={true}
-                    className="selected item"
-                    onClick={[Function]}
-                    role="option"
-                    style={
-                      Object {
-                        "pointerEvents": "all",
-                      }
-                    }
+                  <span
+                    className="text"
                   >
-                    <span
-                      className="text"
-                    >
-                      Draft
-                    </span>
-                  </div>
-                  <div
-                    aria-checked={false}
-                    aria-disabled={undefined}
-                    aria-selected={false}
-                    className="item"
-                    onClick={[Function]}
-                    role="option"
-                    style={
-                      Object {
-                        "pointerEvents": "all",
-                      }
+                    Draft
+                  </span>
+                </div>
+                <div
+                  aria-checked={false}
+                  aria-disabled={undefined}
+                  aria-selected={false}
+                  className="item"
+                  onClick={[Function]}
+                  role="option"
+                  style={
+                    Object {
+                      "pointerEvents": "all",
                     }
+                  }
+                >
+                  <span
+                    className="text"
                   >
-                    <span
-                      className="text"
-                    >
-                      Published
-                    </span>
-                  </div>
+                    Published
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
       <div
         className="column"
@@ -238,7 +232,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Product
+          Sports
         </a>
         <a
           className="ui red label"
@@ -249,7 +243,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          parsing
+          Total
         </a>
         <a
           className="ui red label"
@@ -260,7 +254,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          reboot
+          Money Market Account
         </a>
         <a
           className="ui red label"
@@ -271,7 +265,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Incredible
+          Pants
         </a>
         <a
           className="ui red label"
@@ -282,7 +276,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Producer
+          Assimilated
         </a>
         <a
           className="ui red label"
@@ -293,7 +287,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Developer
+          parallelism
         </a>
         <a
           className="ui red label"
@@ -304,7 +298,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          generating
+          input
         </a>
         <a
           className="ui red label"
@@ -315,7 +309,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Bedfordshire
+          Games
         </a>
         <a
           className="ui red label"
@@ -326,7 +320,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          white
+          Metrics
         </a>
         <a
           className="ui red label"
@@ -337,7 +331,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          optical
+          Fresh
         </a>
         <a
           className="ui red label"
@@ -348,7 +342,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          B2B
+          primary
         </a>
         <a
           className="ui red label"
@@ -359,7 +353,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Sleek Soft Pants
+          Wooden
         </a>
         <a
           className="ui red label"
@@ -370,7 +364,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Berkshire
+          Books
         </a>
         <a
           className="ui red label"
@@ -381,7 +375,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Mandatory
+          Mozambique
         </a>
         <a
           className="ui red label"
@@ -392,7 +386,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Chief
+          Handmade
         </a>
         <a
           className="ui red label"
@@ -403,7 +397,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Personal Loan Account
+          bluetooth
         </a>
         <a
           className="ui red label"
@@ -414,7 +408,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          conglomeration
+          Rustic Metal Tuna
         </a>
         <a
           className="ui red label"
@@ -425,7 +419,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          e-markets
+          back-end
         </a>
         <a
           className="ui red label"
@@ -436,7 +430,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          optical
+          Hills
         </a>
         <a
           className="ui red label"
@@ -447,7 +441,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Cotton
+          connecting
         </a>
         <a
           className="ui red label"
@@ -458,7 +452,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Home Loan Account
+          firewall
         </a>
         <a
           className="ui red label"
@@ -469,7 +463,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          redundant
+          deposit
         </a>
         <a
           className="ui red label"
@@ -480,7 +474,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Rubber
+          Customer
         </a>
         <a
           className="ui red label"
@@ -491,7 +485,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          lavender
+          Bhutan
         </a>
         <a
           className="ui red label"
@@ -502,7 +496,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          Personal Loan Account
+          Gorgeous Cotton Chair
         </a>
         <a
           className="ui red label"
@@ -513,7 +507,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          program
+          web-enabled
         </a>
         <a
           className="ui red label"
@@ -524,7 +518,7 @@ exports[`CurationFilterSubHeader: default 1`] = `
             }
           }
         >
-          ivory
+          Books
         </a>
       </div>
     </div>

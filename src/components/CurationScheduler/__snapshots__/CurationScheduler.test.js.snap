@@ -19,7 +19,7 @@ exports[`CurationScheduler: default 1`] = `
         required={undefined}
         role="button"
         tabIndex={undefined}
-        type={undefined}
+        type="submit"
       >
         Save Curations
       </button>
@@ -34,6 +34,7 @@ exports[`CurationScheduler: default 1`] = `
         aria-multiselectable={undefined}
         className="ui selection dropdown"
         content={undefined}
+        id="curation-status"
         onBlur={[Function]}
         onChange={[Function]}
         onClick={[Function]}
@@ -123,6 +124,7 @@ exports[`CurationScheduler: default 1`] = `
           required={undefined}
           tabIndex={undefined}
           type="date"
+          value={undefined}
         />
         <i
           aria-hidden="true"
@@ -144,6 +146,7 @@ exports[`CurationScheduler: default 1`] = `
           required={undefined}
           tabIndex={undefined}
           type="date"
+          value={undefined}
         />
         <i
           aria-hidden="true"

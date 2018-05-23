@@ -3,6 +3,8 @@ import recycle from 'recycle';
 import PropTypes from 'prop-types';
 
 import { Form, Input } from 'semantic-ui-react';
+
+import 'rxjs/add/operator/withLatestFrom';
 import './CurationScheduler.css';
 
 const CurationScheduler = recycle({

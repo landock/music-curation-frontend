@@ -17,7 +17,7 @@ exports[`App Component renders without crashing 1`] = `
           className="row"
         >
           <div
-            className="left floated two wide column"
+            className="left floated middle aligned two wide column"
           >
             <i
               aria-hidden="true"
@@ -25,7 +25,7 @@ exports[`App Component renders without crashing 1`] = `
             />
           </div>
           <div
-            className="fourteen wide column"
+            className="middle aligned fourteen wide column"
           >
             <img
               className="ui small centered image"
@@ -77,96 +77,60 @@ exports[`App Component renders without crashing 1`] = `
     <div
       className="column"
     >
-      <div
-        className="ui left aligned four column grid"
+      <form
+        action={undefined}
+        className="ui form"
+        onSubmit={[Function]}
       >
         <div
-          className="black row"
+          className="ui three column grid"
+          style={
+            Object {
+              "background": "black",
+              "marginBottom": "20px",
+            }
+          }
         >
           <div
-            className="two wide column"
+            className="left aligned row"
           >
             <div
-              className="ui black inverted text vertical menu"
+              className="right aligned column"
             >
-              <a
-                className="item"
-                onClick={[Function]}
+              <span
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
               >
-                All
-              </a>
-              <a
-                className="item"
-                onClick={[Function]}
-              >
-                Tracks
-              </a>
-              <a
-                className="item"
-                onClick={[Function]}
-              >
-                Artist
-              </a>
-              <a
-                className="item"
-                onClick={[Function]}
-              >
-                Albums
-              </a>
-              <a
-                className="item"
-                onClick={[Function]}
-              >
-                Label
-              </a>
+                Filters:
+              </span>
             </div>
-          </div>
-          <div
-            className="seven wide column"
-          >
-            <form
-              action={undefined}
-              className="ui inverted equal width form"
-              onSubmit={[Function]}
+            <div
+              className="column"
             >
               <div
                 className="field"
               >
                 <label
-                  htmlFor={undefined}
+                  style={
+                    Object {
+                      "color": "white",
+                    }
+                  }
                 >
-                  Dates
+                  Environment
                 </label>
                 <div
-                  className="ui input"
-                  content={undefined}
-                >
-                  <input
-                    disabled={undefined}
-                    onChange={[Function]}
-                    required={undefined}
-                    tabIndex={undefined}
-                    type="range"
-                  />
-                </div>
-              </div>
-              <div
-                className="fields"
-              >
-                <div
                   className="field"
                 >
-                  <label
-                    htmlFor={undefined}
-                  >
-                    Country
-                  </label>
                   <div
                     aria-busy={undefined}
                     aria-disabled={undefined}
                     aria-expanded={false}
                     aria-multiselectable={undefined}
-                    className="ui fluid selection dropdown"
+                    className="ui selection dropdown"
                     content={undefined}
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -207,26 +171,53 @@ exports[`App Component renders without crashing 1`] = `
                         <span
                           className="text"
                         >
-                          Afghanistan
+                          Production
+                        </span>
+                      </div>
+                      <div
+                        aria-checked={false}
+                        aria-disabled={undefined}
+                        aria-selected={false}
+                        className="item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Development
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div
+                className="field"
+              >
+                <label
+                  style={
+                    Object {
+                      "color": "white",
+                    }
+                  }
+                >
+                  Status
+                </label>
                 <div
                   className="field"
                 >
-                  <label
-                    htmlFor={undefined}
-                  >
-                    City
-                  </label>
                   <div
                     aria-busy={undefined}
                     aria-disabled={undefined}
                     aria-expanded={false}
                     aria-multiselectable={undefined}
-                    className="ui fluid selection dropdown"
+                    className="ui selection dropdown"
                     content={undefined}
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -267,124 +258,586 @@ exports[`App Component renders without crashing 1`] = `
                         <span
                           className="text"
                         >
-                          Kandahar
+                          Draft
+                        </span>
+                      </div>
+                      <div
+                        aria-checked={false}
+                        aria-disabled={undefined}
+                        aria-selected={false}
+                        className="item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Published
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </form>
-          </div>
-          <div
-            className="five wide column"
-          >
-            <div
-              className="ui small inverted header"
-            >
-              Release type
             </div>
             <div
-              className="ui equal width grid"
+              className="column"
             >
-              <div
-                className="row"
+              <p>
+                <strong
+                  style={
+                    Object {
+                      "color": "white",
+                    }
+                  }
+                >
+                  Tags
+                </strong>
+              </p>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
               >
-                <div
-                  className="column"
-                >
-                  <div
-                    className="ui inverted text vertical menu"
-                  >
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Karaoke
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Soundtrack
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Compilation
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Single
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      B Side
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="column"
-                >
-                  <div
-                    className="ui inverted text vertical menu"
-                  >
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Collaboration
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Related
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Remix
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Live
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Acoustic
-                    </a>
-                  </div>
-                </div>
-              </div>
+                Tasty Cotton Cheese
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                fault-tolerant
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Boliviano Mvdol
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Security
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                infrastructures
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Global
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Home
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                indigo
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Money Market Account
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Coordinator
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                auxiliary
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Regional
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Motorway
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Computer
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                application
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Games
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Automotive
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Yen
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                California
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Electronics
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                protocol
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Personal Loan Account
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                copying
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                next generation
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Table
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                multi-byte
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Rustic
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Savings Account
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                transmitting
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Extended
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Intelligent Cotton Towels
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                partnerships
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Multi-lateral
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                world-class
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                frame
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Cambridgeshire
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                architectures
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                backing up
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                invoice
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Philippines
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Unbranded Wooden Bacon
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Rue
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Zambian Kwacha
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Automotive
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                time-frame
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Incredible Rubber Salad
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Wall
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                orchid
+              </a>
             </div>
-          </div>
-          <div
-            className="two wide column"
-          >
-            <span>
-              No tags
-            </span>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
   <div
-    className="row"
+    className="left aligned row"
   >
     <div
-      className="left aligned column"
+      className="column"
     >
       <form
         action={undefined}
@@ -561,25 +1014,33 @@ exports[`App Component renders without crashing 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="left aligned row"
   >
     <div
       className="column"
     >
       <div
-        className="ui divided two column grid"
+        className="row"
       >
         <div
-          className="row"
+          className="column"
         >
           <div
-            className="column"
+            className="ui divided two column grid"
           >
-            <p>
-              No Curations Found
-            </p>
+            <div
+              className="row"
+            >
+              <div
+                className="column"
+              >
+                <p>
+                  No Curations Found
+                </p>
+              </div>
+               
+            </div>
           </div>
-           
         </div>
       </div>
     </div>

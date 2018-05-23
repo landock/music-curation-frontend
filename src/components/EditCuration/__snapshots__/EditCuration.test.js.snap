@@ -21,7 +21,7 @@ exports[`EditCuration: default 1`] = `
             href={undefined}
           >
             <img
-              src="http://fpoimg.com/200x200"
+              src={undefined}
             />
           </div>
           <div
@@ -29,22 +29,16 @@ exports[`EditCuration: default 1`] = `
           >
             <div
               className="header"
-            >
-              Handmade McLaughlin Station
-            </div>
+            />
             <div
               className="description"
             >
-              <p>
-                The JSON monitor is down, parse the back-end microchip so we can parse the RAM application!
-              </p>
+              <p />
               <strong>
                 Tracks:
               </strong>
                
-              <em>
-                user-centric repurpose portals, bleeding-edge unleash deliverables, global brand networks, sticky productize ROI, innovative envisioneer deliverables
-              </em>
+              <em />
             </div>
           </div>
         </div>
@@ -71,7 +65,7 @@ exports[`EditCuration: default 1`] = `
               required={undefined}
               role="button"
               tabIndex={undefined}
-              type={undefined}
+              type="submit"
             >
               Save Curations
             </button>
@@ -86,6 +80,7 @@ exports[`EditCuration: default 1`] = `
               aria-multiselectable={undefined}
               className="ui selection dropdown"
               content={undefined}
+              id="curation-status"
               onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}
@@ -175,6 +170,7 @@ exports[`EditCuration: default 1`] = `
                 required={undefined}
                 tabIndex={undefined}
                 type="date"
+                value={undefined}
               />
               <i
                 aria-hidden="true"
@@ -196,6 +192,7 @@ exports[`EditCuration: default 1`] = `
                 required={undefined}
                 tabIndex={undefined}
                 type="date"
+                value={undefined}
               />
               <i
                 aria-hidden="true"

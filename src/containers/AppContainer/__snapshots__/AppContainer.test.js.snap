@@ -17,7 +17,7 @@ exports[`AppContainer renders without crashing 1`] = `
           className="row"
         >
           <div
-            className="left floated two wide column"
+            className="left floated middle aligned two wide column"
           >
             <i
               aria-hidden="true"
@@ -25,7 +25,7 @@ exports[`AppContainer renders without crashing 1`] = `
             />
           </div>
           <div
-            className="fourteen wide column"
+            className="middle aligned fourteen wide column"
           >
             <img
               className="ui small centered image"
@@ -77,96 +77,60 @@ exports[`AppContainer renders without crashing 1`] = `
     <div
       className="column"
     >
-      <div
-        className="ui left aligned four column grid"
+      <form
+        action={undefined}
+        className="ui form"
+        onSubmit={[Function]}
       >
         <div
-          className="black row"
+          className="ui three column grid"
+          style={
+            Object {
+              "background": "black",
+              "marginBottom": "20px",
+            }
+          }
         >
           <div
-            className="two wide column"
+            className="left aligned row"
           >
             <div
-              className="ui black inverted text vertical menu"
+              className="right aligned column"
             >
-              <a
-                className="item"
-                onClick={[Function]}
+              <span
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
               >
-                All
-              </a>
-              <a
-                className="item"
-                onClick={[Function]}
-              >
-                Tracks
-              </a>
-              <a
-                className="item"
-                onClick={[Function]}
-              >
-                Artist
-              </a>
-              <a
-                className="item"
-                onClick={[Function]}
-              >
-                Albums
-              </a>
-              <a
-                className="item"
-                onClick={[Function]}
-              >
-                Label
-              </a>
+                Filters:
+              </span>
             </div>
-          </div>
-          <div
-            className="seven wide column"
-          >
-            <form
-              action={undefined}
-              className="ui inverted equal width form"
-              onSubmit={[Function]}
+            <div
+              className="column"
             >
               <div
                 className="field"
               >
                 <label
-                  htmlFor={undefined}
+                  style={
+                    Object {
+                      "color": "white",
+                    }
+                  }
                 >
-                  Dates
+                  Environment
                 </label>
                 <div
-                  className="ui input"
-                  content={undefined}
-                >
-                  <input
-                    disabled={undefined}
-                    onChange={[Function]}
-                    required={undefined}
-                    tabIndex={undefined}
-                    type="range"
-                  />
-                </div>
-              </div>
-              <div
-                className="fields"
-              >
-                <div
                   className="field"
                 >
-                  <label
-                    htmlFor={undefined}
-                  >
-                    Country
-                  </label>
                   <div
                     aria-busy={undefined}
                     aria-disabled={undefined}
                     aria-expanded={false}
                     aria-multiselectable={undefined}
-                    className="ui fluid selection dropdown"
+                    className="ui selection dropdown"
                     content={undefined}
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -207,26 +171,53 @@ exports[`AppContainer renders without crashing 1`] = `
                         <span
                           className="text"
                         >
-                          Afghanistan
+                          Production
+                        </span>
+                      </div>
+                      <div
+                        aria-checked={false}
+                        aria-disabled={undefined}
+                        aria-selected={false}
+                        className="item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Development
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div
+                className="field"
+              >
+                <label
+                  style={
+                    Object {
+                      "color": "white",
+                    }
+                  }
+                >
+                  Status
+                </label>
                 <div
                   className="field"
                 >
-                  <label
-                    htmlFor={undefined}
-                  >
-                    City
-                  </label>
                   <div
                     aria-busy={undefined}
                     aria-disabled={undefined}
                     aria-expanded={false}
                     aria-multiselectable={undefined}
-                    className="ui fluid selection dropdown"
+                    className="ui selection dropdown"
                     content={undefined}
                     onBlur={[Function]}
                     onChange={[Function]}
@@ -267,124 +258,311 @@ exports[`AppContainer renders without crashing 1`] = `
                         <span
                           className="text"
                         >
-                          Kandahar
+                          Draft
+                        </span>
+                      </div>
+                      <div
+                        aria-checked={false}
+                        aria-disabled={undefined}
+                        aria-selected={false}
+                        className="item"
+                        onClick={[Function]}
+                        role="option"
+                        style={
+                          Object {
+                            "pointerEvents": "all",
+                          }
+                        }
+                      >
+                        <span
+                          className="text"
+                        >
+                          Published
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </form>
-          </div>
-          <div
-            className="five wide column"
-          >
-            <div
-              className="ui small inverted header"
-            >
-              Release type
             </div>
             <div
-              className="ui equal width grid"
+              className="column"
             >
-              <div
-                className="row"
+              <p>
+                <strong
+                  style={
+                    Object {
+                      "color": "white",
+                    }
+                  }
+                >
+                  Tags
+                </strong>
+              </p>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
               >
-                <div
-                  className="column"
-                >
-                  <div
-                    className="ui inverted text vertical menu"
-                  >
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Karaoke
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Soundtrack
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Compilation
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Single
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      B Side
-                    </a>
-                  </div>
-                </div>
-                <div
-                  className="column"
-                >
-                  <div
-                    className="ui inverted text vertical menu"
-                  >
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Collaboration
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Related
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Remix
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Live
-                    </a>
-                    <a
-                      className="item"
-                      onClick={[Function]}
-                    >
-                      Acoustic
-                    </a>
-                  </div>
-                </div>
-              </div>
+                secondary
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Bike
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Wooden
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                SDD
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                zero tolerance
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                open system
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Product
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Prairie
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Pants
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Refined Rubber Sausages
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                copy
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                iterate
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                panel
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                RAM
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Keyboard
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Consultant
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Sports
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                local
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Shirt
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                Intelligent
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                compelling
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                24/365
+              </a>
+              <a
+                className="ui red label"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1%",
+                  }
+                }
+              >
+                capacitor
+              </a>
             </div>
-          </div>
-          <div
-            className="two wide column"
-          >
-            <span>
-              No tags
-            </span>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
   <div
-    className="row"
+    className="left aligned row"
   >
     <div
-      className="left aligned column"
+      className="column"
     >
       <form
         action={undefined}
@@ -561,25 +739,33 @@ exports[`AppContainer renders without crashing 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="left aligned row"
   >
     <div
       className="column"
     >
       <div
-        className="ui divided two column grid"
+        className="row"
       >
         <div
-          className="row"
+          className="column"
         >
           <div
-            className="column"
+            className="ui divided two column grid"
           >
-            <p>
-              No Curations Found
-            </p>
+            <div
+              className="row"
+            >
+              <div
+                className="column"
+              >
+                <p>
+                  No Curations Found
+                </p>
+              </div>
+               
+            </div>
           </div>
-           
         </div>
       </div>
     </div>

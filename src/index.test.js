@@ -14,7 +14,7 @@ it('renders without crashing', () => {
 
   expect(root.innerHTML).toBeFalsy();
 
-  const index = require('./index');
+  const index = require('./index'); //I dont know how to import the module a better way;
 
   expect(root).toHaveProperty('_reactRootContainer');
 });

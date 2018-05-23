@@ -5,6 +5,9 @@ import { Grid, Item } from 'semantic-ui-react';
 import Curation from '../Curation';
 import CurationScheduler from '../CurationScheduler';
 
+import 'rxjs/add/operator/merge';
+import 'rxjs/add/operator/first';
+
 import { actions as curationsActions } from '../../modules/Curations';
 
 const EditCuration = recycle({

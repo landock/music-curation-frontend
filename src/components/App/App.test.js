@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
+import { MemoryRouter as Router } from 'react-router-dom';
 
 import configureMockStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
@@ -19,7 +20,9 @@ describe('App Component', () => {
     let tree = renderer
       .create(
         <Provider store={store}>
-          <App />
+          <Router>
+            <App />
+          </Router>
         </Provider>
       )
       .toJSON();

@@ -18,10 +18,19 @@ exports[`SearchResultCard: default 1`] = `
     <a
       className="header"
     >
-      <i
-        aria-hidden="true"
-        className="plus icon"
-      />
+      <button
+        className="ui icon button"
+        disabled={undefined}
+        onClick={[Function]}
+        role="button"
+        tabIndex={undefined}
+        value={undefined}
+      >
+        <i
+          aria-hidden="true"
+          className="plus icon"
+        />
+      </button>
     </a>
     <div
       className="description"
