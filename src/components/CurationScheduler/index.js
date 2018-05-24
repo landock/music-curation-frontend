@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import recycle from 'recycle';
 import PropTypes from 'prop-types';
 

@@ -22,9 +22,9 @@ class SearchResultCollection extends PureComponent {
   }
 }
 
-SearchResultCollection.defaultProps = {
-  searchResults,
-};
+// SearchResultCollection.defaultProps = {
+//   searchResults,
+// };
 SearchResultCollection.propTypes = {
   searchResults: PropTypes.arrayOf(PropTypes.object),
 };

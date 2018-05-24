@@ -25,8 +25,17 @@ describe('Curations Container', () => {
     );
 
     let componentState = component.instance().props.store.getState();
-
     expect(componentState).toEqual(testData);
+  });
+  it('test if it added the curation collection', () => {
+    let component = renderer.create(
+      <Provider store={store}>
+        <Curations />
+      </Provider>
+    );
+
+    let hasCurationCollection = component.root.findByType(CurationsCollection);
+    expect(hasCurationCollection).toBeTruthy();
   });
 
   it('should fetch data when mounted', () => {

@@ -54,7 +54,6 @@ describe('CurationsCollection', () => {
   it('should render curation name ', () => {
     component = mount(<CurationsCollection curations={testCurations} />);
     const expectedComponentText = curationName;
-    console.log(component.debug());
     const componentText = component
       .find('.header')
       .text()

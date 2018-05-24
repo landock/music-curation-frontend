@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Curation: default 1`] = `
+exports[`renders correctly 1`] = `
 <div
   className="item"
 >
@@ -18,20 +18,20 @@ exports[`Curation: default 1`] = `
     <div
       className="header"
     >
-      Small Luther Islands
+      Sprint 14 remix
     </div>
     <div
       className="description"
     >
       <p>
-        We need to transmit the wireless SMS driver!
+        whatever description here
       </p>
       <strong>
         Tracks:
       </strong>
        
       <em>
-        end-to-end utilize deliverables, user-centric target solutions, 24/365 incentivize interfaces, cross-platform innovate platforms
+        testin shit
       </em>
     </div>
   </div>

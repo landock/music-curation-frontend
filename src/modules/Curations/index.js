@@ -19,7 +19,6 @@ function reducer(state = {}, action = {}) {
         curations: action.payload,
       });
     case CURATION_FETCHED:
-      console.log('payload', action.payload);
       return immutableState.merge({
         currentCuration: action.payload,
       });

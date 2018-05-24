@@ -18,7 +18,8 @@ const SearchResultCard = recycle({
             type: 'ADD_CURATION_TRACK',
             payload: {
               id: parseInt(
-                e.target.value ? e.target.value : e.target.parentElement.value
+                e.target.value ? e.target.value : e.target.parentElement.value,
+                10
               ),
             },
           };

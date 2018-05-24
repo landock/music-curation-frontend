@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Grid, Menu, Form, Header } from 'semantic-ui-react';
 import TagCollection from '../TagCollection';
 
-import { tags } from '../../fixtures/test_data';
 import './SearchResultFilterSubHeader.css';
 
 class SearchResultFilterSubHeader extends PureComponent {
@@ -93,7 +92,7 @@ class SearchResultFilterSubHeader extends PureComponent {
 
 SearchResultFilterSubHeader.propTypes = { tags: PropTypes.array };
 
-SearchResultFilterSubHeader.defaultProps = {
-  tags,
-};
+// SearchResultFilterSubHeader.defaultProps = {
+//   tags,
+// };
 export default SearchResultFilterSubHeader;
