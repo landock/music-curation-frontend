@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import Tag from '../Tag';
 
 class TagCollection extends PureComponent {
@@ -13,9 +12,5 @@ class TagCollection extends PureComponent {
     return tagsMarkup;
   }
 }
-
-TagCollection.propTypes = {
-  tags: PropTypes.array,
-};
 
 export default TagCollection;

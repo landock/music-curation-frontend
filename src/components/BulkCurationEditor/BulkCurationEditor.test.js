@@ -1,11 +1,8 @@
-
-import React from 'react'
-import { shallow, mount, render } from 'enzyme';
-import renderer from 'react-test-renderer'
-import BulkCurationEditor from '.'
+import React from 'react';
+import BulkCurationEditor from '.';
+import { shallow } from 'enzyme';
 
 it('BulkCurationEditor: default', () => {
-  const component = renderer.create(<BulkCurationEditor />)
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-})
+  const component = shallow(<BulkCurationEditor />);
+  expect(component.text()).toEqual('<Form />')
+});

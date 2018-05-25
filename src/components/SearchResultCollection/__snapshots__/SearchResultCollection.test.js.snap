@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`SearchResultCollection: default 1`] = `
-<p>
-  no search results
-</p>
-`;

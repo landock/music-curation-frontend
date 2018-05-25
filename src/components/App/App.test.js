@@ -11,23 +11,25 @@ import App from './index';
 
 describe('App Component', () => {
   let component, mockStore, store;
-  beforeEach(() => {
+
+  beforeAll(() => {
     component = shallow(<App />);
     mockStore = configureMockStore([thunk]);
   });
-  it('renders without crashing', () => {
-    let store = mockStore({});
-    let tree = renderer
-      .create(
-        <Provider store={store}>
-          <Router>
-            <App />
-          </Router>
-        </Provider>
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+
+  // it('renders without crashing', () => {
+  //   let store = mockStore({});
+  //   let tree = renderer
+  //     .create(
+  //       <Provider store={store}>
+  //         <Router>
+  //           <App />
+  //         </Router>
+  //       </Provider>
+  //     )
+  //     .toJSON();
+  //   expect(tree).toMatchSnapshot();
+  // });
 
   it('should render shit if curations prop exists', () => {
     let name = 'Test fuckin Name';

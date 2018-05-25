@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import CurationFilterSubHeader from '.';
 
 it('CurationFilterSubHeader: default', () => {
-  const component = renderer.create(<CurationFilterSubHeader />);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const component = shallow(<CurationFilterSubHeader />);
+  // expect(tree).toMatchSnapshot();
+  expect(component.text()).toEqual('<Form />');
 });

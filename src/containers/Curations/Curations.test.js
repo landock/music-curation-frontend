@@ -9,42 +9,40 @@ import Curations from '.';
 import CurationsCollection from '../../components/CurationsCollection';
 
 describe('Curations Container', () => {
-  let store, testData, mockStore;
+  let component, store, testData, mockStore;
 
-  beforeEach(() => {
+  beforeAll(() => {
     mockStore = configureMockStore([thunk]);
     testData = { Curations: [1] };
     store = mockStore(testData);
+    component = mount(
+      <Provider store={store}>
+        <Curations />
+      </Provider>
+    );
   });
 
   it('should have a store passed from a Provider as props', () => {
-    let component = mount(
-      <Provider store={store}>
-        <Curations />
-      </Provider>
-    );
-
     let componentState = component.instance().props.store.getState();
     expect(componentState).toEqual(testData);
   });
-  it('test if it added the curation collection', () => {
-    let component = renderer.create(
+
+  it('Should be a RecycleComponent', () => {
+    let shallowComponent = shallow(
       <Provider store={store}>
         <Curations />
       </Provider>
     );
 
-    let hasCurationCollection = component.root.findByType(CurationsCollection);
-    expect(hasCurationCollection).toBeTruthy();
+    expect(shallowComponent.text()).toEqual('<RecycleComponent />');
+  });
+
+  it('test if it added the curation collection', () => {
+    expect(component.find(CurationsCollection).length).toEqual(1);
   });
 
   it('should fetch data when mounted', () => {
     fetch.mockResponseOnce(JSON.stringify({ data: '12345' }));
-    let component = mount(
-      <Provider store={store}>
-        <Curations />
-      </Provider>
-    );
     expect(fetch.mock.calls.length).toEqual(1);
     fetch.resetMocks();
   });

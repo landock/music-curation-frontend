@@ -5,7 +5,6 @@ import renderer from 'react-test-renderer'
 import AddTags from '.'
 
 it('AddTags: default', () => {
-  const component = renderer.create(<AddTags />)
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+  const component = shallow(<AddTags />)
+  expect(component.text()).toEqual('<Header />Add Tags<TagCollection />')
 })

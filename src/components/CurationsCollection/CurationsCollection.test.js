@@ -33,37 +33,41 @@ describe('CurationsCollection', () => {
       },
     ],
   };
+
+  beforeAll(() => {
+    component = mount(<CurationsCollection curations={testCurations} />);
+  });
+
   it('Render without crashing', () => {
-    component = renderer.create(<CurationsCollection />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    // let renderedComponent = renderer.create(
+    // <CurationsCollection curations={testCurations} />
+    // );
+    // const tree = renderedComponent.toJSON();
+    // expect(tree).toMatchSnapshot();
   });
 
   it('should render placeholder message if no curations are passed as props', () => {
-    component = shallow(<CurationsCollection />);
+    let shallowComponent = shallow(<CurationsCollection />);
     const placeholderMarkup = <p>No Curations Found</p>;
-    expect(component.contains(placeholderMarkup)).toBe(true);
+
+    expect(shallowComponent.contains(placeholderMarkup)).toBe(true);
   });
 
   it('should render curation image', () => {
-    component = mount(<CurationsCollection curations={testCurations} />);
-
     expect(component.find('img').length).toBe(1);
   });
 
   it('should render curation name ', () => {
-    component = mount(<CurationsCollection curations={testCurations} />);
     const expectedComponentText = curationName;
     const componentText = component
       .find('.header')
       .text()
       .trim();
+
     expect(componentText).toEqual(expectedComponentText);
   });
 
   it("should render 'artist - track name'", () => {
-    component = mount(<CurationsCollection curations={testCurations} />);
-
     const componentText = component
       .find('em')
       .text()

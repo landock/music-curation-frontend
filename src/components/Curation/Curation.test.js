@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Curation from '.';
-import { curation } from '../../fixtures/test_data';
 
 it('renders correctly', () => {
   let mockCuration = {
@@ -20,7 +19,7 @@ it('renders correctly', () => {
     ],
     name: 'Sprint 14 remix',
   };
-  const component = renderer.create(<Curation curation={mockCuration} />);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  const component = shallow(<Curation curation={mockCuration} />);
+
+  expect(component.text()).toEqual('<Item />');
 });
