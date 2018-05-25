@@ -7,9 +7,13 @@ import CurationsCollection from '../../components/CurationsCollection';
 const Curations = recycle({
   dispatch(sources) {
     return [
-      sources.lifecycle
-        .filter(e => e === 'componentDidMount')
-        .map(curationsActions.fetchCurations),
+      sources.lifecycle.filter(e => e === 'componentDidMount').map(() => {
+        return {
+          type: 'API_REQUEST',
+          reducer: 'curations',
+          payload: { url: '/curations' },
+        };
+      }),
     ];
   },
   update(sources) {

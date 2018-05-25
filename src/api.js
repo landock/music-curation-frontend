@@ -1,4 +1,5 @@
 import 'cross-fetch/polyfill';
+import axios from 'axios';
 
 import { memoize } from 'lodash';
 const url = 'http://localhost:3001';
@@ -27,10 +28,27 @@ function getCuration(id) {
     });
 }
 
+function apiRequest(axiosConfig) {
+  if (!axiosConfig.url) return new Error('Need url to do shit');
+  if (!axiosConfig.method) {
+    if(axiosConfig.data) {
+      axiosConfig.method = 'post';
+    }
+    axiosConfig.method = 'get';
+  }
+  axiosConfig.url = url + axiosConfig.url;
+
+  return axios(axiosConfig).then(response => {
+    return response.data;
+  });
+}
+
 const memoizedGetCuration = memoize(getCuration);
 const memoizedGetCurations = memoize(getCurations);
+const memoizedApiRequest = memoize(apiRequest);
 
 export {
   memoizedGetCuration as getCuration,
   memoizedGetCurations as getCurations,
+  memoizedApiRequest as apiRequest,
 };
