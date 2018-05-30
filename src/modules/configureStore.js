@@ -1,13 +1,14 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
-import thunk from 'redux-thunk';
 import history from '../history';
 import Curations from './Curations';
+import Tracks from './Tracks';
 import apiMiddleware from '../middleware/api';
 
 const rootReducer = combineReducers({
   router: routerReducer,
+  Tracks,
   Curations,
 });
 
@@ -21,7 +22,9 @@ const createStoreWithMiddleware = (reducer, initialState = {}) => {
   return createStore(
     reducer,
     initialState,
-    composeEnhancers(applyMiddleware(thunk, loggerMiddleware, middleware, apiMiddleware))
+    composeEnhancers(
+      applyMiddleware(loggerMiddleware, middleware, apiMiddleware)
+    )
   );
 };
 

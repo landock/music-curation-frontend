@@ -7,7 +7,7 @@ import Curations from '../../containers/Curations';
 import CurationSearchBar from '../CurationSearchBar';
 import CurationFilterSubHeader from '../CurationFilterSubHeader';
 import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
-import SearchResultCollection from '../SearchResultCollection';
+import SearchResults from '../../containers/SearchResults';
 import BulkCurationEditor from '../BulkCurationEditor';
 import EditCuration from '../EditCuration';
 import { Grid, Icon, Image } from 'semantic-ui-react';
@@ -24,7 +24,7 @@ export default class App extends Component {
                   <Icon name="sidebar" color="black" size="large" />
                 </Grid.Column>
                 <Grid.Column verticalAlign="middle" width={14}>
-                  <Image src={logo} size="small" centered />
+                  <Image href="/" src={logo} size="small" centered />
                 </Grid.Column>
               </Grid.Row>
             </Grid>
@@ -82,7 +82,7 @@ export default class App extends Component {
           render={props => (
             <Grid.Row>
               <Grid.Column textAlign="left" width={8}>
-                <SearchResultCollection />
+                <SearchResults />
               </Grid.Column>
               <Grid.Column width={8}>
                 <p>The other side</p>

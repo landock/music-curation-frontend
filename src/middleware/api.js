@@ -1,33 +1,50 @@
-import { apiRequest } from '../api';
-import { types as curationTypes } from '../modules/Curations';
+import axios from 'axios';
+import { memoize } from 'lodash';
 
-const API_REQUEST = 'API_REQUEST';
+const API_REQUEST = '@@apiMiddleware/API_REQUEST';
 
-const apiUrl = 'http://localhost:3001';
+const baseUrl = 'http://localhost:3001';
+const types = {
+  API_REQUEST,
+};
 
 function configureNextAction(action, payload) {
-  const { reducer  } = action;
-  if (!reducer) return action;
-  switch (reducer) {
-    case 'curations':
-      return {
-        type: curationTypes.CURATIONS_FETCHED,
-        payload,
-      };
+  const { nextActionType } = action;
+  if (!nextActionType) return action;
 
-    default:
-      return action;
+  return {
+    type: nextActionType,
+    payload,
+  };
+}
+
+async function apiRequest(axiosConfig) {
+  if (!axiosConfig.url) return new Error('Need url to do shit');
+  if (!axiosConfig.method) {
+    if (axiosConfig.data) {
+      axiosConfig.method = 'post';
+    }
+    axiosConfig.method = 'get';
+  }
+  axiosConfig.url = baseUrl + axiosConfig.url;
+
+  try {
+    const response = await axios(axiosConfig);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return error;
   }
 }
 
 const apiMiddleware = store => next => action => {
-  if (action.type !== API_REQUEST || !action.reducer) return next(action);
-
+  if (action.type !== API_REQUEST) return next(action);
   const { payload } = action;
-  return apiRequest(payload).then(data => {
+
+  return apiRequest({ ...payload }).then(data => {
     let nextAction = configureNextAction(action, data);
     return next(nextAction);
   });
 };
 
-export default apiMiddleware;
+export { apiMiddleware as default, types };

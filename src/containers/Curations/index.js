@@ -1,7 +1,8 @@
 import React from 'react';
 import recycle from 'recycle';
 
-import { actions as curationsActions } from '../../modules/Curations';
+import { types as curationsTypes } from '../../modules/Curations';
+import { types as middlewareTypes } from '../../middleware/api';
 import CurationsCollection from '../../components/CurationsCollection';
 
 const Curations = recycle({
@@ -9,9 +10,11 @@ const Curations = recycle({
     return [
       sources.lifecycle.filter(e => e === 'componentDidMount').map(() => {
         return {
-          type: 'API_REQUEST',
-          reducer: 'curations',
-          payload: { url: '/curations' },
+          type: middlewareTypes.API_REQUEST,
+          nextActionType: curationsTypes.CURATIONS_FETCHED,
+          payload: {
+            url: '/curations',
+          },
         };
       }),
     ];

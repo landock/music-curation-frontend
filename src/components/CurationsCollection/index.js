@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Curation from '../Curation';
 import PublicationStatusEditor from '../PublicationStatusEditor';
 import { Item, Grid } from 'semantic-ui-react';

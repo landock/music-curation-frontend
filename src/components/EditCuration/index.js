@@ -2,17 +2,17 @@ import React from 'react';
 import recycle from 'recycle';
 import { Grid, Item } from 'semantic-ui-react';
 
-import Curation from '../Curation';
-import CurationScheduler from '../CurationScheduler';
-
 import 'rxjs/add/operator/merge';
 import 'rxjs/add/operator/first';
 
-import { actions as curationsActions } from '../../modules/Curations';
+import Curation from '../Curation';
+import CurationScheduler from '../CurationScheduler';
+import { types as middlewareTypes } from '../../middleware/api';
+
+import { types as curationsTypes } from '../../modules/Curations';
 
 const EditCuration = recycle({
   dispatch(sources) {
-    let { fetchCuration } = curationsActions;
     return [
       sources
         .select('button')
@@ -25,7 +25,14 @@ const EditCuration = recycle({
         .merge(sources.props)
         .first()
         .map(props => {
-          return fetchCuration(props.match.params.id);
+          return {
+            type: middlewareTypes.API_REQUEST,
+            nextActionType: curationsTypes.CURATION_FETCHED,
+            payload: {
+              url: `/curations/${props.match.params.id}`,
+              method: 'get',
+            },
+          };
         }),
     ];
   },
