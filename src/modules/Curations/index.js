@@ -1,5 +1,7 @@
 import Immutable from 'seamless-immutable';
 import { getCurations, getCuration } from '../../api';
+import { normalize } from 'normalizr';
+import { curationList, curation } from '../../schema';
 
 // Actions
 const CURATIONS_FETCHED = 'music-curation-frontend/curations/CURATIONS_FETCHED';
@@ -12,16 +14,16 @@ const types = {
 // Reducer
 function reducer(state = {}, action = {}) {
   const immutableState = Immutable(state);
-  if (!action.payload) return immutableState;
-  switch (action.type) {
+  const { payload, type } = action;
+  let normalizedData;
+  if (!payload) return immutableState;
+  switch (type) {
     case CURATIONS_FETCHED:
-      return immutableState.merge({
-        curations: action.payload,
-      });
+      normalizedData = normalize(payload, curationList);
+      return immutableState.merge(normalizedData);
     case CURATION_FETCHED:
-      return immutableState.merge({
-        currentCuration: action.payload,
-      });
+      normalizedData = normalize(payload, curation);
+      return immutableState.merge(normalizedData);
     default:
       return immutableState;
   }

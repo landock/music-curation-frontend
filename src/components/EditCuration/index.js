@@ -22,9 +22,8 @@ const EditCuration = recycle({
         .filter(e => {
           return e === 'componentDidMount';
         })
-        .merge(sources.props)
-        .first()
-        .map(props => {
+        .withLatestFrom(sources.props)
+        .map(([e, props]) => {
           return {
             type: middlewareTypes.API_REQUEST,
             nextActionType: curationsTypes.CURATION_FETCHED,
@@ -38,10 +37,13 @@ const EditCuration = recycle({
   },
   update(sources) {
     return [
-      sources.store.reducer((state, store) => {
-        state.currentCuration = store.Curations.currentCuration;
-        return state;
-      }),
+      sources.store
+        .withLatestFrom(sources.props)
+        .reducer((state, [store, props]) => {
+          state.currentCuration =
+            store.Curations.entities.curations[props.match.params.id];
+          return state;
+        }),
     ];
   },
   view(props, state) {

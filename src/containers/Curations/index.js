@@ -22,7 +22,8 @@ const Curations = recycle({
   update(sources) {
     return [
       sources.store.reducer(function(state, store) {
-        state.curations = store.Curations;
+        state.curations =
+          store.Curations.entities && store.Curations.entities.curations;
         return state;
       }),
     ];
