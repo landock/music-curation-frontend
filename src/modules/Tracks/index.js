@@ -11,7 +11,6 @@ function reducer(state = initialState, action = {}) {
   const immutableState = Immutable(state);
   switch (action.type) {
     case TRACKS_FETCHED:
-      console.log('tracks_fretchd', action);
       return immutableState.merge({
         searchResults: action.payload,
       });

@@ -1,36 +1,44 @@
-import 'cross-fetch/polyfill';
-
 import { memoize } from 'lodash';
+import axios from 'axios';
+
 const baseUrl = 'http://localhost:3001';
 
-function getCurations() {
-  const getCurationsUrl = `${baseUrl}/curations`;
+async function apiRequest(axiosConfig) {
+  if (!axiosConfig.url) return new Error('Need url to do shit');
+  if (!axiosConfig.method) {
+    if (axiosConfig.data) {
+      axiosConfig.method = 'post';
+    }
+    axiosConfig.method = 'get';
+  }
+  axiosConfig.url = baseUrl + axiosConfig.url;
 
-  return fetch(getCurationsUrl)
-    .then(response => response.json())
-    .catch(error => {
-      console.log(error);
-      return { error: error };
-    });
+  try {
+    const response = await axios(axiosConfig);
+    console.log('response: ', response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+}
+
+function getCurations() {
+  const url = '/curations';
+  return apiRequest({ url });
 }
 
 function getCuration(id) {
-  const getCurationUrl = `${baseUrl}/curations/${id}`;
+  const url = `/curations/${id}`;
+  return apiRequest({ url });
+}
 
-  return fetch(getCurationUrl)
-    .then(response => {
-      return response.json();
-    })
-    .catch(error => {
-      console.log(error);
-      return { error: error };
-    });
+function getTrackById(id) {
+  const url = `/tracks/${id}`;
+  return apiRequest({ url });
 }
 
 const memoizedGetCuration = memoize(getCuration);
 const memoizedGetCurations = memoize(getCurations);
 
-export {
-  memoizedGetCuration as getCuration,
-  memoizedGetCurations as getCurations,
-};
+export { getCuration, getCurations, apiRequest, getTrackById };

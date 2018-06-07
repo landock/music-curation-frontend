@@ -1,5 +1,6 @@
 import React from 'react';
 import { Item } from 'semantic-ui-react';
+import Tracks from '../../containers/Tracks';
 
 function Curation({ curation }) {
   return !curation ? (
@@ -12,14 +13,7 @@ function Curation({ curation }) {
         <Item.Description>
           <p>{curation.description}</p>
           <strong>Tracks:</strong>{' '}
-          <em>
-            {curation.tracks &&
-              curation.tracks
-                .map(track => {
-                  return track.trackName;
-                })
-                .join(', ')}
-          </em>
+          <Tracks curationId={curation.id} ids={curation.tracks} />
         </Item.Description>
       </Item.Content>
     </Item>

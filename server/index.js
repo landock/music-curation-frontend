@@ -27,6 +27,10 @@ app.get('/search/:whatever', (req, res) => {
   res.json(test_utils.n(test_utils.createTrack, 8));
 });
 
+app.get('/tracks/:id', (req, res) => {
+  res.json(test_utils.createTrack(req.params.id));
+});
+
 app.listen(3001, () =>
   console.log('Music Curations API is listening on :3001')
 );

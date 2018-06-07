@@ -6,6 +6,7 @@ import { Item, Icon, Button, Popup } from 'semantic-ui-react';
 
 import AddTags from '../AddTags';
 import AddToCuration from '../AddToCuration';
+import { types as curationsTypes } from '../../modules/Curations';
 
 const SearchResultCard = recycle({
   dispatch(sources) {
@@ -15,7 +16,7 @@ const SearchResultCard = recycle({
         .addListener('onClick')
         .map(e => {
           return {
-            type: 'ADD_CURATION_TRACK',
+            type: curationsTypes.ADD_CURATION_TRACK,
             payload: {
               id: parseInt(
                 e.target.value ? e.target.value : e.target.parentElement.value,

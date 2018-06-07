@@ -40,8 +40,10 @@ const EditCuration = recycle({
       sources.store
         .withLatestFrom(sources.props)
         .reducer((state, [store, props]) => {
-          state.currentCuration =
-            store.Curations.entities.curations[props.match.params.id];
+          state.currentCuration = store.Curations.entities
+            ? store.Curations.entities.curations[props.match.params.id]
+            : null;
+
           return state;
         }),
     ];
