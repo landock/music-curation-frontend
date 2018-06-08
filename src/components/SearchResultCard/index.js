@@ -14,15 +14,12 @@ const SearchResultCard = recycle({
       sources
         .select(Button)
         .addListener('onClick')
-        .map(e => {
+        .withLatestFrom(sources.props)
+        .map(([e, props]) => {
+          console.log('pusha t', props);
           return {
             type: curationsTypes.ADD_CURATION_TRACK,
-            payload: {
-              id: parseInt(
-                e.target.value ? e.target.value : e.target.parentElement.value,
-                10
-              ),
-            },
+            payload: {...props},
           };
         }),
     ];

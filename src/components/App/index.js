@@ -11,6 +11,7 @@ import SearchResults from '../../containers/SearchResults';
 import BulkCurationEditor from '../BulkCurationEditor';
 import EditCuration from '../EditCuration';
 import { Grid, Icon, Image } from 'semantic-ui-react';
+import CurrentCurationTracks from '../../containers/CurrentCurationTracks';
 
 export default class App extends Component {
   render() {
@@ -85,6 +86,7 @@ export default class App extends Component {
                 <SearchResults />
               </Grid.Column>
               <Grid.Column width={8}>
+                <CurrentCurationTracks />
                 <p>The other side</p>
               </Grid.Column>
             </Grid.Row>

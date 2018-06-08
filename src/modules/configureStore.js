@@ -1,3 +1,4 @@
+import CurrentCuration from '../modules/CurrentCuration';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
@@ -9,6 +10,7 @@ import apiMiddleware from '../middleware/api';
 
 const rootReducer = combineReducers({
   router: routerReducer,
+  CurrentCuration, 
   Tracks,
   Curations,
 });

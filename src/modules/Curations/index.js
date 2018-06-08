@@ -31,16 +31,10 @@ function reducer(state = {}, action = {}) {
       state = merge(state, normalizedData);
       return { ...state };
     case ADD_CURATION_TRACK:
-      const isNotCached =
-        !state.entities ||
-        !state.entities.tracks ||
-        !state.entities.tracks[payload.id];
-      if (!isNotCached) return { ...state };
-      getTrackById(payload.id).then(result => {
-        state.entities.curations[state.result].tracks.push(payload.id);
-        state.entities.tracks[payload.id] = result;
-        return { ...state };
-      });
+      debugger;
+      state.entities.curations[state.result].tracks.push(payload.id);
+      state.entities.tracks[payload.id] = payload;
+      return { ...state };
 
     default:
       return state;
