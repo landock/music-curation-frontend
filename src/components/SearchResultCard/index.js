@@ -6,7 +6,7 @@ import { Item, Icon, Button, Popup } from 'semantic-ui-react';
 
 import AddTags from '../AddTags';
 import AddToCuration from '../AddToCuration';
-import { types as curationsTypes } from '../../modules/Curations';
+import { types as curationsTypes } from '../../modules/CurrentCuration';
 
 const SearchResultCard = recycle({
   dispatch(sources) {
@@ -19,7 +19,7 @@ const SearchResultCard = recycle({
           console.log('pusha t', props);
           return {
             type: curationsTypes.ADD_CURATION_TRACK,
-            payload: {...props},
+            payload: { ...props },
           };
         }),
     ];

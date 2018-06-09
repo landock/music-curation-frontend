@@ -9,7 +9,7 @@ import Curation from '../Curation';
 import CurationScheduler from '../CurationScheduler';
 import { types as middlewareTypes } from '../../middleware/api';
 
-import { types as curationsTypes } from '../../modules/Curations';
+import { types as curationsTypes } from '../../modules/CurrentCuration';
 
 const EditCuration = recycle({
   dispatch(sources) {
@@ -40,8 +40,10 @@ const EditCuration = recycle({
       sources.store
         .withLatestFrom(sources.props)
         .reducer((state, [store, props]) => {
-          state.currentCuration = store.Curations.entities
-            ? store.Curations.entities.curations[props.match.params.id]
+          const { tracks, curations } = store.CurrentCuration.entities;
+
+          state.currentCuration = store.CurrentCuration.entities
+            ? store.CurrentCuration.entities.curations[props.match.params.id]
             : null;
 
           return state;

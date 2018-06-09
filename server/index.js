@@ -16,19 +16,27 @@ app.use((req, res, next) => {
 });
 
 app.get('/curations', (req, res) => {
-  res.json(test_utils.n(test_utils.createCuration, 40));
+  const response = test_utils.n(test_utils.createCuration, 40);
+  console.log(response);
+  res.json(response);
 });
 
 app.get('/curations/:id', (req, res) => {
-  res.json(test_utils.createCuration(req.params.id));
+  const response = test_utils.createCuration(req.params.id);
+  console.log(response);
+  res.json(response);
 });
 
 app.get('/search/:whatever', (req, res) => {
-  res.json(test_utils.n(test_utils.createTrack, 8));
+  const response = test_utils.n(test_utils.createTrack, 10);
+  console.log(response);
+  res.json(response);
 });
 
 app.get('/tracks/:id', (req, res) => {
-  res.json(test_utils.createTrack(req.params.id));
+  const response = test_utils.createTrack(req.params.id);
+  console.log(response);
+  res.json(response);
 });
 
 app.listen(3001, () =>

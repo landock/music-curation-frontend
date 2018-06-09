@@ -9,7 +9,12 @@ class ModifyCuration extends PureComponent {
       <Menu text vertical>
         <Menu.Item link name="Edit">
           <Icon name="write" />
-          <Link to={`editCuration/${this.props.curationId}`}>Edit</Link>
+          <Link
+            style={{ color: 'rgba(0,0,0,.6)' }}
+            to={`editCuration/${this.props.curationId}`}
+          >
+            Edit
+          </Link>
         </Menu.Item>
         <Menu.Item link name="Delete">
           <Icon name="trash" />

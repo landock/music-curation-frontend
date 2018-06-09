@@ -1,13 +1,14 @@
 import React from 'react';
 import recycle from 'recycle';
 import { map, filter, withLatestFrom } from 'rxjs/operators';
+import { sortBy } from 'lodash';
 
 function getTrackNamesReducer(state, [props, store]) {
   console.log('getTrackNamesReducer', props, store);
-  let trackData = props.ids.map(
-    id => store.Curations.entities.tracks[id].trackName
-  );
-  state.tracks = trackData;
+  const { CurrentCuration, Curations } = store;
+  let storeWeNeed = CurrentCuration.entities || Curations.entities;
+  let trackData = props.ids.map(id => storeWeNeed.tracks[id].trackName);
+  state.tracks = sortBy(trackData, ['trackName']);
   return state;
 }
 

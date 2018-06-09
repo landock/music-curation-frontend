@@ -1,6 +1,7 @@
 import React from 'react';
 import recycle from 'recycle';
 import SearchResultCollection from '../../components/SearchResultCollection';
+import { sortBy } from 'lodash';
 
 const SearchResults = recycle({
   dispatch(sources) {
@@ -9,7 +10,7 @@ const SearchResults = recycle({
   update(sources) {
     return [
       sources.store.reducer((state, store) => {
-        state.searchResults = store.Tracks.searchResults;
+        state.searchResults = sortBy(store.Tracks.searchResults, ['trackName']);
         return state;
       }),
     ];
