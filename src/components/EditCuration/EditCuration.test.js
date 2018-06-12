@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { render } from 'react-testing-library';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 
@@ -8,7 +8,25 @@ import EditCuration from '.';
 
 it('EditCuration: default', () => {
   const component = renderer.create(
-    <Provider store={mockStore({ Curations: { currentCuration: {} } })}>
+    <Provider
+      store={mockStore({
+        CurrentCuration: {
+          entities: {
+            tracks: { 1: { trackName: 'skldjf' }, 2: { trackName: 'lksdjfl' } },
+
+            curations: {
+              2: {
+                id: 2,
+                imageUrl: 'http://fpoimg.com/200x200',
+                description: 'whatever description here',
+                tracks: [1, 2],
+                name: 'Sprint 14 remix',
+              },
+            },
+          },
+        },
+      })}
+    >
       <EditCuration match={{ params: { id: 2 } }} />
     </Provider>
   );

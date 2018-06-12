@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import './App.css';
 import logo from '../../img/logo.svg';
 import Curations from '../../containers/Curations';
 import CurationSearchBar from '../CurationSearchBar';

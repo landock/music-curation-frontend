@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { render } from 'react-testing-library';
 import renderer from 'react-test-renderer';
-import SearchResultFilterSubHeader from '.';
+import SearchResultFilterSubHeader from './index';
 
 it('SearchResultFilterSubHeader: default', () => {
   // const component = renderer.create(<SearchResultFilterSubHeader />);

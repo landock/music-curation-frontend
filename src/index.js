@@ -8,7 +8,7 @@ import configureStore from './modules/configureStore';
 import AppContainer from './containers/AppContainer';
 import history from './history';
 
-import './index.css';
+import './index.scss';
 import 'semantic-ui-css/semantic.min.css';
 
 const store = configureStore();

@@ -1,10 +1,9 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { render } from 'react-testing-library';
 import AddToCuration from '.';
 
 it('AddToCuration: default', () => {
-  const component = shallow(<AddToCuration />);
-  // expect(tree).toMatchSnapshot()
-  expect(component.text()).toEqual('<Menu />');
+  const { getByTestId } = render(<AddToCuration />);
+  const whatever = getByTestId('add-to-curation');
+  expect(whatever).toBeTruthy();
 });

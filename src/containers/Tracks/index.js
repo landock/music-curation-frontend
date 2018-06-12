@@ -33,14 +33,16 @@ const Tracks = recycle({
     //     return state;
     //   });
     //
-    const getTracksFromStore = sources.lifecycle.pipe(
-      filter(
-        e => e === 'componentDidMount' || e === 'componentWillReceiveProps'
-      ),
-      withLatestFrom(sources.props),
-      map(val => val[1]),
-      withLatestFrom(sources.store)
-    );
+    const getTracksFromStore =
+      sources.store &&
+      sources.lifecycle.pipe(
+        filter(
+          e => e === 'componentDidMount' || e === 'componentWillReceiveProps'
+        ),
+        withLatestFrom(sources.props),
+        map(val => val[1]),
+        withLatestFrom(sources.store)
+      );
 
     return [getTracksFromStore.reducer(getTrackNamesReducer)];
   },

@@ -24,5 +24,5 @@ it('should do shit', () => {
       reducer: 'curations',
       payload: { url: '/test', params: {} },
     })
-  ).resolves.toEqual({});
+  ).resolves.toEqual({ test: 1 });
 });

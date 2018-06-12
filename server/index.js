@@ -3,6 +3,7 @@ const uid = require('uid');
 
 const app = express();
 const test_utils = require('../src/test_utils.js');
+const consoleOutput = message => console.log(JSON.stringify(message), '\n');
 
 // Default JSON content type
 app.use((req, res, next) => {
@@ -17,25 +18,26 @@ app.use((req, res, next) => {
 
 app.get('/curations', (req, res) => {
   const response = test_utils.n(test_utils.createCuration, 40);
-  console.log(response);
+
+  consoleOutput(response);
   res.json(response);
 });
 
 app.get('/curations/:id', (req, res) => {
   const response = test_utils.createCuration(req.params.id);
-  console.log(response);
+  consoleOutput(response);
   res.json(response);
 });
 
 app.get('/search/:whatever', (req, res) => {
   const response = test_utils.n(test_utils.createTrack, 10);
-  console.log(response);
+  consoleOutput(response);
   res.json(response);
 });
 
 app.get('/tracks/:id', (req, res) => {
   const response = test_utils.createTrack(req.params.id);
-  console.log(response);
+  consoleOutput(response);
   res.json(response);
 });
 

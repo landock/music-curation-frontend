@@ -1,10 +1,9 @@
-
-import React from 'react'
-import { shallow, mount, render } from 'enzyme';
-import renderer from 'react-test-renderer'
-import AddTags from '.'
+import React from 'react';
+import { render } from 'react-testing-library';
+import AddTags from '.';
 
 it('AddTags: default', () => {
-  const component = shallow(<AddTags />)
-  expect(component.text()).toEqual('<Header />Add Tags<TagCollection />')
-})
+  const { container } = render(<AddTags />);
+  let whatthefuck = container.querySelector('.header');
+  console.log(whatthefuck);
+});

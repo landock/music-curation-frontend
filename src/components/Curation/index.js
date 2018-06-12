@@ -13,7 +13,9 @@ function Curation({ curation }) {
         <Item.Description>
           <p>{curation.description}</p>
           <strong>Tracks:</strong>{' '}
-          <Tracks curationId={curation.id} ids={curation.tracks} />
+          {curation.tracks && (
+            <Tracks curationId={curation.id} ids={curation.tracks} />
+          )}
         </Item.Description>
       </Item.Content>
     </Item>

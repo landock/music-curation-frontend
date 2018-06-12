@@ -1,11 +1,13 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { Provider } from 'react-redux';
+import { render } from 'react-testing-library';
 import renderer from 'react-test-renderer';
-import CurationsCollection from '.';
+import CurationsCollection from './index';
+
+import mockStore from '../../fixtures/mockStore';
 
 describe('CurationsCollection', () => {
-  let component;
-
+  let container, getByText, queryByText, debug;
   const id = 1;
   const curationName = 'test';
   const imageUrl = 'https://testurl.com/image.jpg';
@@ -34,23 +36,22 @@ describe('CurationsCollection', () => {
     ],
   };
 
-  beforeAll(() => {
-    component = mount(<CurationsCollection curations={testCurations} />);
-  });
-
-  it('Render without crashing', () => {
-    // let renderedComponent = renderer.create(
-    // <CurationsCollection curations={testCurations} />
-    // );
-    // const tree = renderedComponent.toJSON();
-    // expect(tree).toMatchSnapshot();
+  beforeEach(() => {
+    const renderResult = render(
+      <Provider store={mockStore(testCurations)}>
+        <CurationsCollection curations={testCurations} />
+      </Provider>
+    );
+    container = renderResult.container;
+    getByText = renderResult.getByText;
+    queryByText = renderResult.queryByText;
+    debug = renderResult.debug;
   });
 
   it('should render placeholder message if no curations are passed as props', () => {
-    let shallowComponent = shallow(<CurationsCollection />);
-    const placeholderMarkup = <p>No Curations Found</p>;
+    const placeholderMarkup = 'No Curations Found';
 
-    expect(shallowComponent.contains(placeholderMarkup)).toBe(true);
+    expect(queryByText(placeholderMarkup)).toBe(true);
   });
 
   it('should render curation image', () => {

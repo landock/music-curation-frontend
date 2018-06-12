@@ -1,8 +1,9 @@
 import React from 'react';
 import BulkCurationEditor from '.';
-import { shallow } from 'enzyme';
+import { render } from 'react-testing-library';
 
 it('BulkCurationEditor: default', () => {
-  const component = shallow(<BulkCurationEditor />);
-  expect(component.text()).toEqual('<Form />')
+  const { container } = render(<BulkCurationEditor />);
+  const form = container.querySelector('form');
+  expect(form).toBeTruthy();
 });

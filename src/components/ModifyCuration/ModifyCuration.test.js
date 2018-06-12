@@ -1,8 +1,7 @@
 import React from 'react';
 import { MemoryRouter as Router } from 'react-router-dom';
+import { render } from 'react-testing-library';
 import renderer from 'react-test-renderer';
-
-import { shallow, mount, render } from 'enzyme';
 
 import ModifyCuration from '.';
 

@@ -14,7 +14,7 @@ class AddToCuration extends PureComponent {
       <Menu.Item content="No curations available" />
     );
     return (
-      <Menu text vertical>
+      <Menu data-testid="add-to-curation" text vertical>
         <Menu.Header>Add to</Menu.Header>
         <Menu.Item>
           <Input icon="search" placeholder="Search" />

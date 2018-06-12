@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { render } from 'react-testing-library';
 import renderer from 'react-test-renderer';
-import CurationFilterSubHeader from '.';
-
+import CurationFilterSubHeader from './index';
 it('CurationFilterSubHeader: default', () => {
-  const component = shallow(<CurationFilterSubHeader />);
+  const { container, debug } = render(<CurationFilterSubHeader />);
   // expect(tree).toMatchSnapshot();
-  expect(component.text()).toEqual('<Form />');
+  debug();
+  expect(container).toHaveTextContent('<Form />');
 });

@@ -15,6 +15,11 @@ exports[`ModifyCuration: default 1`] = `
     <a
       href="editCuration/undefined"
       onClick={[Function]}
+      style={
+        Object {
+          "color": "rgba(0,0,0,.6)",
+        }
+      }
     >
       Edit
     </a>

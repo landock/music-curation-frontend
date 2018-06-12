@@ -3,7 +3,7 @@
 exports[`CurationSearchBar: default 1`] = `
 <form
   action={undefined}
-  className="ui inverted form"
+  className="ui form"
   onSubmit={[Function]}
 >
   <div
@@ -20,6 +20,7 @@ exports[`CurationSearchBar: default 1`] = `
         required={undefined}
         tabIndex={undefined}
         type="text"
+        value=""
       />
       <i
         aria-hidden="true"

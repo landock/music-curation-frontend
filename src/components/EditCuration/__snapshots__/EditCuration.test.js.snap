@@ -21,7 +21,7 @@ exports[`EditCuration: default 1`] = `
             href={undefined}
           >
             <img
-              src={undefined}
+              src="http://fpoimg.com/200x200"
             />
           </div>
           <div
@@ -29,16 +29,22 @@ exports[`EditCuration: default 1`] = `
           >
             <div
               className="header"
-            />
+            >
+              Sprint 14 remix
+            </div>
             <div
               className="description"
             >
-              <p />
+              <p>
+                whatever description here
+              </p>
               <strong>
                 Tracks:
               </strong>
                
-              <em />
+              <p>
+                skldjf, lksdjfl
+              </p>
             </div>
           </div>
         </div>

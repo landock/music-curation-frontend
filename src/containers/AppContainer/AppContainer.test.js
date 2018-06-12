@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import fetchMock from 'fetch-mock';
-import { shallow, mount } from 'enzyme';
+import { render } from 'react-testing-library';
 import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router-dom';
 
