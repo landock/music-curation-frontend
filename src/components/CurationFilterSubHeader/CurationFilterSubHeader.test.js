@@ -6,5 +6,5 @@ it('CurationFilterSubHeader: default', () => {
   const { container, debug } = render(<CurationFilterSubHeader />);
   // expect(tree).toMatchSnapshot();
   debug();
-  expect(container).toHaveTextContent('<Form />');
+  expect(container).toHaveTextContent('No tags');
 });

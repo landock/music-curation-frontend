@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
-import logo from '../../img/logo.svg';
+import { Grid, Icon, Image } from 'semantic-ui-react';
 import Curations from '../../containers/Curations';
 import CurationSearchBar from '../CurationSearchBar';
 import CurationFilterSubHeader from '../CurationFilterSubHeader';
@@ -9,8 +9,9 @@ import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
 import SearchResults from '../../containers/SearchResults';
 import BulkCurationEditor from '../BulkCurationEditor';
 import EditCuration from '../EditCuration';
-import { Grid, Icon, Image } from 'semantic-ui-react';
 import CurrentCurationTracks from '../../containers/CurrentCurationTracks';
+
+import logo from '../../img/logo.svg';
 
 export default class App extends Component {
   render() {

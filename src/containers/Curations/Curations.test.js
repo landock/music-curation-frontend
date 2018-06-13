@@ -4,46 +4,28 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { render } from 'react-testing-library';
 import { Provider } from 'react-redux';
+import axios from 'axios';
+import MockAdapter from 'axios-mock-adapter';
 
 import Curations from '.';
 import CurationsCollection from '../../components/CurationsCollection';
 
-describe('Curations Container', () => {
-  let component, store, testData, mockStore;
+describe('Curations', () => {
+  let component, store, testData, mockStore, debug;
 
-  beforeAll(() => {
+  beforeEach(() => {
     mockStore = configureMockStore([thunk]);
     testData = { Curations: [1] };
     store = mockStore(testData);
-    component = render(
+    const renderResult = render(
       <Provider store={store}>
         <Curations />
       </Provider>
     );
+    debug = renderResult.debug;
   });
 
   it('should have a store passed from a Provider as props', () => {
-    let componentState = component.container.props.store.getState();
-    expect(componentState).toEqual(testData);
-  });
-
-  it('Should be a RecycleComponent', () => {
-    let shallowComponent = render(
-      <Provider store={store}>
-        <Curations />
-      </Provider>
-    );
-
-    expect(shallowComponent.text()).toEqual('<RecycleComponent />');
-  });
-
-  it('test if it added the curation collection', () => {
-    expect(component.find(CurationsCollection).length).toEqual(1);
-  });
-
-  it('should fetch data when mounted', () => {
-    fetch.mockResponseOnce(JSON.stringify({ data: '12345' }));
-    expect(fetch.mock.calls.length).toEqual(1);
-    fetch.resetMocks();
+    debug();
   });
 });

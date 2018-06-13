@@ -5,5 +5,4 @@ import AddTags from '.';
 it('AddTags: default', () => {
   const { container } = render(<AddTags />);
   let whatthefuck = container.querySelector('.header');
-  console.log(whatthefuck);
 });
