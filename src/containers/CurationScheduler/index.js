@@ -79,7 +79,7 @@ const CurationScheduler = recycle({
             placeholder="DRAFT"
             id="curation-status"
             options={statusOptions}
-            value={state.publicationStatus}
+            defaultValue={state.publicationStatus}
           />
         </Form.Group>
         <p>
@@ -92,7 +92,7 @@ const CurationScheduler = recycle({
             id="date-start"
             type="date"
             width="8"
-            value={state.dateStart}
+            defautltValue={state.dateStart}
           />
           <Form.Input
             icon="calendar outline"
@@ -100,16 +100,17 @@ const CurationScheduler = recycle({
             id="date-end"
             type="date"
             width="8"
-            value={state.dateEnd}
+            defaultValue={state.dateEnd}
           />
         </Form.Group>
         <Form.Input
           label="Recommended Time Slot"
-          id="date-start"
+          id="recommended-time"
           type="range"
           min="0"
           max="24"
           step="1"
+          value={state.recommendedTime}
         />
         <Form.Select
           placeholder="Copy to"

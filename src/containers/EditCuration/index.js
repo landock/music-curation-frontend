@@ -5,7 +5,7 @@ import { Grid, Item } from 'semantic-ui-react';
 import 'rxjs/add/operator/merge';
 import 'rxjs/add/operator/first';
 
-import Curation from '../Curation';
+import Curation from '../../components/Curation';
 import CurationScheduler from '../CurationScheduler';
 import { types as middlewareTypes } from '../../middleware/api';
 

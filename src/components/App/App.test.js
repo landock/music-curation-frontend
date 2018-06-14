@@ -8,17 +8,17 @@ import renderer from 'react-test-renderer';
 describe('App Component', () => {
   beforeAll(() => {});
 
-  // it('renders without crashing', () => {
-  //   let store = mockStore({});
-  //   let tree = renderer
-  //     .create(
-  //       <Provider store={store}>
-  //         <Router>
-  //           <App />
-  //         </Router>
-  //       </Provider>
-  //     )
-  //     .toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it('renders without crashing', () => {
+    //   let store = mockStore({});
+    //   let tree = renderer
+    //     .create(
+    //       <Provider store={store}>
+    //         <Router>
+    //           <App />
+    //         </Router>
+    //       </Provider>
+    //     )
+    //     .toJSON();
+    //   expect(tree).toMatchSnapshot();
+  });
 });

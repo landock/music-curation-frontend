@@ -13,41 +13,9 @@ exports[`EditCuration: default 1`] = `
       <div
         className="ui items"
       >
-        <div
-          className="item"
-        >
-          <div
-            className="ui small image"
-            href={undefined}
-          >
-            <img
-              src="http://fpoimg.com/200x200"
-            />
-          </div>
-          <div
-            className="content"
-          >
-            <div
-              className="header"
-            >
-              Sprint 14 remix
-            </div>
-            <div
-              className="description"
-            >
-              <p>
-                whatever description here
-              </p>
-              <strong>
-                Tracks:
-              </strong>
-               
-              <p>
-                skldjf, lksdjfl
-              </p>
-            </div>
-          </div>
-        </div>
+        <p>
+          No Curations
+        </p>
       </div>
     </div>
     <div
@@ -168,6 +136,7 @@ exports[`EditCuration: default 1`] = `
             <div
               className="ui left icon input"
               content={undefined}
+              defautltValue={undefined}
             >
               <input
                 disabled={undefined}
@@ -176,7 +145,6 @@ exports[`EditCuration: default 1`] = `
                 required={undefined}
                 tabIndex={undefined}
                 type="date"
-                value={undefined}
               />
               <i
                 aria-hidden="true"
@@ -192,13 +160,13 @@ exports[`EditCuration: default 1`] = `
               content={undefined}
             >
               <input
+                defaultValue={undefined}
                 disabled={undefined}
                 id="date-end"
                 onChange={[Function]}
                 required={undefined}
                 tabIndex={undefined}
                 type="date"
-                value={undefined}
               />
               <i
                 aria-hidden="true"
@@ -211,7 +179,7 @@ exports[`EditCuration: default 1`] = `
           className="field"
         >
           <label
-            htmlFor="date-start"
+            htmlFor="recommended-time"
           >
             Recommended Time Slot
           </label>
@@ -221,7 +189,7 @@ exports[`EditCuration: default 1`] = `
           >
             <input
               disabled={undefined}
-              id="date-start"
+              id="recommended-time"
               max="24"
               min="0"
               onChange={[Function]}
@@ -229,6 +197,7 @@ exports[`EditCuration: default 1`] = `
               step="1"
               tabIndex={undefined}
               type="range"
+              value={undefined}
             />
           </div>
         </div>

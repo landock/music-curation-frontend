@@ -3,12 +3,12 @@ import { Route } from 'react-router-dom';
 
 import { Grid, Icon, Image } from 'semantic-ui-react';
 import Curations from '../../containers/Curations';
-import CurationSearchBar from '../CurationSearchBar';
+import CurationSearchBar from '../../containers/CurationSearchBar';
 import CurationFilterSubHeader from '../CurationFilterSubHeader';
 import SearchResultFilterSubHeader from '../SearchResultFilterSubHeader';
 import SearchResults from '../../containers/SearchResults';
 import BulkCurationEditor from '../BulkCurationEditor';
-import EditCuration from '../EditCuration';
+import EditCuration from '../../containers/EditCuration';
 import CurrentCurationTracks from '../../containers/CurrentCurationTracks';
 
 import logo from '../../img/logo.svg';

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import { Item, Icon, Button, Popup } from 'semantic-ui-react';
 
-import AddTags from '../AddTags';
-import AddToCuration from '../AddToCuration';
+import AddTags from '../../components/AddTags';
+import AddToCuration from '../../components/AddToCuration';
 import { types as curationsTypes } from '../../modules/CurrentCuration';
 
 const SearchResultCard = recycle({

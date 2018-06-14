@@ -4,7 +4,7 @@ import Tracks from '../../containers/Tracks';
 
 function Curation({ curation }) {
   return !curation ? (
-    <p>No Curfations</p>
+    <p>No Curations</p>
   ) : (
     <Item>
       <Item.Image size="small" src={curation.imageUrl} />
@@ -13,8 +13,10 @@ function Curation({ curation }) {
         <Item.Description>
           <p>{curation.description}</p>
           <strong>Tracks:</strong>{' '}
-          {curation.tracks && (
+          {curation.tracks ? (
             <Tracks curationId={curation.id} ids={curation.tracks} />
+          ) : (
+            <p>No tracks available</p>
           )}
         </Item.Description>
       </Item.Content>

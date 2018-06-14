@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SearchResultCard from '../SearchResultCard';
+import SearchResultCard from '../../containers/SearchResultCard';
 import { Item, Header } from 'semantic-ui-react';
 
 function SearchResultCollection({ searchResults }) {

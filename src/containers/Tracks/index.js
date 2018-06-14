@@ -2,21 +2,9 @@ import React from 'react';
 import recycle from 'recycle';
 import { map, filter, withLatestFrom } from 'rxjs/operators';
 import { sortBy } from 'lodash';
-
-function getTrackNamesReducer(state, [props, store]) {
-  console.log('getTrackNamesReducer', props, store);
-  const { CurrentCuration, Curations } = store;
-  let storeWeNeed = CurrentCuration.entities || Curations.entities;
-  let trackData = props.ids.map(id => storeWeNeed.tracks[id].trackName);
-  state.tracks = sortBy(trackData, ['trackName']);
-  return state;
-}
+import TracksView from '../../components/TracksView';
 
 const Tracks = recycle({
-  dispatch(sources) {
-    return [];
-  },
-
   update(sources) {
     // TODO: Move to 'the other side' component
     //
@@ -33,24 +21,37 @@ const Tracks = recycle({
     //     return state;
     //   });
     //
-    const getTracksFromStore =
-      sources.store &&
-      sources.lifecycle.pipe(
-        filter(
-          e => e === 'componentDidMount' || e === 'componentWillReceiveProps'
-        ),
-        withLatestFrom(sources.props),
-        map(val => val[1]),
-        withLatestFrom(sources.store)
-      );
 
-    return [getTracksFromStore.reducer(getTrackNamesReducer)];
+    return [getTracksFromStore(sources)];
   },
 
   view(props, state) {
-    if (!state.tracks) return <p>No tracks available.</p>;
-    return <p>{state.tracks.join(', ')}</p>;
+    return <TracksView tracks={state.tracks} />;
   },
 });
+function getTracksFromStore(sources) {
+  if (!sources.store) return null;
 
+  return sources.lifecycle
+    .pipe(
+      filter(
+        e => e === 'componentDidMount' || e === 'componentWillReceiveProps'
+      ),
+      withLatestFrom(sources.props),
+      map(([e, props]) => props),
+      withLatestFrom(sources.store)
+    )
+    .reducer(getTrackNamesReducer);
+}
+
+function getTrackNamesReducer(state, [props, store]) {
+  const { CurrentCuration, Curations } = store;
+  let storeWeNeed =
+    store.router.location.pathname === '/'
+      ? Curations.entities
+      : CurrentCuration.entities;
+  let trackData = props.ids.map(id => storeWeNeed.tracks[id].trackName);
+  state.tracks = sortBy(trackData, ['trackName']);
+  return state;
+}
 export default Tracks;

@@ -4,7 +4,7 @@ import PublicationStatusEditor from '../PublicationStatusEditor';
 import { Item, Grid } from 'semantic-ui-react';
 
 function CurationsCollection({ curations }) {
-  if (!curations) return null;
+  if (!curations) return <p>No Curations</p>;
   const curationsObjectKeys = Object.keys(curations);
   const hasCurations = curationsObjectKeys.length > 0;
   const curationsMarkup = hasCurations ? (

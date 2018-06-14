@@ -1,5 +1,3 @@
-import Immutable from 'seamless-immutable';
-
 import { getCuration } from '../../api';
 import { curation } from '../../schema';
 import { normalize } from 'normalizr';

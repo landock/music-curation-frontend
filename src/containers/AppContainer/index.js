@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import autoBind from 'react-autobind';
-import { connect } from 'react-redux';
+import recycle from 'recycle';
 
 import './AppContainer.css';
 import App from '../../components/App';
 
-export class AppContainer extends Component {
-  constructor(props) {
-    super(props);
-    autoBind(this);
-  }
-
-  render() {
+const AppContainer = recycle({
+  update(sources) {
+    return [
+      sources.store.reducer(function(state, store) {
+        state.curations =
+          store.Curations.entities && store.Curations.entities.curations;
+        return state;
+      }),
+    ];
+  },
+  view(props, state) {
     return <App />;
-  }
-}
-export default connect()(AppContainer);
+  },
+});
+
+export default AppContainer;
