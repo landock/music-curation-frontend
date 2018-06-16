@@ -12,6 +12,7 @@ import { types as middlewareTypes } from '../../middleware/api';
 import { types as curationsTypes } from '../../modules/CurrentCuration';
 
 const EditCuration = recycle({
+  displayName: 'EditCuration',
   dispatch(sources) {
     return [
       sources
@@ -40,12 +41,13 @@ const EditCuration = recycle({
       sources.store
         .withLatestFrom(sources.props)
         .reducer((state, [store, props]) => {
-          const { tracks, curations } = store.CurrentCuration.entities;
+          const { tracks, curations, tags } = store.CurrentCuration.entities;
 
           state.currentCuration = store.CurrentCuration.entities
             ? store.CurrentCuration.entities.curations[props.match.params.id]
             : null;
 
+          state.currentCuration.tags = tags;
           return state;
         }),
     ];

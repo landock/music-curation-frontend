@@ -24,6 +24,7 @@ exports[`EditCuration: default 1`] = `
       <form
         action={undefined}
         className="ui form"
+        id="curation-scheduler"
         onSubmit={[Function]}
       >
         <div
@@ -67,10 +68,10 @@ exports[`EditCuration: default 1`] = `
             >
               <div
                 aria-live="polite"
-                className="default text"
+                className="text"
                 role="alert"
               >
-                DRAFT
+                Draft
               </div>
               <i
                 aria-hidden="true"
@@ -81,10 +82,10 @@ exports[`EditCuration: default 1`] = `
                 className="menu transition"
               >
                 <div
-                  aria-checked={false}
+                  aria-checked={true}
                   aria-disabled={undefined}
                   aria-selected={true}
-                  className="selected item"
+                  className="active selected item"
                   onClick={[Function]}
                   role="option"
                   style={
@@ -136,9 +137,9 @@ exports[`EditCuration: default 1`] = `
             <div
               className="ui left icon input"
               content={undefined}
-              defautltValue={undefined}
             >
               <input
+                defaultValue=""
                 disabled={undefined}
                 id="date-start"
                 onChange={[Function]}
@@ -160,7 +161,7 @@ exports[`EditCuration: default 1`] = `
               content={undefined}
             >
               <input
-                defaultValue={undefined}
+                defaultValue=""
                 disabled={undefined}
                 id="date-end"
                 onChange={[Function]}
@@ -197,7 +198,7 @@ exports[`EditCuration: default 1`] = `
               step="1"
               tabIndex={undefined}
               type="range"
-              value={undefined}
+              value=""
             />
           </div>
         </div>
@@ -205,7 +206,7 @@ exports[`EditCuration: default 1`] = `
           className="field"
         >
           <label
-            htmlFor={undefined}
+            htmlFor="environment"
           >
             Environment
           </label>
@@ -216,6 +217,7 @@ exports[`EditCuration: default 1`] = `
             aria-multiselectable={undefined}
             className="ui selection dropdown"
             content={undefined}
+            id="environment"
             onBlur={[Function]}
             onChange={[Function]}
             onClick={[Function]}
@@ -228,10 +230,10 @@ exports[`EditCuration: default 1`] = `
           >
             <div
               aria-live="polite"
-              className="default text"
+              className="text"
               role="alert"
             >
-              Copy to
+              Development
             </div>
             <i
               aria-hidden="true"
@@ -244,8 +246,8 @@ exports[`EditCuration: default 1`] = `
               <div
                 aria-checked={false}
                 aria-disabled={undefined}
-                aria-selected={true}
-                className="selected item"
+                aria-selected={false}
+                className="item"
                 onClick={[Function]}
                 role="option"
                 style={
@@ -261,10 +263,10 @@ exports[`EditCuration: default 1`] = `
                 </span>
               </div>
               <div
-                aria-checked={false}
+                aria-checked={true}
                 aria-disabled={undefined}
-                aria-selected={false}
-                className="item"
+                aria-selected={true}
+                className="active selected item"
                 onClick={[Function]}
                 role="option"
                 style={

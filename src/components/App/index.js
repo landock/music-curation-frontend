@@ -24,7 +24,7 @@ export default class App extends Component {
                 <Grid.Column floated="left" verticalAlign="middle" width={2}>
                   <Icon name="sidebar" color="black" size="large" />
                 </Grid.Column>
-                <Grid.Column verticalAlign="middle" width={14}>
+                <Grid.Column verticalAlign="middle" width={9}>
                   <Image href="/" src={logo} size="small" centered />
                 </Grid.Column>
               </Grid.Row>

@@ -5,6 +5,7 @@ import './AppContainer.css';
 import App from '../../components/App';
 
 const AppContainer = recycle({
+  displayName: 'AppContainer',
   update(sources) {
     return [
       sources.store.reducer(function(state, store) {

@@ -6,6 +6,7 @@ import { sortBy } from 'lodash';
 import SearchResultCollection from '../../components/SearchResultCollection';
 
 const CurrentCurationTracks = recycle({
+  displayName: 'CurrentCurationTracks',
   initialState: {
     searchResults: null,
   },

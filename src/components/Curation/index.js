@@ -1,6 +1,8 @@
 import React from 'react';
 import { Item } from 'semantic-ui-react';
 import Tracks from '../../containers/Tracks';
+import TagCollection from '../TagCollection';
+import { Route } from 'react-router-dom';
 
 function Curation({ curation }) {
   return !curation ? (
@@ -18,6 +20,10 @@ function Curation({ curation }) {
           ) : (
             <p>No tracks available</p>
           )}
+          <Route
+            path="/editCuration/:id"
+            render={props => <TagCollection tags={curation.tags} />}
+          />
         </Item.Description>
       </Item.Content>
     </Item>

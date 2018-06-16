@@ -6,6 +6,7 @@ import { types as middlewareTypes } from '../../middleware/api';
 import CurationsCollection from '../../components/CurationsCollection';
 
 const Curations = recycle({
+  displayName: 'Curations',
   dispatch(sources) {
     return [
       sources.lifecycle.filter(e => e === 'componentDidMount').map(() => {

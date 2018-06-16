@@ -3,6 +3,7 @@ const uid = require('uid');
 
 const app = express();
 const test_utils = require('../src/test_utils.js');
+const faker = require('faker');
 const consoleOutput = message => console.log(JSON.stringify(message), '\n');
 
 // Default JSON content type
@@ -25,6 +26,15 @@ app.get('/curations', (req, res) => {
 
 app.get('/curations/:id', (req, res) => {
   const response = test_utils.createCuration(req.params.id);
+  consoleOutput(response);
+  res.json(response);
+});
+
+app.get('/tags', (req, res) => {
+  const response = test_utils.n(
+    test_utils.createTag,
+    faker.random.number({ min: 1, max: 20 })
+  );
   consoleOutput(response);
   res.json(response);
 });

@@ -5,6 +5,7 @@ import { sortBy } from 'lodash';
 import TracksView from '../../components/TracksView';
 
 const Tracks = recycle({
+  displayName: 'Tracks',
   update(sources) {
     // TODO: Move to 'the other side' component
     //
@@ -29,6 +30,7 @@ const Tracks = recycle({
     return <TracksView tracks={state.tracks} />;
   },
 });
+
 function getTracksFromStore(sources) {
   if (!sources.store) return null;
 
@@ -54,4 +56,5 @@ function getTrackNamesReducer(state, [props, store]) {
   state.tracks = sortBy(trackData, ['trackName']);
   return state;
 }
+
 export default Tracks;

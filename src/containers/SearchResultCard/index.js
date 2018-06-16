@@ -9,6 +9,7 @@ import AddToCuration from '../../components/AddToCuration';
 import { types as curationsTypes } from '../../modules/CurrentCuration';
 
 const SearchResultCard = recycle({
+  displayName: 'SearchResultCard',
   dispatch(sources) {
     return [
       sources
@@ -16,7 +17,6 @@ const SearchResultCard = recycle({
         .addListener('onClick')
         .withLatestFrom(sources.props)
         .map(([e, props]) => {
-          console.log('pusha t', props);
           return {
             type: curationsTypes.ADD_CURATION_TRACK,
             payload: { ...props },
@@ -33,6 +33,7 @@ const SearchResultCard = recycle({
       durationInSeconds,
       imageUrl,
       streamUrl,
+      tags,
       recordLabels,
       curations,
     } = props;
@@ -57,7 +58,7 @@ const SearchResultCard = recycle({
             trigger={
               <Icon style={{ cursor: 'pointer' }} size="small" name="tags" />
             }
-            content={<AddTags />}
+            content={<AddTags tags={tags} />}
             on="click"
             position="top right"
             verticalOffset={-100}

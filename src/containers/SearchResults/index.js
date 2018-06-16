@@ -4,9 +4,7 @@ import SearchResultCollection from '../../components/SearchResultCollection';
 import { sortBy } from 'lodash';
 
 const SearchResults = recycle({
-  dispatch(sources) {
-    return [];
-  },
+  displayName: 'SearchResults',
   update(sources) {
     return [
       sources.store.reducer((state, store) => {

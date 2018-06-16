@@ -21,6 +21,7 @@ function createCuration(id) {
     imageUrl: 'http://fpoimg.com/200x200',
     description: faker.hacker.phrase(),
     tracks: n(createTrack, faker.random.number({ min: 1, max: 25 })),
+    tags: n(createTag, faker.random.number({ min: 1, max: 20 })),
     name: faker.fake('{{commerce.productAdjective}} {{address.streetName}}'),
   };
 }
@@ -32,6 +33,7 @@ function createTrack(id) {
     artistName: createName(),
     trackName: createName(),
     durationInSeconds: faker.random.number(99999),
+    tags: n(createTag, faker.random.number({ min: 1, max: 20 })),
     recordLabels: n(
       faker.company.companyName,
       faker.random.number({ min: 1, max: 5 })

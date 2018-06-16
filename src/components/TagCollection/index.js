@@ -4,8 +4,9 @@ import Tag from '../Tag';
 class TagCollection extends PureComponent {
   render() {
     const { tags } = this.props;
+    console.log('tagscollection', tags);
     const tagsMarkup = tags ? (
-      tags.map(tag => <Tag key={tag.id} data={tag} />)
+      Object.keys(tags).map(id => <Tag key={id} data={tags[id]} />)
     ) : (
       <span>No tags</span>
     );

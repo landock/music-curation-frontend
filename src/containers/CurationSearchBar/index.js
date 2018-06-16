@@ -5,6 +5,7 @@ import { types as tracksTypes } from '../../modules/Tracks';
 import { types as middlewareTypes } from '../../middleware/api';
 
 const CurationSearchBar = recycle({
+  displayName: 'CurationSearchBar',
   initialState: { searchTerm: '' },
   dispatch(sources) {
     return [
