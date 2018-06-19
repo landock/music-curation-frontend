@@ -46,13 +46,24 @@ function getTracksFromStore(sources) {
     .reducer(getTrackNamesReducer);
 }
 
+function getTrackNamesFromStoreCollection(id, stores) {
+  let track = stores
+    .filter(store => store.entities.tracks[id])
+    .map(store => store.entities.tracks[id])[0];
+  return track.trackName;
+}
+
 function getTrackNamesReducer(state, [props, store]) {
-  const { CurrentCuration, Curations } = store;
-  let storeWeNeed =
-    store.router.location.pathname === '/'
-      ? Curations.entities
-      : CurrentCuration.entities;
-  let trackData = props.ids.map(id => storeWeNeed.tracks[id].trackName);
+  const { CurrentCuration, Curations, SearchCurations } = store;
+  const storesWithEntities = [
+    CurrentCuration,
+    Curations,
+    SearchCurations,
+  ].filter(store => store.entities);
+
+  let trackData = props.ids.map(id => {
+    return getTrackNamesFromStoreCollection(id, storesWithEntities);
+  });
   state.tracks = sortBy(trackData, ['trackName']);
   return state;
 }

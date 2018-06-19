@@ -25,12 +25,19 @@ const Curations = recycle({
       sources.store.reducer((state, store) => {
         state.curations =
           store.Curations.entities && store.Curations.entities.curations;
+        state.searchCurations =
+          store.SearchCurations.entities &&
+          store.SearchCurations.entities.curations;
         return state;
       }),
     ];
   },
   view(props, state) {
-    return <CurationsCollection curations={state.curations} />;
+    return (
+      <CurationsCollection
+        curations={state.searchCurations || state.curations}
+      />
+    );
   },
 });
 

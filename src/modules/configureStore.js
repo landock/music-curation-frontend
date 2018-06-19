@@ -1,3 +1,4 @@
+import SearchCurations from '../modules/SearchCurations';
 import CurrentCuration from '../modules/CurrentCuration';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
@@ -10,6 +11,7 @@ import apiMiddleware from '../middleware/api';
 
 const rootReducer = combineReducers({
   router: routerReducer,
+  SearchCurations, 
   CurrentCuration, 
   Tracks,
   Curations,

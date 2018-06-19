@@ -10,6 +10,7 @@ import SearchResults from '../../containers/SearchResults';
 import BulkCurationEditor from '../BulkCurationEditor';
 import EditCuration from '../../containers/EditCuration';
 import CurrentCurationTracks from '../../containers/CurrentCurationTracks';
+import SearchCurationsResults from '../../containers/SearchCurationsResults';
 
 import logo from '../../img/logo.svg';
 
@@ -43,7 +44,10 @@ export default class App extends Component {
         />
         <Grid.Row>
           <Grid.Column color="grey">
-            <CurationSearchBar />
+            <Route
+              path="/editCuration/:id"
+              children={props => <CurationSearchBar {...props} />}
+            />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -87,7 +91,6 @@ export default class App extends Component {
               </Grid.Column>
               <Grid.Column width={8}>
                 <CurrentCurationTracks />
-                <p>The other side</p>
               </Grid.Column>
             </Grid.Row>
           )}

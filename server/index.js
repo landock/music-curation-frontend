@@ -30,6 +30,12 @@ app.get('/curations/:id', (req, res) => {
   res.json(response);
 });
 
+app.get('/searchCurations/:searchTerms', (req, res) => {
+  const response = test_utils.n(test_utils.createCuration, 40);
+  consoleOutput(response);
+  res.json(response);
+});
+
 app.get('/tags', (req, res) => {
   const response = test_utils.n(
     test_utils.createTag,

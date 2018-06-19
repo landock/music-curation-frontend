@@ -1,9 +1,7 @@
-import Immutable from 'seamless-immutable';
 import { getCurations, getTrackById } from '../../api';
 import { normalize } from 'normalizr';
 import { curationList } from '../../schema';
 import { merge } from 'lodash';
-import { stat } from 'fs';
 
 // Actions
 const CURATIONS_FETCHED = 'music-curation-frontend/curations/CURATIONS_FETCHED';
@@ -22,7 +20,7 @@ function reducer(state = {}, action = {}) {
       return { ...state };
 
     default:
-      return state;
+      return { ...state };
   }
 }
 
