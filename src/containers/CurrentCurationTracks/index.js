@@ -5,6 +5,12 @@ import { sortBy } from 'lodash';
 
 import SearchResultCollection from '../../components/SearchResultCollection';
 
+function keyGenerator(results) {
+  if (!results) return 'no-data';
+  let ids = results.map(result => result.id);
+  ids.sort();
+  return ids.join('-');
+}
 const CurrentCurationTracks = recycle({
   displayName: 'CurrentCurationTracks',
   initialState: {
@@ -14,7 +20,12 @@ const CurrentCurationTracks = recycle({
     return [updateTracks(sources.store)];
   },
   view(props, state) {
-    return <SearchResultCollection searchResults={state.searchResults} />;
+    return (
+      <SearchResultCollection
+        key={keyGenerator(state.searchResults)}
+        searchResults={state.searchResults}
+      />
+    );
   },
 });
 

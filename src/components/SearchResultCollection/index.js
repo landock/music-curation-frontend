@@ -39,6 +39,7 @@ export default class SearchResultCollection extends Component {
         <SortableList
           searchResults={searchResults}
           onSortEnd={this.onSortEnd}
+          useDragHandle={true}
         />
       </div>
     ) : (

@@ -2,19 +2,19 @@ import React from 'react';
 import recycle from 'recycle';
 import PropTypes from 'prop-types';
 
-import { Item, Icon, Button, Popup } from 'semantic-ui-react';
+import { Item, Icon, Popup } from 'semantic-ui-react';
 
 import AddTags from '../../components/AddTags';
 import AddToCuration from '../../components/AddToCuration';
 import { types as curationsTypes } from '../../modules/CurrentCuration';
-import { SortableElement } from 'react-sortable-hoc';
+import { SortableElement, SortableHandle } from 'react-sortable-hoc';
 
 const SearchResultCard = recycle({
   displayName: 'SearchResultCard',
   dispatch(sources) {
     return [
       sources
-        .select(Button)
+        .select(Icon)
         .addListener('onClick')
         .withLatestFrom(sources.props)
         .map(([e, props]) => {
@@ -26,60 +26,61 @@ const SearchResultCard = recycle({
     ];
   },
   view(props, state) {
-    const SortableItem = SortableElement(
-      ({
-        id,
-        trackName,
-        artistName,
-        iconName,
-        durationInSeconds,
-        imageUrl,
-        streamUrl,
-        tags,
-        recordLabels,
-        curations,
-      }) => (
-        <Item>
-          <Item.Image size="tiny" src={imageUrl} />
-          <Item.Content>
-            <Item.Header as="a">
-              {trackName}
-              <Button icon={iconName || 'plus'} value={id} />
-            </Item.Header>
-            <Item.Description>{artistName}</Item.Description>
-            <Item.Extra>
-              {recordLabels ? (
-                <span>{recordLabels.join(', ')}</span>
-              ) : (
-                <span> no labels </span>
-              )}
-              <p>{durationInSeconds}</p>
-            </Item.Extra>
-            <Popup
-              trigger={
-                <Icon style={{ cursor: 'pointer' }} size="small" name="tags" />
-              }
-              content={<AddTags tags={tags} />}
-              on="click"
-              position="top right"
-              verticalOffset={-100}
-              horizontalOffset={90}
-              basic
-            />
-            <Popup
-              trigger={<Icon name="share" style={{ cursor: 'pointer' }} />}
-              content={<AddToCuration curations={curations} />}
-              on="click"
-              position="bottom right"
-              verticalOffset={-133}
-              horizontalOffset={-20}
-              basic
-            />
-          </Item.Content>
-        </Item>
-      )
+    const DragHandleName = SortableHandle(({ trackName }) => {
+      return <span>{trackName}</span>;
+    });
+    const {
+      id,
+      trackName,
+      artistName,
+      iconName,
+      durationInSeconds,
+      imageUrl,
+      streamUrl,
+      tags,
+      recordLabels,
+      curations,
+    } = props;
+    return (
+      <Item>
+        <Item.Image size="tiny" src={imageUrl} />
+        <Item.Content>
+          <Item.Header as="a">
+            <DragHandleName trackName={trackName} />{' '}
+            <Icon name={iconName || 'plus'} link />
+          </Item.Header>
+          <Item.Description>{artistName}</Item.Description>
+          <Item.Extra>
+            {recordLabels ? (
+              <span>{recordLabels.join(', ')}</span>
+            ) : (
+              <span> no labels </span>
+            )}
+            <p>{durationInSeconds}</p>
+          </Item.Extra>
+          <Popup
+            trigger={
+              <Icon style={{ cursor: 'pointer' }} size="small" name="tags" />
+            }
+            content={<AddTags tags={tags} />}
+            on="click"
+            position="top right"
+            verticalOffset={-100}
+            horizontalOffset={90}
+            basic
+          />
+          <Popup
+            trigger={<Icon name="share" style={{ cursor: 'pointer' }} />}
+            content={<AddToCuration curations={curations} />}
+            on="click"
+            position="bottom right"
+            verticalOffset={-133}
+            horizontalOffset={-20}
+            basic
+          />
+        </Item.Content>
+      </Item>
     );
-    return <SortableItem {...props} />;
   },
 });
 
@@ -93,4 +94,7 @@ SearchResultCard.propTypes = {
   recordLabels: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default SearchResultCard;
+const SortableSearchResultCard = SortableElement(props => (
+  <SearchResultCard {...props} />
+));
+export default SortableSearchResultCard;

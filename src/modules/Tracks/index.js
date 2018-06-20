@@ -9,13 +9,13 @@ const types = {
 };
 // Reducer
 function reducer(state = initialState, action = {}) {
-  const immutableState = Immutable(state);
-  switch (action.type) {
+  const { type, payload } = action;
+  switch (type) {
     case TRACKS_FETCHED:
-      const nextState = merge(state, {
-        searchResults: action.payload,
+      state = merge(state, {
+        searchResults: payload,
       });
-      return { ...nextState };
+      return { ...state };
     default:
       return { ...state };
   }

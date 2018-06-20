@@ -8,5 +8,6 @@ const curation = new schema.Entity('curations', {
   tags: [tag],
 });
 const curationList = [curation];
+const trackList = [track];
 
-export { track, artist, tag, curation, curationList };
+export { track, artist, tag, curation, curationList, trackList };

@@ -3,9 +3,6 @@ import recycle from 'recycle';
 import CurationsCollection from '../../components/CurationsCollection';
 
 const SearchCurationsResults = recycle({
-  dispatch(sources) {
-    return [];
-  },
   update(sources) {
     return [
       sources.store.reducer((state, store) => {
