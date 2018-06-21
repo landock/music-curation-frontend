@@ -4,13 +4,8 @@ import recycle from 'recycle';
 import { sortBy } from 'lodash';
 
 import SearchResultCollection from '../../components/SearchResultCollection';
+import keyGenerator from '../../generateKeyFromObjectWithIds';
 
-function keyGenerator(results) {
-  if (!results) return 'no-data';
-  let ids = results.map(result => result.id);
-  ids.sort();
-  return ids.join('-');
-}
 const CurrentCurationTracks = recycle({
   displayName: 'CurrentCurationTracks',
   initialState: {

@@ -18,7 +18,10 @@ app.use((req, res, next) => {
 });
 
 app.get('/curations', (req, res) => {
-  const response = test_utils.n(test_utils.createCuration, 40);
+  const response = test_utils.n(
+    test_utils.createCuration,
+    faker.random.number({ min: 10, max: 40 })
+  );
 
   consoleOutput(response);
   res.json(response);
@@ -31,7 +34,10 @@ app.get('/curations/:id', (req, res) => {
 });
 
 app.get('/searchCurations/:searchTerms', (req, res) => {
-  const response = test_utils.n(test_utils.createCuration, 40);
+  const response = test_utils.n(
+    test_utils.createCuration,
+    faker.random.number({ min: 10, max: 40 })
+  );
   consoleOutput(response);
   res.json(response);
 });

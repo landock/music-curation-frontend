@@ -2,12 +2,7 @@ import React from 'react';
 import recycle from 'recycle';
 import SearchResultCollection from '../../components/SearchResultCollection';
 import { sortBy } from 'lodash';
-
-function keyGenerator(results) {
-  let ids = results.map(result => result.id);
-  ids.sort();
-  return ids.join('-');
-}
+import keyGenerator from '../../generateKeyFromObjectWithIds';
 
 const SearchResults = recycle({
   displayName: 'SearchResults',
