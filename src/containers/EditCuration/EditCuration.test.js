@@ -1,33 +1,46 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
+import { of } from 'rxjs/observable/of';
 
-import mockStore from '../../fixtures/mockStore';
-import EditCuration from '.';
+import EditCuration, { getDataOnMount, getCurrentCuration } from '.';
 
-it('EditCuration: default', () => {
-  const store = mockStore({
-    CurrentCuration: {
-      entities: {
-        tracks: { 1: { trackName: 'skldjf' }, 2: { trackName: 'lksdjfl' } },
+describe('EditCuration methods', () => {
+  beforeEach(() => {});
+  describe('getDataOnMount', () => {
+    const id = 1337;
+    let mockLifecycleStream = of('componentDidMount');
+    let mockPropsStream = of({ match: { params: { id } } });
+    it('should return an action object when there are router props passed in', () => {
+      const result = getDataOnMount(mockLifecycleStream, mockPropsStream);
+      result.subscribe(val => {
+        expect(val.payload.url).toBe(`/curations/${id}`);
+      });
+    });
+  });
 
-        curations: {
-          2: {
-            id: 2,
-            imageUrl: 'http://fpoimg.com/200x200',
-            description: 'whatever description here',
-            tracks: [1, 2],
-            name: 'Sprint 14 remix',
+  describe('getCurrentCuration', () => {
+    const id = 578547;
+    let mockReducer = jest.fn();
+    let mockStoreStream = of({
+      CurrentCuration: {
+        entities: {
+          curations: {
+            id,
           },
+          tags: {},
         },
       },
-    },
+    });
+    let mockPropsStream = of({ match: { params: { id } } });
+    const getCurrentCurationResult = getCurrentCuration(
+      mockStoreStream,
+      mockPropsStream,
+      mockReducer
+    );
+    expect(mockReducer.mock.calls.length).toBe(1);
+    getCurrentCurationResult.subscribe(value => {
+      console.log(value);
+    });
   });
-  const component = renderer.create(
-    <Provider store={store}>
-      <EditCuration match={{ params: { id: 2 } }} />
-    </Provider>
-  );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+
+  describe('getCurrentCurationReducer', () => {});
 });

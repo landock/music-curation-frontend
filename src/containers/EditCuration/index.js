@@ -2,54 +2,28 @@ import React from 'react';
 import recycle from 'recycle';
 import { Grid, Item } from 'semantic-ui-react';
 
-import 'rxjs/add/operator/merge';
-import 'rxjs/add/operator/first';
-
 import Curation from '../../components/Curation';
 import CurationScheduler from '../CurationScheduler';
 import { types as middlewareTypes } from '../../middleware/api';
 
 import { types as curationsTypes } from '../../modules/CurrentCuration';
 
+import { reducer } from 'recycle';
+import { withLatestFrom } from 'rxjs/operators';
+
 const EditCuration = recycle({
+  //TODO: Add displayName to hygen generator
   displayName: 'EditCuration',
   dispatch(sources) {
-    return [
-      sources
-        .select('button')
-        .addListener('onClick')
-        .mapTo({ type: 'UPDATE_CURATION_SCHEDULE', payload: {} }),
-      sources.lifecycle
-        .filter(e => {
-          return e === 'componentDidMount';
-        })
-        .withLatestFrom(sources.props)
-        .map(([e, props]) => {
-          return {
-            type: middlewareTypes.API_REQUEST,
-            nextActionType: curationsTypes.CURATION_FETCHED,
-            payload: {
-              url: `/curations/${props.match.params.id}`,
-              method: 'get',
-            },
-          };
-        }),
-    ];
+    return [getDataOnMount(sources.lifecycle, sources.props)];
   },
   update(sources) {
     return [
-      sources.store
-        .withLatestFrom(sources.props)
-        .reducer((state, [store, props]) => {
-          const { tracks, curations, tags } = store.CurrentCuration.entities;
-
-          state.currentCuration = store.CurrentCuration.entities
-            ? store.CurrentCuration.entities.curations[props.match.params.id]
-            : null;
-
-          state.currentCuration.tags = tags;
-          return state;
-        }),
+      getCurrentCuration(
+        sources.store,
+        sources.props,
+        getCurrentCurationReducer
+      ),
     ];
   },
   view(props, state) {
@@ -70,4 +44,49 @@ const EditCuration = recycle({
   },
 });
 
-export default EditCuration;
+function getDataOnMount(lifecycleStream, propsStream) {
+  return lifecycleStream
+    .filter(e => {
+      return e === 'componentDidMount';
+    })
+    .withLatestFrom(propsStream)
+    .map(([e, props]) => {
+      console.log(e, props);
+      return {
+        type: middlewareTypes.API_REQUEST,
+        nextActionType: curationsTypes.CURATION_FETCHED,
+        payload: {
+          url: `/curations/${props.match.params.id}`,
+          method: 'get',
+        },
+      };
+    });
+}
+
+function getCurrentCuration(storeStream, propsStream, reducerFunc) {
+  const result = storeStream.pipe(
+    withLatestFrom(propsStream),
+    reducer(reducerFunc)
+  );
+  console.log(
+    'getCurrentCuration: ',
+    storeStream.value,
+    propsStream.value,
+    reducerFunc.mock
+  );
+  return result;
+}
+
+function getCurrentCurationReducer(state, [store, props]) {
+  if (!store.CurrentCuration.entities) return state;
+
+  const { tags } = store.CurrentCuration.entities;
+
+  state.currentCuration =
+    store.CurrentCuration.entities.curations[props.match.params.id];
+
+  state.currentCuration.tags = tags;
+  return state;
+}
+
+export { EditCuration as default, getDataOnMount, getCurrentCuration };
