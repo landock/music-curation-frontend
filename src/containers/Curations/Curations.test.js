@@ -1,31 +1,57 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-import { render } from 'react-testing-library';
-import { Provider } from 'react-redux';
-import axios from 'axios';
-import MockAdapter from 'axios-mock-adapter';
+import { of } from 'rxjs/observable/of';
 
-import Curations from '.';
-import CurationsCollection from '../../components/CurationsCollection';
+import {
+  getSearchCurationsFromStore,
+  getCurationsOnMount,
+  stateReducer,
+} from '.';
+import { getCurations } from '../../api';
 
 describe('Curations', () => {
-  let component, store, testData, mockStore, debug;
+  describe('getSearchCurationsFromStore', () => {
+    it('should return a state object', () => {
+      const mockReducer = jest.fn();
+      const mockStoreStream = of({
+        Curations: { entities: { curations: {} } },
+        SearchCurations: { entities: { curations: {} } },
+      });
+      const result = getSearchCurationsFromStore(mockStoreStream, mockReducer);
 
-  beforeEach(() => {
-    mockStore = configureMockStore([thunk]);
-    testData = { Curations: [1] };
-    store = mockStore(testData);
-    const renderResult = render(
-      <Provider store={store}>
-        <Curations />
-      </Provider>
-    );
-    debug = renderResult.debug;
+      result.subscribe(value => {
+        expect(value.reducer).toBe(mockReducer);
+      });
+    });
   });
 
-  it('should have a store passed from a Provider as props', () => {
-    debug();
+  describe('getCurationsOnMount', () => {
+    it('should return an action object to request data on mount', () => {
+      const mockLifecycleStream = of('componentDidMount');
+      const result = getCurationsOnMount(mockLifecycleStream);
+      const actionObject = {
+        type: expect.any(String),
+        nextActionType: expect.any(String),
+        payload: expect.any(Object),
+      };
+
+      result.subscribe(value => {
+        expect(value).toMatchObject(actionObject);
+      });
+    });
+  });
+
+  describe('stateReducer', () => {
+    it('should return a state object with curations from the store', () => {
+      const mockState = {};
+      const mockStore = {
+        Curations: { entities: { curations: {} } },
+        SearchCurations: { entities: { curations: {} } },
+      };
+      const result = stateReducer(mockState, mockStore);
+
+      expect(result).toMatchObject({
+        curations: expect.any(Object),
+        searchCurations: expect.any(Object),
+      });
+    });
   });
 });

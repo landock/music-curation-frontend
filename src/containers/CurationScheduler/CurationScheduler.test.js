@@ -1,9 +1,16 @@
-import React from 'react';
-import { render } from 'react-testing-library';
+import { of } from 'rxjs/observable/of';
 
-import CurationScheduler from '.';
+import {
+  handleFormSubmit,
+  addListenerToElement,
+  CurationSchedulerView,
+} from '.';
 
-it('CurationScheduler: default', () => {
-  const {container, debug} = render(<CurationScheduler />);
-  debug();
+describe('CurationSchedulerView', () => {
+  describe('handleFormSubmit', () => {
+    it('should return an action object', () => {
+      const mockEventStream = of({ target: { value: '', innerText: '' } });
+      const result = handleFormSubmit();
+    });
+  });
 });

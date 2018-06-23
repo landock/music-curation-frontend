@@ -1,8 +1,9 @@
 import React from 'react';
 import recycle from 'recycle';
 import PropTypes from 'prop-types';
+import { camelCase } from 'lodash';
 
-import { Form, Input } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 
 import 'rxjs/add/operator/withLatestFrom';
 import './CurationScheduler.css';
@@ -12,69 +13,23 @@ const CurationScheduler = recycle({
   initialState: {
     dateStart: '',
     dateEnd: '',
-    recommendedTime: '',
+    recommendedTime: 1,
     publicationStatus: 'Draft',
     environment: 'Development',
   },
   dispatch(sources) {
-    return [
-      sources
-        .selectId('curation-scheduler')
-        .addListener('onSubmit')
-        .withLatestFrom(sources.state)
-        .map(([event, state]) => {
-          const { dateStart, dateEnd, status, environment } = state;
-          return {
-            type: 'UPDATE_CURATION_SCHEDULE',
-            payload: {
-              dateStart,
-              dateEnd,
-              status,
-              environment,
-            },
-          };
-        }),
-    ];
+    const id = 'curation-scheduler';
+    return [handleFormSubmit(sources.selectId, id, sources.state)];
   },
 
   update(sources) {
+    const idSelector = sources.selectId;
+    const eventToListenFor = 'onChange';
     return [
-      sources
-        .selectId('date-start')
-        .addListener('onChange')
-        .reducer((state, e) => {
-          return {
-            ...state,
-            dateStart: e.target.value,
-          };
-        }),
-      sources
-        .selectId('date-end')
-        .addListener('onChange')
-        .reducer((state, e) => {
-          return {
-            ...state,
-            dateEnd: e.target.value,
-          };
-        }),
-      sources
-        .selectId('curation-status')
-        .addListener('onChange')
-        .reducer((state, e) => {
-          return {
-            ...state,
-            publicationStatus: e.target.innerText,
-          };
-        }),
-      sources
-        .selectId('environment')
-        .addListener('onChange')
-        .reducer((state, e) => {
-          return {
-            ...state,
-            environment: e.target.innerText,
-          };
-        }),
+      addListenerToElement(idSelector, 'date-end', eventToListenFor),
+      addListenerToElement(idSelector, 'date-start', eventToListenFor),
+      addListenerToElement(idSelector, 'publication-status', eventToListenFor),
+      addListenerToElement(idSelector, 'environment', eventToListenFor),
     ];
   },
 
@@ -82,6 +37,37 @@ const CurationScheduler = recycle({
     return CurationSchedulerView(state);
   },
 });
+
+function handleFormSubmit(idSelectorStream, id, stateStream) {
+  return idSelectorStream(id)
+    .addListener('onSubmit')
+    .withLatestFrom(stateStream)
+    .map(([event, state]) => {
+      return {
+        type: 'UPDATE_CURATION_SCHEDULE',
+        payload: {
+          ...state,
+        },
+      };
+    });
+}
+
+function addListenerToElement(idSelectorStream, id, eventName) {
+  return idSelectorStream(id)
+    .addListener(eventName)
+    .reducer(addListenerToElementReducer(id));
+}
+
+function addListenerToElementReducer(id) {
+  return (state, e) => {
+    let camelCaseId = camelCase(id);
+    console.log(camelCaseId);
+    return {
+      ...state,
+      [camelCaseId]: e.target.value || e.target.innerText,
+    };
+  };
+}
 
 function CurationSchedulerView({
   dateStart,
@@ -110,7 +96,7 @@ function CurationSchedulerView({
           placeholder="DRAFT"
           id="curation-status"
           options={statusOptions}
-          value={publicationStatus}
+          defaultValue={publicationStatus}
         />
       </Form.Group>
       <p>
@@ -141,14 +127,14 @@ function CurationSchedulerView({
         min="0"
         max="24"
         step="1"
-        value={recommendedTime}
+        defaultValue={recommendedTime}
       />
       <Form.Select
         id="environment"
         placeholder="Copy to"
         label="Environment"
         options={environmentOptions}
-        value={environment}
+        defaultValue={environment}
       />
     </Form>
   );
@@ -163,4 +149,9 @@ CurationScheduler.propTypes = {
   published: PropTypes.bool,
 };
 
-export default CurationScheduler;
+export {
+  CurationScheduler as default,
+  handleFormSubmit,
+  addListenerToElement,
+  CurationSchedulerView,
+};

@@ -1,5 +1,5 @@
 import React from 'react';
-import recycle from 'recycle';
+import recycle, { reducer } from 'recycle';
 
 import { types as curationsTypes } from '../../modules/Curations';
 import { types as middlewareTypes } from '../../middleware/api';
@@ -7,30 +7,15 @@ import CurationsCollection from '../../components/CurationsCollection';
 
 const Curations = recycle({
   displayName: 'Curations',
+  initialState: {
+    curations: null,
+    searchCurations: null,
+  },
   dispatch(sources) {
-    return [
-      sources.lifecycle.filter(e => e === 'componentDidMount').map(() => {
-        return {
-          type: middlewareTypes.API_REQUEST,
-          nextActionType: curationsTypes.CURATIONS_FETCHED,
-          payload: {
-            url: '/curations',
-          },
-        };
-      }),
-    ];
+    return [getCurationsOnMount(sources.lifecycle)];
   },
   update(sources) {
-    return [
-      sources.store.reducer((state, store) => {
-        state.curations =
-          store.Curations.entities && store.Curations.entities.curations;
-        state.searchCurations =
-          store.SearchCurations.entities &&
-          store.SearchCurations.entities.curations;
-        return state;
-      }),
-    ];
+    return [getSearchCurationsFromStore(sources.store, stateReducer)];
   },
   view(props, state) {
     return (
@@ -41,4 +26,33 @@ const Curations = recycle({
   },
 });
 
-export default Curations;
+function getCurationsOnMount(lifecycleStream) {
+  return lifecycleStream.filter(e => e === 'componentDidMount').map(() => {
+    return {
+      type: middlewareTypes.API_REQUEST,
+      nextActionType: curationsTypes.CURATIONS_FETCHED,
+      payload: {
+        url: '/curations',
+      },
+    };
+  });
+}
+
+function getSearchCurationsFromStore(storeStream, reducerFunc) {
+  return storeStream.pipe(reducer(reducerFunc));
+}
+
+function stateReducer(state, store) {
+  state.curations =
+    store.Curations.entities && store.Curations.entities.curations;
+  state.searchCurations =
+    store.SearchCurations.entities && store.SearchCurations.entities.curations;
+  return state;
+}
+
+export {
+  Curations as default,
+  getCurationsOnMount,
+  getSearchCurationsFromStore,
+  stateReducer,
+};

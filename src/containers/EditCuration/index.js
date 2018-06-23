@@ -68,12 +68,6 @@ function getCurrentCuration(storeStream, propsStream, reducerFunc) {
     withLatestFrom(propsStream),
     reducer(reducerFunc)
   );
-  console.log(
-    'getCurrentCuration: ',
-    storeStream.value,
-    propsStream.value,
-    reducerFunc.mock
-  );
   return result;
 }
 
@@ -89,4 +83,9 @@ function getCurrentCurationReducer(state, [store, props]) {
   return state;
 }
 
-export { EditCuration as default, getDataOnMount, getCurrentCuration };
+export {
+  EditCuration as default,
+  getDataOnMount,
+  getCurrentCuration,
+  getCurrentCurationReducer,
+};
