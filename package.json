@@ -76,6 +76,11 @@
     "parser": "flow",
     "prettier.eslintIntegration": true
   },
+  "quokka": {
+    "babel": {
+      "presets": ["env", "react"]
+    } 
+  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",

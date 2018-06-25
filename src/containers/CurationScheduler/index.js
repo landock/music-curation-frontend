@@ -18,18 +18,63 @@ const CurationScheduler = recycle({
     environment: 'Development',
   },
   dispatch(sources) {
-    const id = 'curation-scheduler';
-    return [handleFormSubmit(sources.selectId, id, sources.state)];
+    const formStream = getSelectorStream(sources.select, Form, 'onSubmit');
+    return [handleFormSubmit(formStream, sources.state)];
   },
 
   update(sources) {
     const idSelector = sources.selectId;
     const eventToListenFor = 'onChange';
+
+    const dateStartId = 'date-start';
+    const dateStartStream = getSelectorStream(
+      idSelector,
+      dateStartId,
+      eventToListenFor
+    );
+    const dateStartReducer = addListenerToElementReducer(dateStartId);
+
+    const dateEndId = 'date-end';
+    const dateEndStream = getSelectorStream(
+      idSelector,
+      dateEndId,
+      eventToListenFor
+    );
+    const dateEndReducer = addListenerToElementReducer(dateEndId);
+
+    const publicationStatusId = 'publication-status';
+    const publicationStatusStream = getSelectorStream(
+      idSelector,
+      publicationStatusId,
+      eventToListenFor
+    );
+    const publicationStatusReducer = addListenerToElementReducer(
+      publicationStatusId
+    );
+
+    const environmentId = 'environment';
+    const environmentStream = getSelectorStream(
+      idSelector,
+      environmentId,
+      eventToListenFor
+    );
+    const environmentReducer = addListenerToElementReducer(environmentId);
+
+    const recommendedTimeId = 'recommended-time';
+    const recommendedTimeStream = getSelectorStream(
+      idSelector,
+      recommendedTimeId,
+      eventToListenFor
+    );
+    const recommendedTimeReducer = addListenerToElementReducer(
+      recommendedTimeId
+    );
     return [
-      addListenerToElement(idSelector, 'date-end', eventToListenFor),
-      addListenerToElement(idSelector, 'date-start', eventToListenFor),
-      addListenerToElement(idSelector, 'publication-status', eventToListenFor),
-      addListenerToElement(idSelector, 'environment', eventToListenFor),
+      dateEndStream.reducer(dateEndReducer),
+      dateStartStream.reducer(dateStartReducer),
+      publicationStatusStream.reducer(publicationStatusReducer),
+      environmentStream.reducer(environmentReducer),
+      recommendedTimeStream.reducer(recommendedTimeReducer),
     ];
   },
 
@@ -38,28 +83,27 @@ const CurationScheduler = recycle({
   },
 });
 
-function handleFormSubmit(idSelectorStream, id, stateStream) {
-  return idSelectorStream(id)
-    .addListener('onSubmit')
-    .withLatestFrom(stateStream)
-    .map(([event, state]) => {
-      return {
-        type: 'UPDATE_CURATION_SCHEDULE',
-        payload: {
-          ...state,
-        },
-      };
-    });
+function handleFormSubmit(idSelectorStream, stateStream) {
+  if (!idSelectorStream) return;
+  return idSelectorStream.withLatestFrom(stateStream).map(([event, state]) => {
+    return {
+      type: 'UPDATE_CURATION_SCHEDULE',
+      payload: {
+        ...state,
+      },
+    };
+  });
 }
 
-function addListenerToElement(idSelectorStream, id, eventName) {
-  return idSelectorStream(id)
-    .addListener(eventName)
-    .reducer(addListenerToElementReducer(id));
+function getSelectorStream(selectorFunc, selectorArg, eventName) {
+  if (!selectorFunc) return;
+  return selectorFunc(selectorArg).addListener(eventName);
 }
 
 function addListenerToElementReducer(id) {
-  return (state, e) => {
+  if (!id) return;
+  return function(state, e) {
+    if (!e) return;
     let camelCaseId = camelCase(id);
     console.log(camelCaseId);
     return {
@@ -94,7 +138,7 @@ function CurationSchedulerView({
         </Form.Button>
         <Form.Select
           placeholder="DRAFT"
-          id="curation-status"
+          id="publication-status"
           options={statusOptions}
           defaultValue={publicationStatus}
         />
@@ -152,6 +196,7 @@ CurationScheduler.propTypes = {
 export {
   CurationScheduler as default,
   handleFormSubmit,
-  addListenerToElement,
+  getSelectorStream,
   CurationSchedulerView,
+  addListenerToElementReducer,
 };
