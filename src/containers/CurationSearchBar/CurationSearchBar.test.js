@@ -1,10 +1,12 @@
-import React from 'react';
-import { render } from 'react-testing-library';
-import renderer from 'react-test-renderer';
-import CurationSearchBar from '.';
+import { configureAction, handleSubmit } from '.';
 
-it('CurationSearchBar: default', () => {
-  const component = renderer.create(<CurationSearchBar />);
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+describe('CurationSearchBar', () => {
+  describe('configureAction', () => {
+    it('should return an action configured with a search api url based on the search term', () => {
+      const mockProps = {};
+      const searchTerm = 'beagles al dente';
+      const result = configureAction(mockProps, searchTerm);
+      expect(result.payload.url).toContain(searchTerm);
+    });
+  });
 });

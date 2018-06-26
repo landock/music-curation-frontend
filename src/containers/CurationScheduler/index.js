@@ -1,12 +1,14 @@
 import React from 'react';
 import recycle from 'recycle';
 import PropTypes from 'prop-types';
-import { camelCase } from 'lodash';
 
 import { Form } from 'semantic-ui-react';
 
+import getSelectorStream from '../../getSelectorStream';
+import addListenerToElementReducer from '../../reducerThatMapsIdToStateProperty';
 import 'rxjs/add/operator/withLatestFrom';
 import './CurationScheduler.css';
+import { Stream } from 'stream';
 
 const CurationScheduler = recycle({
   displayName: 'CurationScheduler',
@@ -21,63 +23,22 @@ const CurationScheduler = recycle({
     const formStream = getSelectorStream(sources.select, Form, 'onSubmit');
     return [handleFormSubmit(formStream, sources.state)];
   },
-
   update(sources) {
     const idSelector = sources.selectId;
     const eventToListenFor = 'onChange';
 
-    const dateStartId = 'date-start';
-    const dateStartStream = getSelectorStream(
-      idSelector,
-      dateStartId,
-      eventToListenFor
-    );
-    const dateStartReducer = addListenerToElementReducer(dateStartId);
+    const streamsWeNeed = [
+      'date-start',
+      'date-end',
+      'publication-status',
+      'environment',
+      'recommended-time',
+    ].map(id => getSelectorStream(idSelector, id, eventToListenFor));
 
-    const dateEndId = 'date-end';
-    const dateEndStream = getSelectorStream(
-      idSelector,
-      dateEndId,
-      eventToListenFor
+    return streamsWeNeed.map(stream =>
+      stream.reducer(addListenerToElementReducer)
     );
-    const dateEndReducer = addListenerToElementReducer(dateEndId);
-
-    const publicationStatusId = 'publication-status';
-    const publicationStatusStream = getSelectorStream(
-      idSelector,
-      publicationStatusId,
-      eventToListenFor
-    );
-    const publicationStatusReducer = addListenerToElementReducer(
-      publicationStatusId
-    );
-
-    const environmentId = 'environment';
-    const environmentStream = getSelectorStream(
-      idSelector,
-      environmentId,
-      eventToListenFor
-    );
-    const environmentReducer = addListenerToElementReducer(environmentId);
-
-    const recommendedTimeId = 'recommended-time';
-    const recommendedTimeStream = getSelectorStream(
-      idSelector,
-      recommendedTimeId,
-      eventToListenFor
-    );
-    const recommendedTimeReducer = addListenerToElementReducer(
-      recommendedTimeId
-    );
-    return [
-      dateEndStream.reducer(dateEndReducer),
-      dateStartStream.reducer(dateStartReducer),
-      publicationStatusStream.reducer(publicationStatusReducer),
-      environmentStream.reducer(environmentReducer),
-      recommendedTimeStream.reducer(recommendedTimeReducer),
-    ];
   },
-
   view(props, state) {
     return CurationSchedulerView(state);
   },
@@ -93,24 +54,6 @@ function handleFormSubmit(idSelectorStream, stateStream) {
       },
     };
   });
-}
-
-function getSelectorStream(selectorFunc, selectorArg, eventName) {
-  if (!selectorFunc) return;
-  return selectorFunc(selectorArg).addListener(eventName);
-}
-
-function addListenerToElementReducer(id) {
-  if (!id) return;
-  return function(state, e) {
-    if (!e) return;
-    let camelCaseId = camelCase(id);
-    console.log(camelCaseId);
-    return {
-      ...state,
-      [camelCaseId]: e.target.value || e.target.innerText,
-    };
-  };
 }
 
 function CurationSchedulerView({
