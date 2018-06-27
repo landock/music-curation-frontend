@@ -6,7 +6,7 @@ import getSelectorStream from '../../getSelectorStream';
 import addListenerToElementReducer from '../../reducerThatMapsIdToStateProperty';
 import { types as searchCurationsTypes } from '../../modules/SearchCurations';
 import { types as tracksTypes } from '../../modules/Tracks';
-import { types as middlewareTypes } from '../../middleware/api';
+import { getData } from '../../middleware/api';
 
 const CurationSearchBar = recycle({
   displayName: 'CurationSearchBar',
@@ -52,20 +52,15 @@ function handleSubmit(selectorStream, stateStream, propsStream) {
 }
 
 function configureAction(props, searchTerm) {
-  let action = {
-    type: middlewareTypes.API_REQUEST,
-    nextActionType: tracksTypes.TRACKS_FETCHED,
-    payload: {
-      url: `/search/${searchTerm}`,
-    },
-  };
+  let url = `/search/${searchTerm}`;
+  let nextActionType = tracksTypes.TRACKS_FETCHED;
 
   if (!props.match) {
-    action.nextActionType = searchCurationsTypes.SEARCH_CURATIONS_FETCHED;
-    action.payload.url = `/searchCurations/${searchTerm}`;
+    nextActionType = searchCurationsTypes.SEARCH_CURATIONS_FETCHED;
+    url = `/searchCurations/${searchTerm}`;
   }
 
-  return action;
+  return getData(url, nextActionType);
 }
 
 export { CurationSearchBar as default, handleSubmit, configureAction };

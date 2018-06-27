@@ -2,27 +2,12 @@ import React from 'react';
 import recycle from 'recycle';
 import { map, filter, withLatestFrom } from 'rxjs/operators';
 import { sortBy } from 'lodash';
+
 import TracksView from '../../components/TracksView';
 
 const Tracks = recycle({
   displayName: 'Tracks',
   update(sources) {
-    // TODO: Move to 'the other side' component
-    //
-    // let testPipe = sources.store
-    //   .pipe(
-    //     map(store => store.Curations.entities.tracks),
-    //     tap(n => console.log('testpipe', n)),
-    //     distinctUntilChanged()
-    //   )
-    //   .reducer((state, tracks) => {
-    //     console.log(state, tracks);
-    //     state.tracks = Object.keys(tracks).map(id => tracks[id].trackName);
-    //     console.log(state);
-    //     return state;
-    //   });
-    //
-
     return [getTracksFromStore(sources)];
   },
 
@@ -59,12 +44,15 @@ function getTrackNamesReducer(state, [props, store]) {
     CurrentCuration,
     Curations,
     SearchCurations,
-  ].filter(store => store.entities);
+  ].filter(store => {
+    if (!store) return false;
+    return store.entities;
+  });
 
   let trackData = props.ids.map(id => {
     return getTrackNamesFromStoreCollection(id, storesWithEntities);
   });
-  state.tracks = sortBy(trackData, ['trackName']);
+  state.tracks = trackData;
   return state;
 }
 

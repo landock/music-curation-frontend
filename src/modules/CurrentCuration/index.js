@@ -1,21 +1,17 @@
-import { getCuration } from '../../api';
-import { curation } from '../../schema';
 import { normalize } from 'normalizr';
 import { merge } from 'lodash';
+
+import { curation } from '../../schema';
 
 const initialState = {};
 const ADD_CURATION_TRACK =
   'music-curation-frontend/curations/ADD_CURATION_TRACK';
 const CURATION_FETCHED = 'music-curation-frontend/curations/CURATION_FETCHED';
-const types = {
-  ADD_CURATION_TRACK,
-  CURATION_FETCHED,
-};
-// Reducer
+
 function reducer(state = initialState, action = {}) {
   const { payload, type } = action;
   if (!payload) return state;
-  switch (action.type) {
+  switch (type) {
     case ADD_CURATION_TRACK:
       state.entities.curations[state.result].tracks.push(payload.id);
       state.entities.tracks[payload.id] = payload;
@@ -29,20 +25,16 @@ function reducer(state = initialState, action = {}) {
   }
 }
 
-function curationFetched(payload) {
-  return { type: CURATION_FETCHED, payload: payload };
+function addCurationTrack(payload) {
+  return { type: ADD_CURATION_TRACK, payload };
 }
 
-function fetchCuration(id) {
-  return dispatch => {
-    return getCuration(id).then(body => {
-      return dispatch(curationFetched(body));
-    });
-  };
-}
+const types = {
+  ADD_CURATION_TRACK,
+  CURATION_FETCHED,
+};
 
 const actions = {
-  fetchCuration,
-  curationFetched,
+  addCurationTrack,
 };
-export { reducer as default, types };
+export { reducer as default, types, actions };

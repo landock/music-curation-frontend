@@ -67,6 +67,7 @@
     "prettier": "1.11.1",
     "prettier-eslint": "^8.8.1",
     "react-testing-library": "^3.1.7",
+    "redux-mock-provider": "^1.0.0",
     "redux-mock-store": "^1.5.3",
     "storybook-addon-specifications": "^2.1.1"
   },
@@ -78,8 +79,11 @@
   },
   "quokka": {
     "babel": {
-      "presets": ["env", "react"]
-    } 
+      "presets": [
+        "env",
+        "react"
+      ]
+    }
   },
   "jest": {
     "collectCoverageFrom": [

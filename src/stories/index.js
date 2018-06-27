@@ -18,4 +18,6 @@ import '../components/CurationFilterSubHeader/CurationFilterSubHeader.story';
 import '../components/SearchResultFilterSubHeader/SearchResultFilterSubHeader.story';
 import '../components/BulkCurationEditor/BulkCurationEditor.story';
 import '../components/App/App.story';
+import '../components/CurationSchedulerView/CurationSchedulerView.story';
 
+import '../components/EditCurationView/EditCurationView.story'

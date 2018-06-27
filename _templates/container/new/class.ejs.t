@@ -37,6 +37,7 @@ import recycle from 'recycle';
 
 
 const <%= container %> = recycle({
+  displayName: '<%= container %>',
   dispatch(sources) {
     return [];
   },

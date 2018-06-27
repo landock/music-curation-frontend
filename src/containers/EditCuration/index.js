@@ -1,15 +1,13 @@
 import React from 'react';
 import recycle from 'recycle';
-import { Grid, Item } from 'semantic-ui-react';
 
-import Curation from '../../components/Curation';
-import CurationScheduler from '../CurationScheduler';
-import { types as middlewareTypes } from '../../middleware/api';
+import { getData } from '../../middleware/api';
 
 import { types as curationsTypes } from '../../modules/CurrentCuration';
 
 import { reducer } from 'recycle';
 import { withLatestFrom } from 'rxjs/operators';
+import EditCurationView from '../../components/EditCurationView';
 
 const EditCuration = recycle({
   //TODO: Add displayName to hygen generator
@@ -27,20 +25,7 @@ const EditCuration = recycle({
     ];
   },
   view(props, state) {
-    return (
-      <Grid columns={2}>
-        <Grid.Row>
-          <Grid.Column width={10}>
-            <Item.Group>
-              <Curation curation={state.currentCuration} />
-            </Item.Group>
-          </Grid.Column>
-          <Grid.Column width={6}>
-            <CurationScheduler />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    );
+    return <EditCurationView currentCuration={state.currentCuration} />;
   },
 });
 
@@ -51,14 +36,10 @@ function getDataOnMount(lifecycleStream, propsStream) {
     })
     .withLatestFrom(propsStream)
     .map(([e, props]) => {
-      return {
-        type: middlewareTypes.API_REQUEST,
-        nextActionType: curationsTypes.CURATION_FETCHED,
-        payload: {
-          url: `/curations/${props.match.params.id}`,
-          method: 'get',
-        },
-      };
+      const url = `/curations/${props.match.params.id}`;
+      const nextActionType = curationsTypes.CURATION_FETCHED;
+
+      return getData(url, nextActionType);
     });
 }
 

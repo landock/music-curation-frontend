@@ -2,7 +2,7 @@ import React from 'react';
 import recycle, { reducer } from 'recycle';
 
 import { types as curationsTypes } from '../../modules/Curations';
-import { types as middlewareTypes } from '../../middleware/api';
+import { getData } from '../../middleware/api';
 import CurationsCollection from '../../components/CurationsCollection';
 
 const Curations = recycle({
@@ -27,15 +27,9 @@ const Curations = recycle({
 });
 
 function getCurationsOnMount(lifecycleStream) {
-  return lifecycleStream.filter(e => e === 'componentDidMount').map(() => {
-    return {
-      type: middlewareTypes.API_REQUEST,
-      nextActionType: curationsTypes.CURATIONS_FETCHED,
-      payload: {
-        url: '/curations',
-      },
-    };
-  });
+  return lifecycleStream
+    .filter(e => e === 'componentDidMount')
+    .map(() => getData('/curations', curationsTypes.CURATIONS_FETCHED));
 }
 
 function getSearchCurationsFromStore(storeStream, reducerFunc) {

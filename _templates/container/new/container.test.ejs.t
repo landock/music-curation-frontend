@@ -6,8 +6,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import <%= container %> from '.'
 
-it('<%= container %>: default', () => {
-  const component = renderer.create(<<%= container %> />)
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+describe('<%= container %>', () => {
+  it('should do something with <%= container %>', () => {})
 })

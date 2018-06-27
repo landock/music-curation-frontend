@@ -7,7 +7,10 @@ import { Item, Icon, Popup } from 'semantic-ui-react';
 
 import AddTags from '../../components/AddTags';
 import AddToCuration from '../../components/AddToCuration';
-import { types as curationsTypes } from '../../modules/CurrentCuration';
+import {
+  types as curationsTypes,
+  actions as curationsActions,
+} from '../../modules/CurrentCuration';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';
 import getSelectorStream from '../../getSelectorStream';
 
@@ -32,10 +35,7 @@ function mapClickEventToActionWithPropsAsPayload(eventStream, propsStream) {
   return eventStream.pipe(
     withLatestFrom(propsStream),
     map(([e, props]) => {
-      return {
-        type: curationsTypes.ADD_CURATION_TRACK,
-        payload: { ...props },
-      };
+      return curationsActions.addCurationTrack({ ...props });
     })
   );
 }

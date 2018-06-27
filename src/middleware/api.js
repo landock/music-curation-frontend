@@ -1,4 +1,5 @@
 import { apiRequest } from '../api';
+import { memoize } from 'lodash';
 
 const API_REQUEST = '@@apiMiddleware/API_REQUEST';
 
@@ -7,18 +8,18 @@ const types = {
 };
 
 function configureNextAction(action, payload) {
-  const { nextActionType } = action;
-  if (!nextActionType) return action;
-
+  if (!action) return action;
+  const { action: type } = action;
   return {
-    type: nextActionType,
+    type,
     payload,
   };
 }
 
 const apiMiddleware = store => next => action => {
-  if (action.type !== API_REQUEST) return next(action);
-  const { payload } = action;
+  const { payload, type } = action;
+
+  if (type !== API_REQUEST) return next(action);
 
   return apiRequest({ ...payload }).then(data => {
     let nextAction = configureNextAction(action, data);
@@ -26,4 +27,15 @@ const apiMiddleware = store => next => action => {
   });
 };
 
-export { apiMiddleware as default, types };
+function getData(url, actionToAttachPayloadTo) {
+  return {
+    type: API_REQUEST,
+    action: actionToAttachPayloadTo,
+    payload: {
+      url,
+    },
+  };
+}
+const memoizedGetData = memoize(getData);
+
+export { apiMiddleware as default, types, memoizedGetData as getData };

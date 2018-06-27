@@ -1,8 +1,10 @@
 import React from 'react';
 import { Item } from 'semantic-ui-react';
+import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import Tracks from '../../containers/Tracks';
 import TagCollection from '../TagCollection';
-import { Route } from 'react-router-dom';
 
 function Curation({ curation }) {
   return !curation ? (
@@ -29,5 +31,9 @@ function Curation({ curation }) {
     </Item>
   );
 }
+
+Curation.propTypes = {
+  curation: PropTypes.object,
+};
 
 export default Curation;
