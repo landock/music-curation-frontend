@@ -1,9 +1,14 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import SearchResults from '.';
+import { updateReducer } from '.';
 
-it('SearchResults: default', () => {
-  // const component = renderer.create(<SearchResults />);
-  // const tree = component.toJSON();
-  // expect(tree).toMatchSnapshot();
+describe('SearchResults', () => {
+  describe('updateReducer', () => {
+    it('should get state or whatever', () => {
+      const track = { trackName: 'cats' };
+      const mockStore = { Tracks: { searchResults: [track] } };
+      const result = updateReducer({}, mockStore);
+
+      expect(result).toHaveProperty('searchResults');
+      expect(result.searchResults).toContain(track);
+    });
+  });
 });

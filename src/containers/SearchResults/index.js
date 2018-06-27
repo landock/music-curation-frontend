@@ -7,12 +7,7 @@ import keyGenerator from '../../generateKeyFromObjectWithIds';
 const SearchResults = recycle({
   displayName: 'SearchResults',
   update(sources) {
-    return [
-      sources.store.reducer((state, store) => {
-        state.searchResults = sortBy(store.Tracks.searchResults, ['trackName']);
-        return state;
-      }),
-    ];
+    return [sources.store.reducer(updateReducer)];
   },
   view(props, state) {
     return (
@@ -24,4 +19,9 @@ const SearchResults = recycle({
   },
 });
 
-export default SearchResults;
+function updateReducer(state, store) {
+  if (!store.Tracks) return state;
+  state.searchResults = sortBy(store.Tracks.searchResults, ['trackName']);
+  return state;
+}
+export { SearchResults as default, updateReducer };

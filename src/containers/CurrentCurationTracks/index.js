@@ -12,7 +12,7 @@ const CurrentCurationTracks = recycle({
     searchResults: null,
   },
   update(sources) {
-    return [updateTracks(sources.store)];
+    return [updateTracks(sources.store, getCurrentTracksReducer)];
   },
   view(props, state) {
     return (
@@ -24,12 +24,12 @@ const CurrentCurationTracks = recycle({
   },
 });
 
-function updateTracks(storeStream) {
-  return storeStream.reducer(getCurrentTracksReducer);
+function updateTracks(storeStream, reducerFunc) {
+  return storeStream.reducer(reducerFunc);
 }
 
 function getCurrentTracksReducer(state, store) {
-  if (!store.CurrentCuration.entities) return state;
+  if (!store.CurrentCuration || !store.CurrentCuration.entities) return state;
 
   const { CurrentCuration: { entities: { tracks } } } = store;
   const tracksCollection = tracks

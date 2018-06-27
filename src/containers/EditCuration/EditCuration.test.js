@@ -9,10 +9,10 @@ import {
 
 describe('EditCuration methods', () => {
   describe('getDataOnMount', () => {
-    const id = 1337;
-    let mockLifecycleStream = of('componentDidMount');
-    let mockPropsStream = of({ match: { params: { id } } });
     it('should return an action object when there are router props passed in', () => {
+      const id = 1337;
+      let mockLifecycleStream = of('componentDidMount');
+      let mockPropsStream = of({ match: { params: { id } } });
       const result = getDataOnMount(mockLifecycleStream, mockPropsStream);
       result.subscribe(val => {
         expect(val.payload.url).toBe(`/curations/${id}`);
@@ -51,24 +51,26 @@ describe('EditCuration methods', () => {
   });
 
   describe('getCurrentCurationReducer', () => {
-    const id = 5388;
-    const tags = [{ id: 1, title: 'test' }];
-    let mockStore = {
-      CurrentCuration: {
-        entities: {
-          curations: {
-            [id]: { id },
-            tags: {},
+    it('should return state or something', () => {
+      const id = 5388;
+      const tags = [{ id: 1, title: 'test' }];
+      let mockStore = {
+        CurrentCuration: {
+          entities: {
+            curations: {
+              [id]: { id },
+              tags: {},
+            },
+            tags,
           },
-          tags,
         },
-      },
-    };
-    let mockProps = { match: { params: { id } } };
-    let mockState = {};
-    let result = getCurrentCurationReducer(mockState, [mockStore, mockProps]);
+      };
+      let mockProps = { match: { params: { id } } };
+      let mockState = {};
+      let result = getCurrentCurationReducer(mockState, [mockStore, mockProps]);
 
-    expect(result.currentCuration.id).toBe(id);
-    expect(result.currentCuration.tags).toBe(tags);
+      expect(result.currentCuration.id).toBe(id);
+      expect(result.currentCuration.tags).toBe(tags);
+    });
   });
 });

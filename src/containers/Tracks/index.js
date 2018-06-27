@@ -68,4 +68,9 @@ function getTrackNamesReducer(state, [props, store]) {
   return state;
 }
 
-export default Tracks;
+export {
+  Tracks as default,
+  getTrackNamesFromStoreCollection,
+  getTrackNamesReducer,
+  getTracksFromStore,
+};

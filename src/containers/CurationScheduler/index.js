@@ -1,14 +1,13 @@
 import React from 'react';
 import recycle from 'recycle';
 import PropTypes from 'prop-types';
-
 import { Form } from 'semantic-ui-react';
 
 import getSelectorStream from '../../getSelectorStream';
 import addListenerToElementReducer from '../../reducerThatMapsIdToStateProperty';
+
 import 'rxjs/add/operator/withLatestFrom';
 import './CurationScheduler.css';
-import { Stream } from 'stream';
 
 const CurationScheduler = recycle({
   displayName: 'CurationScheduler',
@@ -126,6 +125,7 @@ function CurationSchedulerView({
     </Form>
   );
 }
+
 CurationScheduler.propTypes = {
   created_at: PropTypes.string,
   updated_at: PropTypes.string,

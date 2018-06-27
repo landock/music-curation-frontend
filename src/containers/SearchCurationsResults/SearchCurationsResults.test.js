@@ -1,10 +1,12 @@
-
-import React from 'react'
-import renderer from 'react-test-renderer'
-import SearchCurationsResults from '.'
+import { reducerCallback } from '.';
 
 it('SearchCurationsResults: default', () => {
-  const component = renderer.create(<SearchCurationsResults />)
-  const tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
-})
+  const curations = { 1: { id: 1 } };
+  const mockStore = {
+    SearchCurations: { entities: { curations } },
+  };
+  const result = reducerCallback({}, mockStore);
+
+  expect(result).toHaveProperty('curations');
+  expect(result.curations).toMatchObject(curations);
+});

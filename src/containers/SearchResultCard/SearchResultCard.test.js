@@ -1,10 +1,23 @@
-import React from 'react';
-import { render } from 'react-testing-library';
-import renderer from 'react-test-renderer';
-import SearchResultCard from '.';
+import {
+  mapClickEventToActionWithPropsAsPayload,
+  SearchResultCardView,
+} from '.';
+import { of } from 'rxjs/observable/of';
 
-it('SearchResultCard: default', () => {
-  // const component = renderer.create(<SearchResultCard />)
-  // const tree = component.toJSON()
-  // expect(tree).toMatchSnapshot()
+describe('SearchResultCard', () => {
+  describe('mapClickEventToActionWithPropsAsPayload', () => {
+    it('should return an action object that will dispatch the props as a payload', () => {
+      const id = 1122333;
+      const mockEventStream = of('click');
+      const mockPropsStream = of({ id });
+      const result = mapClickEventToActionWithPropsAsPayload(
+        mockEventStream,
+        mockPropsStream
+      );
+
+      result.subscribe(val => {
+        expect(val.payload.id).toBe(id);
+      });
+    });
+  });
 });

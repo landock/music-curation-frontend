@@ -24,18 +24,21 @@ const CurationSearchBar = recycle({
     return [inputStream.reducer(addListenerToElementReducer)];
   },
   view(props, state) {
-    return (
-      <Form>
-        <Form.Input
-          id="search-term"
-          value={state.searchTerm}
-          icon="search"
-          placeholder="Search Curations"
-        />
-      </Form>
-    );
+    return new CurationSearchBarView(state);
   },
 });
+function CurationSearchBarView({ searchTerm }) {
+  return (
+    <Form>
+      <Form.Input
+        id="search-term"
+        value={searchTerm}
+        icon="search"
+        placeholder="Search Curations"
+      />
+    </Form>
+  );
+}
 
 function handleSubmit(selectorStream, stateStream, propsStream) {
   return selectorStream

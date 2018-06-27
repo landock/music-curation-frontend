@@ -51,7 +51,6 @@ function getDataOnMount(lifecycleStream, propsStream) {
     })
     .withLatestFrom(propsStream)
     .map(([e, props]) => {
-      console.log(e, props);
       return {
         type: middlewareTypes.API_REQUEST,
         nextActionType: curationsTypes.CURATION_FETCHED,

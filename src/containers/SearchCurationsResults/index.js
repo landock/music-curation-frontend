@@ -4,18 +4,19 @@ import CurationsCollection from '../../components/CurationsCollection';
 
 const SearchCurationsResults = recycle({
   update(sources) {
-    return [
-      sources.store.reducer((state, store) => {
-        state.curations =
-          store.SearchCurations.entities &&
-          store.SearchCurations.entities.curations;
-        return state;
-      }),
-    ];
+    return [sources.store.reducer(reducerCallback)];
   },
   view(props, state) {
     return <CurationsCollection curations={state.curations} />;
   },
 });
 
-export default SearchCurationsResults;
+function reducerCallback(state, store) {
+  if (!state) return;
+  if (!store || !store.SearchCurations) return state;
+
+  state.curations =
+    store.SearchCurations.entities && store.SearchCurations.entities.curations;
+  return state;
+}
+export { SearchCurationsResults as default, reducerCallback };
