@@ -29,7 +29,7 @@ describe('Curations', () => {
       const result = getCurationsOnMount(mockLifecycleStream);
       const actionObject = {
         type: expect.any(String),
-        nextActionType: expect.any(String),
+        action: expect.any(String),
         payload: expect.any(Object),
       };
 

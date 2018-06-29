@@ -1,6 +1,8 @@
 import React from 'react';
 import BulkCurationEditor from '.';
-import { render } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
+
+afterEach(cleanup);
 
 it('BulkCurationEditor: default', () => {
   const { container } = render(<BulkCurationEditor />);

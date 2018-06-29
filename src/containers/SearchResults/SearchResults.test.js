@@ -1,11 +1,11 @@
-import { updateReducer } from '.';
+import { reducerCallback } from '.';
 
 describe('SearchResults', () => {
-  describe('updateReducer', () => {
+  describe('reducerCallback', () => {
     it('should get state or whatever', () => {
       const track = { trackName: 'cats' };
       const mockStore = { Tracks: { searchResults: [track] } };
-      const result = updateReducer({}, mockStore);
+      const result = reducerCallback({}, mockStore);
 
       expect(result).toHaveProperty('searchResults');
       expect(result.searchResults).toContain(track);

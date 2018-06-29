@@ -1,41 +1,36 @@
 import React from 'react';
-
-import { Provider } from 'react-redux';
 import { MemoryRouter as Router } from 'react-router';
-
+import MockProvider, { getMockStore } from 'redux-mock-provider';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import mockStore from '../../fixtures/mockStore';
 
 import App from './';
+import { tags } from '../../fixtures/test_data';
 
-const curations = {
-  curations: [
-    {
-      id: '23',
-      imageUrl: 'https://placeimg.com/250/250/tech/grayscale',
-      tracks: [
-        {
-          id: '12',
-          imageUrl: 'https://placeimg.com/250/250/animals',
-          artistName: 'spongebop',
-          trackName: 'squarewave',
-        },
-      ],
-      name: 'story testing',
-    },
-  ],
+const curation = {
+  id: 123,
+  imageUrl: 'http://fpoimg.com/200x200',
+  description: 'Real description of curations',
+  tracks: [1],
+  tags: {},
+  name: 'Testing this shit',
 };
 
-const store = mockStore({ Curations: curations });
+const store = getMockStore({
+  key: 'Curations',
+  state: {
+    entities: {
+      curations: [curation],
+      tracks: { 1: { id: 1, trackName: 'Track god' } },
+    },
+  },
+});
 
 storiesOf('App', module)
   .addDecorator(story => {
     return (
-      <Provider store={store}>
+      <MockProvider store={store}>
         <Router>{story()}</Router>
-      </Provider>
+      </MockProvider>
     );
   })
-  .add('default', () => <App />);
+  .add('default', () => <App tags={tags} />);

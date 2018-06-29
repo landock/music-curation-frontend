@@ -38,9 +38,13 @@ function getSearchCurationsFromStore(storeStream, reducerFunc) {
 
 function stateReducer(state, store) {
   state.curations =
-    store.Curations.entities && store.Curations.entities.curations;
+    store.Curations &&
+    store.Curations.entities &&
+    store.Curations.entities.curations;
   state.searchCurations =
-    store.SearchCurations.entities && store.SearchCurations.entities.curations;
+    store.SearchCurations &&
+    store.SearchCurations.entities &&
+    store.SearchCurations.entities.curations;
   return state;
 }
 

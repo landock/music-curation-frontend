@@ -10,12 +10,12 @@ import SearchResults from '../../containers/SearchResults';
 import BulkCurationEditor from '../BulkCurationEditor';
 import EditCuration from '../../containers/EditCuration';
 import CurrentCurationTracks from '../../containers/CurrentCurationTracks';
-import SearchCurationsResults from '../../containers/SearchCurationsResults';
 
 import logo from '../../img/logo.svg';
 
 export default class App extends Component {
   render() {
+    const { tags } = this.props;
     return (
       <Grid container className="App">
         <Grid.Row className="App-header">
@@ -52,7 +52,14 @@ export default class App extends Component {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <Route exact path="/" component={CurationFilterSubHeader} />
+            <Route
+              exact
+              path="/"
+              render={props => {
+                console.log('App props', props);
+                return <CurationFilterSubHeader tags={tags} />;
+              }}
+            />
             <Route
               path="/editCuration"
               component={SearchResultFilterSubHeader}

@@ -6,11 +6,10 @@ import renderer from 'react-test-renderer';
 import ModifyCuration from '.';
 
 it('ModifyCuration: default', () => {
-  const component = renderer.create(
+  const { container } = render(
     <Router>
       <ModifyCuration />
     </Router>
   );
-  const tree = component.toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(container).toBeTruthy();
 });

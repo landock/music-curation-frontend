@@ -1,8 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
 import PublicationStatusEditor from '.';
+import { MemoryRouter } from 'react-router-dom';
 
 let storyProps = {
   created_at: '2018-04-30T22:09:50.997Z',
@@ -13,5 +12,7 @@ let storyProps = {
 };
 
 storiesOf('PublicationStatusEditor', module).add('default', () => (
-  <PublicationStatusEditor {...storyProps} />
+  <MemoryRouter>
+    <PublicationStatusEditor {...storyProps} />
+  </MemoryRouter>
 ));

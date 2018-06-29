@@ -1,7 +1,6 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
 import { render } from 'react-testing-library';
-import renderer from 'react-test-renderer';
 import CurationsCollection from './index';
 
 import mockStore from '../../fixtures/mockStore';
@@ -37,9 +36,12 @@ describe('CurationsCollection', () => {
   };
 
   it('should render placeholder message if no curations are passed as props', () => {
-    const { debug, queryByText } = render(<CurationsCollection />);
+    const { queryByText } = render(
+      <MemoryRouter>
+        <CurationsCollection />
+      </MemoryRouter>
+    );
     const placeholderMarkup = 'No Curations';
-    debug();
     const element = queryByText(placeholderMarkup);
 
     expect(element).toBeTruthy();
@@ -47,18 +49,21 @@ describe('CurationsCollection', () => {
 
   it('should render curation image', () => {
     const { container } = render(
-      <CurationsCollection curations={testCurations} />
+      <MemoryRouter>
+        <CurationsCollection curations={testCurations} />
+      </MemoryRouter>
     );
     expect(container.getElementsByTagName('img').length).toBe(1);
   });
 
   it('should render curation name ', () => {
     const { queryByText } = render(
-      <CurationsCollection curations={testCurations} />
+      <MemoryRouter>
+        <CurationsCollection curations={testCurations} />
+      </MemoryRouter>
     );
     const expectedComponentText = queryByText('development');
 
     expect(expectedComponentText).not.toBe(false);
   });
-
 });

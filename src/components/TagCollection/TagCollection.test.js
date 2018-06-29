@@ -1,12 +1,16 @@
 import React from 'react';
 import { render } from 'react-testing-library';
 import renderer from 'react-test-renderer';
-// import TagCollection from '.';
+
+import TagCollection from '.';
+
 it('TagCollection: default', () => {
+  const tagTitle = 'Mock';
+  const anotherTagTitle = 'Test';
   let tagCollectionProps = {
-    tags: [{ id: 1, title: 'Mock' }, { id: 2, title: 'Test' }],
+    tags: [{ id: 1, title: tagTitle }, { id: 2, title: anotherTagTitle }],
   };
-  // const component = renderer.create(<TagCollection {...tagCollectionProps} />);
-  // const tree = component.toJSON();
-  // expect(tree).toMatchSnapshot();
+  const { queryByText } = render(<TagCollection {...tagCollectionProps} />);
+  expect(queryByText(tagTitle)).not.toBeNull();
+  expect(queryByText(anotherTagTitle)).not.toBeNull();
 });
