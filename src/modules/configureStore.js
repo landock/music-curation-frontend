@@ -9,10 +9,12 @@ import Curations from './Curations';
 import Tracks from './Tracks';
 import apiMiddleware from '../middleware/api';
 
+import { apiRequest } from '../api';
+
 const rootReducer = combineReducers({
   router: routerReducer,
-  SearchCurations, 
-  CurrentCuration, 
+  SearchCurations,
+  CurrentCuration,
   Tracks,
   Curations,
 });
@@ -28,7 +30,12 @@ const createStoreWithMiddleware = (reducer, initialState = {}) => {
     reducer,
     initialState,
     composeEnhancers(
-      applyMiddleware(loggerMiddleware, middleware, apiMiddleware, thunk)
+      applyMiddleware(
+        loggerMiddleware,
+        middleware,
+        apiMiddleware(apiRequest),
+        thunk
+      )
     )
   );
 };

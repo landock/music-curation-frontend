@@ -1,10 +1,11 @@
 import React from 'react';
 import { MemoryRouter as Router } from 'react-router';
-import MockProvider, { getMockStore } from 'redux-mock-provider';
+import MockProvider from 'redux-mock-provider';
 import { storiesOf } from '@storybook/react';
 
 import App from './';
 import { tags } from '../../fixtures/test_data';
+import mockStore from '../../fixtures/mockStore';
 
 const curation = {
   id: 123,
@@ -14,19 +15,27 @@ const curation = {
   tags: {},
   name: 'Testing this shit',
 };
+const curations = [curation];
+const tracks = { 1: { id: 1, trackName: 'Track god' } };
 
-const store = getMockStore({
-  key: 'Curations',
-  state: {
+const store = mockStore({
+  Curations: {
     entities: {
-      curations: [curation],
-      tracks: { 1: { id: 1, trackName: 'Track god' } },
+      curations,
+      tracks,
+    },
+  },
+  CurrentCurations: {
+    entities: {
+      curations,
+      tracks,
     },
   },
 });
 
 storiesOf('App', module)
   .addDecorator(story => {
+    console.log('app store', store);
     return (
       <MockProvider store={store}>
         <Router>{story()}</Router>

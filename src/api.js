@@ -23,14 +23,24 @@ async function apiRequest(axiosConfig) {
   }
 }
 
-function getCurations() {
+async function getCurations() {
   const url = '/curations';
-  return apiRequest({ url });
+  try {
+    const result = await apiRequest({ url });
+    return result;
+  } catch (error) {
+    return error;
+  }
 }
 
-function getCuration(id) {
+async function getCuration(id) {
   const url = `/curations/${id}`;
-  return apiRequest({ url });
+  try {
+    const result = await apiRequest({ url });
+    return result;
+  } catch (error) {
+    return error;
+  }
 }
 
 function getTrackById(id) {

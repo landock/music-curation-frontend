@@ -1,4 +1,3 @@
-import { apiRequest } from '../api';
 import { memoize } from 'lodash';
 
 const API_REQUEST = '@@apiMiddleware/API_REQUEST';
@@ -16,15 +15,14 @@ function configureNextAction(action, payload) {
   };
 }
 
-const apiMiddleware = store => next => action => {
+const apiMiddleware = apiClient => store => next => async action => {
   const { payload, type } = action;
 
   if (type !== API_REQUEST) return next(action);
 
-  return apiRequest({ ...payload }).then(data => {
-    let nextAction = configureNextAction(action, data);
-    return next(nextAction);
-  });
+  const data = await apiClient({ ...payload });
+  let nextAction = configureNextAction(action, data);
+  return store.dispatch(nextAction);
 };
 
 function getData(url, actionToAttachPayloadTo) {
@@ -38,4 +36,9 @@ function getData(url, actionToAttachPayloadTo) {
 }
 const memoizedGetData = memoize(getData);
 
-export { apiMiddleware as default, types, memoizedGetData as getData };
+export {
+  apiMiddleware as default,
+  types,
+  memoizedGetData as getData,
+  configureNextAction,
+};

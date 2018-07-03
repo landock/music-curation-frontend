@@ -1,28 +1,40 @@
-import apiMiddleware from './api.js';
-import MockAdapter from 'axios-mock-adapter';
-import axios from 'axios';
-import mockStore from '../fixtures/mockStore';
+import apiMiddleware, { configureNextAction } from './api.js';
+import { types as curationTypes } from '../modules/Curations';
+import { types as apiTypes } from '../middleware/api';
 
-it('should do shit', () => {
-  let axiosMock = new MockAdapter(axios);
-  axiosMock.onGet(/\/test/).reply(200, [
-    {
-      id: 1,
-      imageUrl: '',
-      description: '',
-      tracks: [],
-      name: 'testssss ',
-    },
-  ]);
+describe('apiMiddleware', () => {
+  it('should call an api client and dispatch the results', async () => {
+    const apiClient = jest.fn();
+    const next = jest.fn();
+    const store = {
+      getState: jest.fn(),
+      dispatch: jest.fn(),
+    };
+    const payload = { url: '/test', params: {} };
+    const action = {
+      action: curationTypes.CURATIONS_FETCHED,
+      type: apiTypes.API_REQUEST,
+      payload,
+    };
 
-  axiosMock.reset();
-  expect(
-    apiMiddleware(mockStore())(action => {
-      return action;
-    })({
-      type: 'API_REQUEST',
-      reducer: 'curations',
-      payload: { url: '/test', params: {} },
-    })
-  ).resolves.toEqual({ test: 1 });
+    await apiMiddleware(apiClient)(store)(next)(action);
+
+    expect(apiClient).toHaveBeenCalledWith(payload);
+    expect(store.dispatch).toHaveBeenCalled();
+  });
+});
+
+describe('configureNextAction', () => {
+  it('take an action and return a new action with a new type and payload', () => {
+    const mockPayload = { id: 121 };
+    const actionType = 'test/this/ACTION';
+    const mockAction = { action: actionType };
+
+    const result = configureNextAction(mockAction, mockPayload);
+
+    expect(result).toMatchObject({
+      type: actionType,
+      payload: mockPayload,
+    });
+  });
 });
