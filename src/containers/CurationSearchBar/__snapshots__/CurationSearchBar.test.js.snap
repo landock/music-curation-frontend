@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurationSearchBar view match snapshot 1`] = `
+<Form
+  as="form"
+  id="search-form"
+>
+  <FormInput
+    as={[Function]}
+    control={[Function]}
+    icon="search"
+    id="search-term"
+    placeholder="Search Curations"
+    value="beagles al dente"
+  />
+</Form>
+`;

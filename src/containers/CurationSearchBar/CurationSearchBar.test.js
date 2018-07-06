@@ -1,12 +1,40 @@
-import { configureAction, handleSubmit } from '.';
+import * as CurationSearchBarModule from '.';
+import { of } from 'rxjs/observable/of';
+
+import getSelectorStream from '../../getSelectorStream';
+import handleSubmit from './handleSubmit';
+
+jest.mock('../../getSelectorStream');
+jest.mock('./handleSubmit');
 
 describe('CurationSearchBar', () => {
-  describe('configureAction', () => {
-    it('should return an action configured with a search api url based on the search term', () => {
-      const mockProps = {};
+  let { view, dispatch } = CurationSearchBarModule;
+  describe('view', () => {
+    it('match snapshot', () => {
       const searchTerm = 'beagles al dente';
-      const result = configureAction(mockProps, searchTerm);
-      expect(result.payload.url).toContain(searchTerm);
+      const mockProps = {};
+      const mockState = { searchTerm };
+      const result = new view(mockProps, mockState);
+      expect(result).toMatchSnapshot();
+    });
+  });
+  describe('dispatch', () => {
+    it('should call getSelectorStream and handleSubmit and return the result as an array', () => {
+      const searchTerm = 'beagles al dente';
+
+      getSelectorStream.mockReturnValue(of('whatever'));
+      const state = of({ id: 1 });
+      const mockSources = {
+        select: of('www'),
+        state,
+        props: of({}),
+      };
+      CurationSearchBarModule.handleSubmit = jest.fn();
+
+      const result = new dispatch(mockSources);
+
+      expect(getSelectorStream).toHaveBeenCalled();
+      expect(handleSubmit).toHaveBeenCalled();
     });
   });
 });
