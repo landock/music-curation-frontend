@@ -1,5 +1,5 @@
 # Music Curation Frontend
-Helpful links and documentation on tech in this app.
+Helpful links and documentation on tech in this app. [View site here](https://landock.github.io/music-curation-frontend)
 
   - [Create React App](https://github.com/facebookincubator/create-react-app)
   - [Create React App Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
