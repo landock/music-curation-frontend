@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import history from '../history';
 import Curations from './Curations';
+import Tags from './Tags';
 import Tracks from './Tracks';
 import apiMiddleware from '../middleware/api';
 
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   CurrentCuration,
   Tracks,
   Curations,
+  Tags,
 });
 
 const createStoreWithMiddleware = (reducer, initialState = {}) => {

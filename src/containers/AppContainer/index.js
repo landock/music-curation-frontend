@@ -1,22 +1,35 @@
 import React from 'react';
-import recycle from 'recycle';
+import recycle, { reducer } from 'recycle';
 
 import './AppContainer.css';
 import App from '../../components/App';
+import { types as tagsTypes } from '../../modules/Tags';
+import { getData } from '../../middleware/api';
 
 const AppContainer = recycle({
   displayName: 'AppContainer',
+  initialState: {
+    tags: null,
+  },
+  dispatch(sources) {
+    return [
+      sources.lifecycle
+        .filter(e => e === 'componentDidMount')
+        .map(() => getData('/tags', tagsTypes.TAGS_FETCHED)),
+    ];
+  },
   update(sources) {
     return [
-      sources.store.reducer(function(state, store) {
-        state.curations =
-          store.Curations.entities && store.Curations.entities.curations;
-        return state;
-      }),
+      sources.store.pipe(
+        reducer((state, store) => {
+          state.tags = store.Tags && store.Tags.tags;
+          return state;
+        })
+      ),
     ];
   },
   view(props, state) {
-    return <App />;
+    return <App tags={state.tags} />;
   },
 });
 
