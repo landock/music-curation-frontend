@@ -1,5 +1,5 @@
 import React from 'react';
-import recycle, { reducer } from 'recycle';
+import recycle from 'recycle';
 
 import './AppContainer.css';
 import App from '../../components/App';
@@ -20,12 +20,10 @@ const AppContainer = recycle({
   },
   update(sources) {
     return [
-      sources.store.pipe(
-        reducer((state, store) => {
-          state.tags = store.Tags && store.Tags.tags;
-          return state;
-        })
-      ),
+      sources.store.reducer(function(state, store) {
+        state.tags = store.Tags && store.Tags.tags;
+        return state;
+      }),
     ];
   },
   view(props, state) {
