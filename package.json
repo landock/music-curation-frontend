@@ -50,7 +50,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "postmerge": "if [[ $(git diff HEAD@{1}..HEAD@{0} -- package.json | wc -l) -gt 0 ]]; then yarn install; fi;"
+    "postmerge": "if [[ $(git diff HEAD@{1}..HEAD@{0} -- package.json | wc -l) -gt 0 ]]; then yarn install; fi;",
+    "deploy": "yarn run build-js && wrangler deploy",
+    "preview": "yarn run build-js && wrangler dev"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.10",
@@ -71,7 +73,8 @@
     "react-testing-library": "^3.1.7",
     "redux-mock-provider": "^1.0.0",
     "redux-mock-store": "^1.5.3",
-    "storybook-addon-specifications": "^2.1.1"
+    "storybook-addon-specifications": "^2.1.1",
+    "wrangler": "^4.79.0"
   },
   "prettier": {
     "singleQuote": true,
