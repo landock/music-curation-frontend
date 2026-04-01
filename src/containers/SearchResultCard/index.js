@@ -8,7 +8,6 @@ import { Item, Icon, Popup } from 'semantic-ui-react';
 import AddTags from '../../components/AddTags';
 import AddToCuration from '../../components/AddToCuration';
 import {
-  types as curationsTypes,
   actions as curationsActions,
 } from '../../modules/CurrentCuration';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';

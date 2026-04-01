@@ -1,4 +1,3 @@
-import Immutable from 'seamless-immutable';
 import { merge } from 'lodash';
 
 const initialState = {};

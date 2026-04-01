@@ -1,4 +1,4 @@
-import { getCurations, getTrackById } from '../../api';
+import { getCurations } from '../../api';
 import { normalize } from 'normalizr';
 import { curationList } from '../../schema';
 import { merge } from 'lodash';

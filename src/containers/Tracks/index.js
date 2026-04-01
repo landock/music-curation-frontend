@@ -1,7 +1,6 @@
 import React from 'react';
 import recycle from 'recycle';
 import { map, filter, withLatestFrom } from 'rxjs/operators';
-import { sortBy } from 'lodash';
 
 import TracksView from '../../components/TracksView';
 

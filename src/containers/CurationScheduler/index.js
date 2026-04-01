@@ -1,4 +1,3 @@
-import React from 'react';
 import recycle from 'recycle';
 import PropTypes from 'prop-types';
 import { Form } from 'semantic-ui-react';

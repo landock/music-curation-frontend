@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import SearchResultCard from '../../containers/SearchResultCard';
 import { Item, Header } from 'semantic-ui-react';
 import { SortableContainer, arrayMove } from 'react-sortable-hoc';
