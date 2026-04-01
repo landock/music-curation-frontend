@@ -20,7 +20,7 @@ function createTag() {
 function createTrack(id) {
   return {
     id: id ? parseInt(id, 10) : faker.number.int(9999),
-    imageUrl: 'http://fpoimg.com/100x100',
+    imageUrl: 'https://fpoimg.com/100x100',
     artistName: faker.person.fullName(),
     trackName: faker.music.songName(),
     durationInSeconds: faker.number.int(99999),
@@ -32,7 +32,7 @@ function createTrack(id) {
 function createCuration(id) {
   return {
     id: id ? parseInt(id, 10) : faker.number.int(9999),
-    imageUrl: 'http://fpoimg.com/200x200',
+    imageUrl: 'https://fpoimg.com/200x200',
     description: faker.hacker.phrase(),
     tracks: n(createTrack, faker.number.int({ min: 1, max: 25 })),
     tags: n(createTag, faker.number.int({ min: 1, max: 20 })),
