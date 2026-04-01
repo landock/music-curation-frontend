@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'https://fake-api-for-music-manager-b5xnrg8pq9vu.runkit.sh';
+const baseUrl = process.env.REACT_APP_API_URL || 'https://fake-api-for-music-manager-b5xnrg8pq9vu.runkit.sh';
 
 async function apiRequest(axiosConfig) {
   if (!axiosConfig.url) return new Error('Need url to do shit');

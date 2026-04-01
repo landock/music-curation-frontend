@@ -5,9 +5,11 @@
   "private": true,
   "packageManager": "yarn@4.13.0",
   "dependencies": {
+    "@faker-js/faker": "^9.0.0",
     "axios": "^0.18.0",
     "cross-fetch": "^2.1.0",
     "history": "^4.7.2",
+    "hono": "^4.0.0",
     "immutable": "^3.8.2",
     "lodash": "^4.17.10",
     "moment": "^2.21.0",
