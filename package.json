@@ -93,5 +93,8 @@
       "!src/**/*.story.js",
       "!src/stories/index.js"
     ]
+  },
+  "resolutions": {
+    "lodash.template": "4.4.0"
   }
 }
