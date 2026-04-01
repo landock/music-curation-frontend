@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = process.env.REACT_APP_API_URL;
+const baseUrl = 'https://music-curation-api.mike-easley.workers.dev';
 
 async function apiRequest(axiosConfig) {
   if (!axiosConfig.url) return new Error('Need url to do shit');
