@@ -52,7 +52,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "postmerge": "if [[ $(git diff HEAD@{1}..HEAD@{0} -- package.json | wc -l) -gt 0 ]]; then yarn install; fi;"
+    "postmerge": "if [[ $(git diff HEAD@{1}..HEAD@{0} -- package.json | wc -l) -gt 0 ]]; then yarn install; fi;",
+    "deploy:api": "wrangler deploy --config wrangler.api.toml"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.10",
